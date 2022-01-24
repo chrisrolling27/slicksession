@@ -5,7 +5,8 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    // Don't call this.setState() here!
+
+
     this.state = {
       counter: 42
     };

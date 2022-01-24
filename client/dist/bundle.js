@@ -129,8 +129,7 @@ var App = /*#__PURE__*/function (_React$Component) {
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, App);
 
-    _this = _super.call(this, props); // Don't call this.setState() here!
-
+    _this = _super.call(this, props);
     _this.state = {
       counter: 42
     }; //this.onChange = this.onChange.bind(this);
