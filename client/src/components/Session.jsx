@@ -24,7 +24,7 @@ class Session extends React.Component {
     return (
 
       <div>
-        Inputs for session here
+       <div className="sessionAdder"> Inputs for session here </div>
       </div>
     );
   }

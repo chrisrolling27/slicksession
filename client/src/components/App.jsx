@@ -8,7 +8,7 @@ class App extends React.Component {
 
 
     this.state = {
-      showSession: false
+      addSession: false
     };
 
     this.makeSession = this.makeSession.bind(this);
@@ -20,7 +20,7 @@ class App extends React.Component {
 
   makeSession() {
     console.log('clicked add session button');
-    this.setState({showSession: !this.state.showSession});
+    this.setState({addSession: !this.state.addSession});
   }
 
   //ternary/terciary to show the add session component
@@ -28,11 +28,11 @@ class App extends React.Component {
     return (
 
       <div>
-        Hello world!
+        Session cards here
 
-      <div> <Session> </Session> </div>
+      <div> {this.state.addSession ? <Session> </Session> : ''}</div>
 
-        <div> <button className="addSession" onClick={this.makeSession}> + </button> </div>
+        <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
       </div>
     );
   }

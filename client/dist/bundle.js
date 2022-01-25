@@ -136,7 +136,7 @@ var App = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      showSession: false
+      addSession: false
     };
     _this.makeSession = _this.makeSession.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this));
     return _this;
@@ -152,15 +152,15 @@ var App = /*#__PURE__*/function (_React$Component) {
     value: function makeSession() {
       console.log('clicked add session button');
       this.setState({
-        showSession: !this.state.showSession
+        addSession: !this.state.addSession
       });
     } //ternary/terciary to show the add session component
 
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, "Hello world!", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Session_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null, " "), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        className: "addSession",
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, "Session cards here", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.addSession ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Session_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null, " ") : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "addSessionButton",
         onClick: this.makeSession
       }, " + "), " "));
     }
@@ -228,7 +228,9 @@ var Session = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Inputs for session here");
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "sessionAdder"
+      }, " Inputs for session here "));
     }
   }]);
 
