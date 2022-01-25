@@ -8,23 +8,31 @@ class App extends React.Component {
 
 
     this.state = {
-      counter: 42
+      showSession: false
     };
 
-    //this.onChange = this.onChange.bind(this);
+    this.makeSession = this.makeSession.bind(this);
   }
 
   componentDidMount() {
     console.log('App mounted');
   }
 
+  makeSession() {
+    console.log('clicked add session button');
+    this.setState({showSession: !this.state.showSession});
+  }
 
   //ternary/terciary to show the add session component
   render() {
     return (
 
       <div>
-        Hello world
+        Hello world!
+
+      <div> <Session> </Session> </div>
+
+        <div> <button className="addSession" onClick={this.makeSession}> + </button> </div>
       </div>
     );
   }
