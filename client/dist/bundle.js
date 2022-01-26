@@ -154,7 +154,8 @@ var App = /*#__PURE__*/function (_React$Component) {
       this.setState({
         addSession: !this.state.addSession
       });
-    }
+    } //
+
   }, {
     key: "render",
     value: function render() {
