@@ -23,10 +23,6 @@ class App extends React.Component {
     this.setState({ addSession: !this.state.addSession });
   }
 
-  submitSession(e) {
-    console.log(e.target.value);
-
-  }
 
 
   render() {
@@ -35,7 +31,7 @@ class App extends React.Component {
       <div>
         Session cards here
 
-        <div> {this.state.addSession ? <Session submit={this.submitSession.bind(this)}> </Session> : ''}</div>
+        <div> {this.state.addSession ? <Session > </Session> : ''}</div>
 
         <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
       </div>

@@ -12,22 +12,27 @@ class Session extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.submitSession = this.submitSession.bind(this);
   }
 
   handleChange(e) {
-    this.setState({sessionText: e.target.value})
+    this.setState({ sessionText: e.target.value })
+  }
+
+  submitSession(e) {
+    console.log(this.state.sessionText);
+
   }
 
   render() {
     return (
-
       <div>
         <div className="sessionAdder">
 
-          <form onSubmit={this.props.submit}>
+          <form onSubmit={this.submitSession2}>
             <label>
               Meeting notes here:
-              <input type="text" name="sessionText" onChange={this.handleChange}  />
+              <input type="text" name="sessionText" onChange={this.handleChange} />
             </label>
             <input type="submit" value="Submit" />
           </form>
