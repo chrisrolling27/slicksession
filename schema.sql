@@ -1,17 +1,17 @@
-DROP DATABASE IF EXISTS movies;
+DROP DATABASE IF EXISTS slicksession;
 
-CREATE DATABASE `movies`;
+CREATE DATABASE `slicksession`;
 
-USE `movies`;
+USE `slicksession`;
 
 
-CREATE TABLE `movies` (
+CREATE TABLE `sessions` (
   `id` INTEGER PRIMARY KEY AUTO_INCREMENT,
-  `title` VARCHAR(255) NOT NULL,
-  `watched` BOOLEAN
+  `text` TEXT NOT NULL,
+  `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-ALTER TABLE `movies` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+ALTER TABLE `sessions` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
-INSERT INTO `movies` (`id`,`title`, `watched`) VALUES
-(1,'Gladiator', false);
+INSERT INTO `sessions` (`id`,`text`, `date`) VALUES
+(1,'Todays meeting will involve the following points...', CURRENT_TIMESTAMP);
