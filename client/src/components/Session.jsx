@@ -14,9 +14,7 @@ class Session extends React.Component {
     //this.onChange = this.onChange.bind(this);
   }
 
-  componentDidMount() {
 
-  }
 
 
 
@@ -24,7 +22,17 @@ class Session extends React.Component {
     return (
 
       <div>
-       <div className="sessionAdder"> Inputs for session here </div>
+        <div className="sessionAdder">
+
+          <form>
+            <label>
+              Meeting notes here:
+              <input type="text" name="name" />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
+
+        </div>
       </div>
     );
   }
