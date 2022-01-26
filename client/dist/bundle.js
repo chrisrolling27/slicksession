@@ -159,7 +159,6 @@ var App = /*#__PURE__*/function (_React$Component) {
     key: "submitSession",
     value: function submitSession(e) {
       console.log(e.target.value);
-      e.preventDefault();
     }
   }, {
     key: "render",

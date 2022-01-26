@@ -25,7 +25,7 @@ class App extends React.Component {
 
   submitSession(e) {
     console.log(e.target.value);
-    e.preventDefault();
+
   }
 
 
