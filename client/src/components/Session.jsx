@@ -8,15 +8,15 @@ class Session extends React.Component {
 
 
     this.state = {
-
+      sessionText: ''
     };
 
-    //this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-
-
-
+  handleChange(e) {
+    this.setState({sessionText: e.target.value})
+  }
 
   render() {
     return (
@@ -24,10 +24,10 @@ class Session extends React.Component {
       <div>
         <div className="sessionAdder">
 
-          <form>
+          <form onSubmit={this.props.submit}>
             <label>
               Meeting notes here:
-              <input type="text" name="name" />
+              <input type="text" name="sessionText" onChange={this.handleChange}  />
             </label>
             <input type="submit" value="Submit" />
           </form>

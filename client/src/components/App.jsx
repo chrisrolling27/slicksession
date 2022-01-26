@@ -20,17 +20,22 @@ class App extends React.Component {
 
   makeSession() {
     console.log('clicked add session button');
-    this.setState({addSession: !this.state.addSession});
+    this.setState({ addSession: !this.state.addSession });
   }
 
-  //ternary/terciary to show the add session component
+  submitSession(e) {
+    console.log(e.target.value);
+    e.preventDefault();
+  }
+
+
   render() {
     return (
 
       <div>
         Session cards here
 
-      <div> {this.state.addSession ? <Session> </Session> : ''}</div>
+        <div> {this.state.addSession ? <Session submit={this.submitSession.bind(this)}> </Session> : ''}</div>
 
         <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
       </div>
