@@ -1,5 +1,5 @@
 import React from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
 class Session extends React.Component {
 
@@ -37,7 +37,7 @@ class Session extends React.Component {
       <div>
         <div className="sessionAdder">
 
-          <form onSubmit={this.submitSession2}>
+          <form onSubmit={this.submitSession}>
             <label>
               Meeting notes here:
               <input type="text" required name="sessionText" onChange={this.handleChange} />

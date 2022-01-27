@@ -16,6 +16,8 @@ db.connect((err) => {
   }
 })
 
+//separate concerns into MVC
+
 app.post('/session', (req, res) => {
   let querystring = `INSERT INTO sessions (text) VALUES ("${req.body.text}")`;
   console.log(querystring);
@@ -27,6 +29,11 @@ app.post('/session', (req, res) => {
       res.status(201).send(results);
     }
   })
+})
+
+app.get('sessions', (req, res) => {
+  let querystring = 'SELECT * FROM sessions';
+
 })
 
 
