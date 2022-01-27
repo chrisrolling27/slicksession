@@ -35,7 +35,7 @@ class App extends React.Component {
     return (
 
       <div>
-        <div> {this.state.mySessions.map((sesh) => sesh.text)} </div>
+        <div> {this.state.mySessions.map((sesh) => <SessionCard session={sesh} key={sesh.id}> </SessionCard>)} </div>
 
         <div> {this.state.addSession ? <Session > </Session> : ''}</div>
 

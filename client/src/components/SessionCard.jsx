@@ -19,8 +19,7 @@ class SessionCard extends React.Component {
     return (
       <div>
         <div className="sessionCard">
-        Hello Imma sessionCard
-
+        {this.props.session.text}
         </div>
       </div>
     );
