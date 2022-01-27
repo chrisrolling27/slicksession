@@ -11,7 +11,7 @@ class App extends React.Component {
 
     this.state = {
       addSession: false,
-      mySessions : []
+      mySessions: []
     };
 
     this.makeSession = this.makeSession.bind(this);
@@ -20,7 +20,7 @@ class App extends React.Component {
   componentDidMount() {
     console.log('App mounted');
     axios.get('/sessions').then((response) => {
-      this.setState({mySessions: response.data})
+      this.setState({ mySessions: response.data })
     })
   }
 
@@ -35,7 +35,7 @@ class App extends React.Component {
     return (
 
       <div>
-
+        <div> {this.state.mySessions.map((sesh) => sesh.text)} </div>
 
         <div> {this.state.addSession ? <Session > </Session> : ''}</div>
 

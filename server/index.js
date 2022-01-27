@@ -31,9 +31,16 @@ app.post('/session', (req, res) => {
   })
 })
 
-app.get('sessions', (req, res) => {
+app.get('/sessions', (req, res) => {
   let querystring = 'SELECT * FROM sessions';
-
+  console.log(querystring)
+  db.query(querystring, (err, results) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(200).send(results);
+    }
+  })
 })
 
 
