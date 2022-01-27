@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Axios from 'axios';
 
 class Session extends React.Component {
 
@@ -21,7 +21,15 @@ class Session extends React.Component {
 
   submitSession(e) {
     console.log(this.state.sessionText);
-
+    axios.post('/session', {
+      text: this.state.sessionText
+     })
+     .then((response) => {
+       console.log(response);
+     })
+    .catch((response) => {
+      console.log(error);
+    });
   }
 
   render() {
@@ -32,7 +40,7 @@ class Session extends React.Component {
           <form onSubmit={this.submitSession2}>
             <label>
               Meeting notes here:
-              <input type="text" name="sessionText" onChange={this.handleChange} />
+              <input type="text" required name="sessionText" onChange={this.handleChange} />
             </label>
             <input type="submit" value="Submit" />
           </form>

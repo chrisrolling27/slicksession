@@ -16,7 +16,18 @@ db.connect((err) => {
   }
 })
 
-
+app.post('/session', (req, res) => {
+  let querystring = `INSERT INTO sessions (text) VALUES ("${req.body.text}")`;
+  console.log(querystring);
+  db.query(querystring, (err, results) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      console.log('posted successfully')
+      res.status(201).send(results);
+    }
+  })
+})
 
 
 app.listen(PORT, () => {
