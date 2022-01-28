@@ -25,3 +25,13 @@ body {
     left: 50%;
 
 }
+
+
+
+.sessionCard {
+  width: 150px;
+  height: 150px;
+  border: 1px;
+  border-color:grey
+
+}
