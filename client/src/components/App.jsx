@@ -19,14 +19,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log('App mounted');
     axios.get('/sessions').then((response) => {
       this.setState({ mySessions: response.data })
     })
   }
 
   makeSession() {
-    console.log('clicked add session button');
     this.setState({ addSession: !this.state.addSession });
   }
 

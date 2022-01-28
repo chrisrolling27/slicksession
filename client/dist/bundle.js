@@ -154,7 +154,6 @@ var App = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      console.log('App mounted');
       axios__WEBPACK_IMPORTED_MODULE_9___default.a.get('/sessions').then(function (response) {
         _this2.setState({
           mySessions: response.data
@@ -164,7 +163,6 @@ var App = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "makeSession",
     value: function makeSession() {
-      console.log('clicked add session button');
       this.setState({
         addSession: !this.state.addSession
       });
