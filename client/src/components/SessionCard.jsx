@@ -11,7 +11,6 @@ class SessionCard extends React.Component {
       sessionText: ''
     };
 
-
   }
 
 
