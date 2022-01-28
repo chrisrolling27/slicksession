@@ -167,12 +167,19 @@ var App = /*#__PURE__*/function (_React$Component) {
       this.setState({
         addSession: !this.state.addSession
       });
+    }
+  }, {
+    key: "keyStroke",
+    value: function keyStroke(e) {
+      console.log(e.keyCode);
     } //
 
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.mySessions.map(function (sesh) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        onKeyDown: this.keyStroke
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.mySessions.map(function (sesh) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_SessionCard_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
           session: sesh,
           key: sesh.id

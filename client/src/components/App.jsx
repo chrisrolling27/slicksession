@@ -29,17 +29,20 @@ class App extends React.Component {
     this.setState({ addSession: !this.state.addSession });
   }
 
+  keyStroke(e) {
+    console.log(e.keyCode);
+  }
 
 //
   render() {
     return (
 
-      <div>
-        <div> {this.state.mySessions.map((sesh) => <SessionCard session={sesh} key={sesh.id}> </SessionCard>)} </div>
+      <div onKeyDown={this.keyStroke}>
+        <div > {this.state.mySessions.map((sesh) => <SessionCard session={sesh} key={sesh.id}> </SessionCard>)} </div>
 
         <div> {this.state.addSession ? <Session > </Session> : ''}</div>
 
-        <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
+        <div > <button className="addSessionButton"  onClick={this.makeSession}> + </button> </div>
       </div>
     );
   }
