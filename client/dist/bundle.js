@@ -145,6 +145,7 @@ var App = /*#__PURE__*/function (_React$Component) {
       mySessions: []
     };
     _this.makeSession = _this.makeSession.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this));
+    _this.keyStroke = _this.keyStroke.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this));
     return _this;
   }
 
@@ -171,14 +172,18 @@ var App = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "keyStroke",
     value: function keyStroke(e) {
-      console.log(e.keyCode);
-    } //
-
+      if (e.key === 'Enter') {
+        this.setState({
+          addSession: !this.state.addSession
+        });
+      }
+    }
   }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        onKeyDown: this.keyStroke
+        onKeyDown: this.keyStroke,
+        tabIndex: "0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.mySessions.map(function (sesh) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_SessionCard_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
           session: sesh,

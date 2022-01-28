@@ -15,6 +15,7 @@ class App extends React.Component {
     };
 
     this.makeSession = this.makeSession.bind(this);
+    this.keyStroke = this.keyStroke.bind(this);
   }
 
   componentDidMount() {
@@ -30,20 +31,22 @@ class App extends React.Component {
   }
 
   keyStroke(e) {
-    console.log(e.keyCode);
+    if (e.key === 'Enter') {
+      this.setState({addSession: !this.state.addSession});
+    }
   }
 
-//
   render() {
     return (
 
-      <div onKeyDown={this.keyStroke}>
-        <div > {this.state.mySessions.map((sesh) => <SessionCard session={sesh} key={sesh.id}> </SessionCard>)} </div>
+      <div onKeyDown={this.keyStroke} tabIndex='0'>
+        <div  > {this.state.mySessions.map((sesh) => <SessionCard session={sesh} key={sesh.id}> </SessionCard>)} </div>
 
         <div> {this.state.addSession ? <Session > </Session> : ''}</div>
 
         <div > <button className="addSessionButton"  onClick={this.makeSession}> + </button> </div>
       </div>
+
     );
   }
 }
