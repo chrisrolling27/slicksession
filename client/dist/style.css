@@ -31,7 +31,7 @@ body {
 .sessionCard {
   width: 150px;
   height: 150px;
-  border: 1px;
-  border-color:grey
+  border-style: solid;
+  border-color:black
 
 }

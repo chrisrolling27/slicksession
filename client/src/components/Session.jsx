@@ -39,7 +39,7 @@ class Session extends React.Component {
 
           <form onSubmit={this.submitSession}>
             <label>
-              Meeting notes here:
+
               <input type="text" required name="sessionText" onChange={this.handleChange} />
             </label>
             <input type="submit" value="Submit" />

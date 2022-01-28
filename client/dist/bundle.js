@@ -167,7 +167,8 @@ var App = /*#__PURE__*/function (_React$Component) {
       this.setState({
         addSession: !this.state.addSession
       });
-    }
+    } //
+
   }, {
     key: "render",
     value: function render() {
@@ -274,7 +275,7 @@ var Session = /*#__PURE__*/function (_React$Component) {
         className: "sessionAdder"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
         onSubmit: this.submitSession
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("label", null, "Meeting notes here:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
         type: "text",
         required: true,
         name: "sessionText",
@@ -348,7 +349,7 @@ var SessionCard = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "sessionCard"
-      }, this.props.session.text));
+      }, this.props.session.text, this.props.session.date));
     }
   }]);
 

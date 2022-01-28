@@ -20,6 +20,7 @@ class SessionCard extends React.Component {
       <div>
         <div className="sessionCard">
         {this.props.session.text}
+        {this.props.session.date}
         </div>
       </div>
     );
