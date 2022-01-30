@@ -13,7 +13,7 @@ class App extends React.Component {
       addSession: false,
       mySessions: []
     };
-
+//
     this.makeSession = this.makeSession.bind(this);
     this.keyStroke = this.keyStroke.bind(this);
   }

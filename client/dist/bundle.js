@@ -143,7 +143,8 @@ var App = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       addSession: false,
       mySessions: []
-    };
+    }; //
+
     _this.makeSession = _this.makeSession.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this));
     _this.keyStroke = _this.keyStroke.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this));
     return _this;
