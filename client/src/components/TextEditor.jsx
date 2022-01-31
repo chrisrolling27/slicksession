@@ -1,0 +1,29 @@
+import React from 'react';
+import { Editor } from 'slate';
+//import { Value } from 'slate';
+
+class TextEditor extends React.Component {
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      value: '',
+    };
+  }
+
+  onChange = ({ value }) => {
+    this.setStafte({ value })
+  }
+
+  render() {
+    return (
+      <div>  heya?
+      <Editor value={this.state.value} onChange={this.onChange} />
+      </div>
+    )
+  }
+
+}
+
+export default TextEditor;
