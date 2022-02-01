@@ -5,7 +5,24 @@ import { Slate, Editable, withReact } from 'slate-react';
 
 
 const AppEditor = () => {
-  return 'cheese!!'
+
+  const [editor] = useState(() => withReact(createEditor()))
+  const [value, setValue] = useState([
+    {
+      type: 'paragraph',
+      children: [{ text: 'Enter your text here.' }],
+    },
+  ])
+
+  return (
+    <Slate
+      editor={editor}
+      value={value}
+      onChange={newValue => setValue(newValue)}
+    >
+      <Editable />
+    </Slate>
+  )
 }
 
 
