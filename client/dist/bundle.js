@@ -233,7 +233,7 @@ var AppEditor = function AppEditor() {
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([{
     type: 'paragraph',
     children: [{
-      text: 'Enter your text here.'
+      text: 'Enter your text.'
     }]
   }]),
       _useState4 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState3, 2),

@@ -10,7 +10,7 @@ const AppEditor = () => {
   const [value, setValue] = useState([
     {
       type: 'paragraph',
-      children: [{ text: 'Enter your text here.' }],
+      children: [{ text: 'Enter your text.' }],
     },
   ])
 
