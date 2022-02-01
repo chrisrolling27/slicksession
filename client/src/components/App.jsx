@@ -1,17 +1,14 @@
-import React from 'react';
+import React from 'react'
 import Session from './Session.jsx';
 import SessionCard from './SessionCard.jsx';
 import axios from 'axios';
-import TextEditor from './TextEditor.jsx';
-
-//import { Value } from 'slate';
+import AppEditor from './AppEditor.jsx';
 
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
-
 
     this.state = {
       addSession: false,
@@ -38,15 +35,19 @@ class App extends React.Component {
     }
   }
 
+
+
+
   render() {
     return (
 
       <div onKeyDown={this.keyStroke} tabIndex='0'>
+        <AppEditor> </AppEditor>
         <div> {this.state.mySessions.map((sesh) => <SessionCard session={sesh} key={sesh.id}> </SessionCard>)} </div>
 
         <div> {this.state.addSession ? <Session > </Session> : ''}</div>
 
-        <div > <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
+        <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
       </div>
 
     );

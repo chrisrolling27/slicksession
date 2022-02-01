@@ -113,7 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SessionCard_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./SessionCard.jsx */ "./client/src/components/SessionCard.jsx");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _TextEditor_jsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./TextEditor.jsx */ "./client/src/components/TextEditor.jsx");
+/* harmony import */ var _AppEditor_jsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./AppEditor.jsx */ "./client/src/components/AppEditor.jsx");
 
 
 
@@ -129,7 +129,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 
 
- //import { Value } from 'slate';
+
 
 var App = /*#__PURE__*/function (_React$Component) {
   _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(App, _React$Component);
@@ -184,7 +184,7 @@ var App = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         onKeyDown: this.keyStroke,
         tabIndex: "0"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.mySessions.map(function (sesh) {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_AppEditor_jsx__WEBPACK_IMPORTED_MODULE_10__["default"], null, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.mySessions.map(function (sesh) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_SessionCard_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
           session: sesh,
           key: sesh.id
@@ -200,6 +200,31 @@ var App = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./client/src/components/AppEditor.jsx":
+/*!*********************************************!*\
+  !*** ./client/src/components/AppEditor.jsx ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var slate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slate */ "./node_modules/slate/dist/index.es.js");
+/* harmony import */ var slate_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! slate-react */ "./node_modules/slate-react/dist/index.es.js");
+
+
+
+
+var AppEditor = function AppEditor() {
+  return 'cheese!!';
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AppEditor);
 
 /***/ }),
 
@@ -372,90 +397,6 @@ var SessionCard = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
-/***/ "./client/src/components/TextEditor.jsx":
-/*!**********************************************!*\
-  !*** ./client/src/components/TextEditor.jsx ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var slate__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! slate */ "./node_modules/slate/dist/index.es.js");
-
-
-
-
-
-
-
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-
- //import { Value } from 'slate';
-
-var TextEditor = /*#__PURE__*/function (_React$Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(TextEditor, _React$Component);
-
-  var _super = _createSuper(TextEditor);
-
-  function TextEditor(props) {
-    var _this;
-
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, TextEditor);
-
-    _this = _super.call(this, props);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this), "onChange", function (_ref) {
-      var value = _ref.value;
-
-      _this.setStafte({
-        value: value
-      });
-    });
-
-    _this.state = {
-      value: ''
-    };
-    return _this;
-  }
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(TextEditor, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, "  heya?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(slate__WEBPACK_IMPORTED_MODULE_8__["Editor"], {
-        value: this.state.value,
-        onChange: this.onChange
-      }));
-    }
-  }]);
-
-  return TextEditor;
-}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (TextEditor);
-
-/***/ }),
-
 /***/ "./client/src/index.js":
 /*!*****************************!*\
   !*** ./client/src/index.js ***!
@@ -539,33 +480,6 @@ function _createClass(Constructor, protoProps, staticProps) {
 }
 
 module.exports = _createClass;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/defineProperty.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/defineProperty.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-module.exports = _defineProperty;
 module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
@@ -2791,6 +2705,59 @@ module.exports = JSON.parse("{\"_args\":[[\"axios@0.21.4\",\"/home/chris/myproje
 
 /***/ }),
 
+/***/ "./node_modules/compute-scroll-into-view/dist/index.module.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/compute-scroll-into-view/dist/index.module.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function t(t){return"object"==typeof t&&null!=t&&1===t.nodeType}function e(t,e){return(!e||"hidden"!==t)&&"visible"!==t&&"clip"!==t}function n(t,n){if(t.clientHeight<t.scrollHeight||t.clientWidth<t.scrollWidth){var r=getComputedStyle(t,null);return e(r.overflowY,n)||e(r.overflowX,n)||function(t){var e=function(t){if(!t.ownerDocument||!t.ownerDocument.defaultView)return null;try{return t.ownerDocument.defaultView.frameElement}catch(t){return null}}(t);return!!e&&(e.clientHeight<t.scrollHeight||e.clientWidth<t.scrollWidth)}(t)}return!1}function r(t,e,n,r,i,o,l,d){return o<t&&l>e||o>t&&l<e?0:o<=t&&d<=n||l>=e&&d>=n?o-t-r:l>e&&d<n||o<t&&d>n?l-e+i:0}/* harmony default export */ __webpack_exports__["default"] = (function(e,i){var o=window,l=i.scrollMode,d=i.block,u=i.inline,h=i.boundary,a=i.skipOverflowHiddenElements,c="function"==typeof h?h:function(t){return t!==h};if(!t(e))throw new TypeError("Invalid target");for(var f=document.scrollingElement||document.documentElement,s=[],p=e;t(p)&&c(p);){if((p=p.parentElement)===f){s.push(p);break}null!=p&&p===document.body&&n(p)&&!n(document.documentElement)||null!=p&&n(p,a)&&s.push(p)}for(var m=o.visualViewport?o.visualViewport.width:innerWidth,g=o.visualViewport?o.visualViewport.height:innerHeight,w=window.scrollX||pageXOffset,v=window.scrollY||pageYOffset,W=e.getBoundingClientRect(),b=W.height,H=W.width,y=W.top,E=W.right,M=W.bottom,V=W.left,x="start"===d||"nearest"===d?y:"end"===d?M:y+b/2,I="center"===u?V+H/2:"end"===u?E:V,C=[],T=0;T<s.length;T++){var k=s[T],B=k.getBoundingClientRect(),D=B.height,O=B.width,R=B.top,X=B.right,Y=B.bottom,L=B.left;if("if-needed"===l&&y>=0&&V>=0&&M<=g&&E<=m&&y>=R&&M<=Y&&V>=L&&E<=X)return C;var S=getComputedStyle(k),j=parseInt(S.borderLeftWidth,10),q=parseInt(S.borderTopWidth,10),z=parseInt(S.borderRightWidth,10),A=parseInt(S.borderBottomWidth,10),F=0,G=0,J="offsetWidth"in k?k.offsetWidth-k.clientWidth-j-z:0,K="offsetHeight"in k?k.offsetHeight-k.clientHeight-q-A:0;if(f===k)F="start"===d?x:"end"===d?x-g:"nearest"===d?r(v,v+g,g,q,A,v+x,v+x+b,b):x-g/2,G="start"===u?I:"center"===u?I-m/2:"end"===u?I-m:r(w,w+m,m,j,z,w+I,w+I+H,H),F=Math.max(0,F+v),G=Math.max(0,G+w);else{F="start"===d?x-R-q:"end"===d?x-Y+A+K:"nearest"===d?r(R,Y,D,q,A+K,x,x+b,b):x-(R+D/2)+K/2,G="start"===u?I-L-j:"center"===u?I-(L+O/2)+J/2:"end"===u?I-X+z+J:r(L,X,O,j,z+J,I,I+H,H);var N=k.scrollLeft,P=k.scrollTop;x+=P-(F=Math.max(0,Math.min(P+F,k.scrollHeight-D+K))),I+=N-(G=Math.max(0,Math.min(N+G,k.scrollWidth-O+J)))}C.push({el:k,top:F,left:G})}return C});
+//# sourceMappingURL=index.module.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/direction/index.js":
+/*!*****************************************!*\
+  !*** ./node_modules/direction/index.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = direction
+
+var RTL = '\u0591-\u07FF\uFB1D-\uFDFD\uFE70-\uFEFC'
+var LTR =
+  'A-Za-z\u00C0-\u00D6\u00D8-\u00F6' +
+  '\u00F8-\u02B8\u0300-\u0590\u0800-\u1FFF\u200E\u2C00-\uFB1C' +
+  '\uFE00-\uFE6F\uFEFD-\uFFFF'
+
+var rtl = new RegExp('^[^' + LTR + ']*[' + RTL + ']')
+var ltr = new RegExp('^[^' + RTL + ']*[' + LTR + ']')
+
+function direction(value) {
+  value = String(value || '')
+
+  if (rtl.test(value)) {
+    return 'rtl'
+  }
+
+  if (ltr.test(value)) {
+    return 'ltr'
+  }
+
+  return 'neutral'
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/immer/dist/immer.esm.js":
 /*!**********************************************!*\
   !*** ./node_modules/immer/dist/immer.esm.js ***!
@@ -2823,6 +2790,1017 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setUseProxies", function() { return vn; });
 function n(n){for(var r=arguments.length,t=Array(r>1?r-1:0),e=1;e<r;e++)t[e-1]=arguments[e];if(true){var i=Y[n],o=i?"function"==typeof i?i.apply(null,t):i:"unknown error nr: "+n;throw Error("[Immer] "+o)}throw Error("[Immer] minified error nr: "+n+(t.length?" "+t.map((function(n){return"'"+n+"'"})).join(","):"")+". Find the full error at: https://bit.ly/3cXEKWf")}function r(n){return!!n&&!!n[Q]}function t(n){return!!n&&(function(n){if(!n||"object"!=typeof n)return!1;var r=Object.getPrototypeOf(n);if(null===r)return!0;var t=Object.hasOwnProperty.call(r,"constructor")&&r.constructor;return t===Object||"function"==typeof t&&Function.toString.call(t)===Z}(n)||Array.isArray(n)||!!n[L]||!!n.constructor[L]||s(n)||v(n))}function e(t){return r(t)||n(23,t),t[Q].t}function i(n,r,t){void 0===t&&(t=!1),0===o(n)?(t?Object.keys:nn)(n).forEach((function(e){t&&"symbol"==typeof e||r(e,n[e],n)})):n.forEach((function(t,e){return r(e,t,n)}))}function o(n){var r=n[Q];return r?r.i>3?r.i-4:r.i:Array.isArray(n)?1:s(n)?2:v(n)?3:0}function u(n,r){return 2===o(n)?n.has(r):Object.prototype.hasOwnProperty.call(n,r)}function a(n,r){return 2===o(n)?n.get(r):n[r]}function f(n,r,t){var e=o(n);2===e?n.set(r,t):3===e?(n.delete(r),n.add(t)):n[r]=t}function c(n,r){return n===r?0!==n||1/n==1/r:n!=n&&r!=r}function s(n){return X&&n instanceof Map}function v(n){return q&&n instanceof Set}function p(n){return n.o||n.t}function l(n){if(Array.isArray(n))return Array.prototype.slice.call(n);var r=rn(n);delete r[Q];for(var t=nn(r),e=0;e<t.length;e++){var i=t[e],o=r[i];!1===o.writable&&(o.writable=!0,o.configurable=!0),(o.get||o.set)&&(r[i]={configurable:!0,writable:!0,enumerable:o.enumerable,value:n[i]})}return Object.create(Object.getPrototypeOf(n),r)}function d(n,e){return void 0===e&&(e=!1),y(n)||r(n)||!t(n)?n:(o(n)>1&&(n.set=n.add=n.clear=n.delete=h),Object.freeze(n),e&&i(n,(function(n,r){return d(r,!0)}),!0),n)}function h(){n(2)}function y(n){return null==n||"object"!=typeof n||Object.isFrozen(n)}function b(r){var t=tn[r];return t||n(18,r),t}function m(n,r){tn[n]||(tn[n]=r)}function _(){return false||U||n(0),U}function j(n,r){r&&(b("Patches"),n.u=[],n.s=[],n.v=r)}function O(n){g(n),n.p.forEach(S),n.p=null}function g(n){n===U&&(U=n.l)}function w(n){return U={p:[],l:U,h:n,m:!0,_:0}}function S(n){var r=n[Q];0===r.i||1===r.i?r.j():r.O=!0}function P(r,e){e._=e.p.length;var i=e.p[0],o=void 0!==r&&r!==i;return e.h.g||b("ES5").S(e,r,o),o?(i[Q].P&&(O(e),n(4)),t(r)&&(r=M(e,r),e.l||x(e,r)),e.u&&b("Patches").M(i[Q].t,r,e.u,e.s)):r=M(e,i,[]),O(e),e.u&&e.v(e.u,e.s),r!==H?r:void 0}function M(n,r,t){if(y(r))return r;var e=r[Q];if(!e)return i(r,(function(i,o){return A(n,e,r,i,o,t)}),!0),r;if(e.A!==n)return r;if(!e.P)return x(n,e.t,!0),e.t;if(!e.I){e.I=!0,e.A._--;var o=4===e.i||5===e.i?e.o=l(e.k):e.o;i(3===e.i?new Set(o):o,(function(r,i){return A(n,e,o,r,i,t)})),x(n,o,!1),t&&n.u&&b("Patches").R(e,t,n.u,n.s)}return e.o}function A(e,i,o,a,c,s){if( true&&c===o&&n(5),r(c)){var v=M(e,c,s&&i&&3!==i.i&&!u(i.D,a)?s.concat(a):void 0);if(f(o,a,v),!r(v))return;e.m=!1}if(t(c)&&!y(c)){if(!e.h.F&&e._<1)return;M(e,c),i&&i.A.l||x(e,c)}}function x(n,r,t){void 0===t&&(t=!1),n.h.F&&n.m&&d(r,t)}function z(n,r){var t=n[Q];return(t?p(t):n)[r]}function I(n,r){if(r in n)for(var t=Object.getPrototypeOf(n);t;){var e=Object.getOwnPropertyDescriptor(t,r);if(e)return e;t=Object.getPrototypeOf(t)}}function k(n){n.P||(n.P=!0,n.l&&k(n.l))}function E(n){n.o||(n.o=l(n.t))}function R(n,r,t){var e=s(r)?b("MapSet").N(r,t):v(r)?b("MapSet").T(r,t):n.g?function(n,r){var t=Array.isArray(n),e={i:t?1:0,A:r?r.A:_(),P:!1,I:!1,D:{},l:r,t:n,k:null,o:null,j:null,C:!1},i=e,o=en;t&&(i=[e],o=on);var u=Proxy.revocable(i,o),a=u.revoke,f=u.proxy;return e.k=f,e.j=a,f}(r,t):b("ES5").J(r,t);return(t?t.A:_()).p.push(e),e}function D(e){return r(e)||n(22,e),function n(r){if(!t(r))return r;var e,u=r[Q],c=o(r);if(u){if(!u.P&&(u.i<4||!b("ES5").K(u)))return u.t;u.I=!0,e=F(r,c),u.I=!1}else e=F(r,c);return i(e,(function(r,t){u&&a(u.t,r)===t||f(e,r,n(t))})),3===c?new Set(e):e}(e)}function F(n,r){switch(r){case 2:return new Map(n);case 3:return Array.from(n)}return l(n)}function N(){function t(n,r){var t=s[n];return t?t.enumerable=r:s[n]=t={configurable:!0,enumerable:r,get:function(){var r=this[Q];return true&&f(r),en.get(r,n)},set:function(r){var t=this[Q]; true&&f(t),en.set(t,n,r)}},t}function e(n){for(var r=n.length-1;r>=0;r--){var t=n[r][Q];if(!t.P)switch(t.i){case 5:a(t)&&k(t);break;case 4:o(t)&&k(t)}}}function o(n){for(var r=n.t,t=n.k,e=nn(t),i=e.length-1;i>=0;i--){var o=e[i];if(o!==Q){var a=r[o];if(void 0===a&&!u(r,o))return!0;var f=t[o],s=f&&f[Q];if(s?s.t!==a:!c(f,a))return!0}}var v=!!r[Q];return e.length!==nn(r).length+(v?0:1)}function a(n){var r=n.k;if(r.length!==n.t.length)return!0;var t=Object.getOwnPropertyDescriptor(r,r.length-1);if(t&&!t.get)return!0;for(var e=0;e<r.length;e++)if(!r.hasOwnProperty(e))return!0;return!1}function f(r){r.O&&n(3,JSON.stringify(p(r)))}var s={};m("ES5",{J:function(n,r){var e=Array.isArray(n),i=function(n,r){if(n){for(var e=Array(r.length),i=0;i<r.length;i++)Object.defineProperty(e,""+i,t(i,!0));return e}var o=rn(r);delete o[Q];for(var u=nn(o),a=0;a<u.length;a++){var f=u[a];o[f]=t(f,n||!!o[f].enumerable)}return Object.create(Object.getPrototypeOf(r),o)}(e,n),o={i:e?5:4,A:r?r.A:_(),P:!1,I:!1,D:{},l:r,t:n,k:i,o:null,O:!1,C:!1};return Object.defineProperty(i,Q,{value:o,writable:!0}),i},S:function(n,t,o){o?r(t)&&t[Q].A===n&&e(n.p):(n.u&&function n(r){if(r&&"object"==typeof r){var t=r[Q];if(t){var e=t.t,o=t.k,f=t.D,c=t.i;if(4===c)i(o,(function(r){r!==Q&&(void 0!==e[r]||u(e,r)?f[r]||n(o[r]):(f[r]=!0,k(t)))})),i(e,(function(n){void 0!==o[n]||u(o,n)||(f[n]=!1,k(t))}));else if(5===c){if(a(t)&&(k(t),f.length=!0),o.length<e.length)for(var s=o.length;s<e.length;s++)f[s]=!1;else for(var v=e.length;v<o.length;v++)f[v]=!0;for(var p=Math.min(o.length,e.length),l=0;l<p;l++)o.hasOwnProperty(l)||(f[l]=!0),void 0===f[l]&&n(o[l])}}}}(n.p[0]),e(n.p))},K:function(n){return 4===n.i?o(n):a(n)}})}function T(){function e(n){if(!t(n))return n;if(Array.isArray(n))return n.map(e);if(s(n))return new Map(Array.from(n.entries()).map((function(n){return[n[0],e(n[1])]})));if(v(n))return new Set(Array.from(n).map(e));var r=Object.create(Object.getPrototypeOf(n));for(var i in n)r[i]=e(n[i]);return u(n,L)&&(r[L]=n[L]),r}function f(n){return r(n)?e(n):n}var c="add";m("Patches",{$:function(r,t){return t.forEach((function(t){for(var i=t.path,u=t.op,f=r,s=0;s<i.length-1;s++){var v=o(f),p=""+i[s];0!==v&&1!==v||"__proto__"!==p&&"constructor"!==p||n(24),"function"==typeof f&&"prototype"===p&&n(24),"object"!=typeof(f=a(f,p))&&n(15,i.join("/"))}var l=o(f),d=e(t.value),h=i[i.length-1];switch(u){case"replace":switch(l){case 2:return f.set(h,d);case 3:n(16);default:return f[h]=d}case c:switch(l){case 1:return"-"===h?f.push(d):f.splice(h,0,d);case 2:return f.set(h,d);case 3:return f.add(d);default:return f[h]=d}case"remove":switch(l){case 1:return f.splice(h,1);case 2:return f.delete(h);case 3:return f.delete(t.value);default:return delete f[h]}default:n(17,u)}})),r},R:function(n,r,t,e){switch(n.i){case 0:case 4:case 2:return function(n,r,t,e){var o=n.t,s=n.o;i(n.D,(function(n,i){var v=a(o,n),p=a(s,n),l=i?u(o,n)?"replace":c:"remove";if(v!==p||"replace"!==l){var d=r.concat(n);t.push("remove"===l?{op:l,path:d}:{op:l,path:d,value:p}),e.push(l===c?{op:"remove",path:d}:"remove"===l?{op:c,path:d,value:f(v)}:{op:"replace",path:d,value:f(v)})}}))}(n,r,t,e);case 5:case 1:return function(n,r,t,e){var i=n.t,o=n.D,u=n.o;if(u.length<i.length){var a=[u,i];i=a[0],u=a[1];var s=[e,t];t=s[0],e=s[1]}for(var v=0;v<i.length;v++)if(o[v]&&u[v]!==i[v]){var p=r.concat([v]);t.push({op:"replace",path:p,value:f(u[v])}),e.push({op:"replace",path:p,value:f(i[v])})}for(var l=i.length;l<u.length;l++){var d=r.concat([l]);t.push({op:c,path:d,value:f(u[l])})}i.length<u.length&&e.push({op:"replace",path:r.concat(["length"]),value:i.length})}(n,r,t,e);case 3:return function(n,r,t,e){var i=n.t,o=n.o,u=0;i.forEach((function(n){if(!o.has(n)){var i=r.concat([u]);t.push({op:"remove",path:i,value:n}),e.unshift({op:c,path:i,value:n})}u++})),u=0,o.forEach((function(n){if(!i.has(n)){var o=r.concat([u]);t.push({op:c,path:o,value:n}),e.unshift({op:"remove",path:o,value:n})}u++}))}(n,r,t,e)}},M:function(n,r,t,e){t.push({op:"replace",path:[],value:r===H?void 0:r}),e.push({op:"replace",path:[],value:n})}})}function C(){function r(n,r){function t(){this.constructor=n}a(n,r),n.prototype=(t.prototype=r.prototype,new t)}function e(n){n.o||(n.D=new Map,n.o=new Map(n.t))}function o(n){n.o||(n.o=new Set,n.t.forEach((function(r){if(t(r)){var e=R(n.A.h,r,n);n.p.set(r,e),n.o.add(e)}else n.o.add(r)})))}function u(r){r.O&&n(3,JSON.stringify(p(r)))}var a=function(n,r){return(a=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(n,r){n.__proto__=r}||function(n,r){for(var t in r)r.hasOwnProperty(t)&&(n[t]=r[t])})(n,r)},f=function(){function n(n,r){return this[Q]={i:2,l:r,A:r?r.A:_(),P:!1,I:!1,o:void 0,D:void 0,t:n,k:this,C:!1,O:!1},this}r(n,Map);var o=n.prototype;return Object.defineProperty(o,"size",{get:function(){return p(this[Q]).size}}),o.has=function(n){return p(this[Q]).has(n)},o.set=function(n,r){var t=this[Q];return u(t),p(t).has(n)&&p(t).get(n)===r||(e(t),k(t),t.D.set(n,!0),t.o.set(n,r),t.D.set(n,!0)),this},o.delete=function(n){if(!this.has(n))return!1;var r=this[Q];return u(r),e(r),k(r),r.t.has(n)?r.D.set(n,!1):r.D.delete(n),r.o.delete(n),!0},o.clear=function(){var n=this[Q];u(n),p(n).size&&(e(n),k(n),n.D=new Map,i(n.t,(function(r){n.D.set(r,!1)})),n.o.clear())},o.forEach=function(n,r){var t=this;p(this[Q]).forEach((function(e,i){n.call(r,t.get(i),i,t)}))},o.get=function(n){var r=this[Q];u(r);var i=p(r).get(n);if(r.I||!t(i))return i;if(i!==r.t.get(n))return i;var o=R(r.A.h,i,r);return e(r),r.o.set(n,o),o},o.keys=function(){return p(this[Q]).keys()},o.values=function(){var n,r=this,t=this.keys();return(n={})[V]=function(){return r.values()},n.next=function(){var n=t.next();return n.done?n:{done:!1,value:r.get(n.value)}},n},o.entries=function(){var n,r=this,t=this.keys();return(n={})[V]=function(){return r.entries()},n.next=function(){var n=t.next();if(n.done)return n;var e=r.get(n.value);return{done:!1,value:[n.value,e]}},n},o[V]=function(){return this.entries()},n}(),c=function(){function n(n,r){return this[Q]={i:3,l:r,A:r?r.A:_(),P:!1,I:!1,o:void 0,t:n,k:this,p:new Map,O:!1,C:!1},this}r(n,Set);var t=n.prototype;return Object.defineProperty(t,"size",{get:function(){return p(this[Q]).size}}),t.has=function(n){var r=this[Q];return u(r),r.o?!!r.o.has(n)||!(!r.p.has(n)||!r.o.has(r.p.get(n))):r.t.has(n)},t.add=function(n){var r=this[Q];return u(r),this.has(n)||(o(r),k(r),r.o.add(n)),this},t.delete=function(n){if(!this.has(n))return!1;var r=this[Q];return u(r),o(r),k(r),r.o.delete(n)||!!r.p.has(n)&&r.o.delete(r.p.get(n))},t.clear=function(){var n=this[Q];u(n),p(n).size&&(o(n),k(n),n.o.clear())},t.values=function(){var n=this[Q];return u(n),o(n),n.o.values()},t.entries=function(){var n=this[Q];return u(n),o(n),n.o.entries()},t.keys=function(){return this.values()},t[V]=function(){return this.values()},t.forEach=function(n,r){for(var t=this.values(),e=t.next();!e.done;)n.call(r,e.value,e.value,this),e=t.next()},n}();m("MapSet",{N:function(n,r){return new f(n,r)},T:function(n,r){return new c(n,r)}})}function J(){N(),C(),T()}function K(n){return n}function $(n){return n}var G,U,W="undefined"!=typeof Symbol&&"symbol"==typeof Symbol("x"),X="undefined"!=typeof Map,q="undefined"!=typeof Set,B="undefined"!=typeof Proxy&&void 0!==Proxy.revocable&&"undefined"!=typeof Reflect,H=W?Symbol.for("immer-nothing"):((G={})["immer-nothing"]=!0,G),L=W?Symbol.for("immer-draftable"):"__$immer_draftable",Q=W?Symbol.for("immer-state"):"__$immer_state",V="undefined"!=typeof Symbol&&Symbol.iterator||"@@iterator",Y={0:"Illegal state",1:"Immer drafts cannot have computed properties",2:"This object has been frozen and should not be mutated",3:function(n){return"Cannot use a proxy that has been revoked. Did you pass an object from inside an immer function to an async process? "+n},4:"An immer producer returned a new value *and* modified its draft. Either return a new value *or* modify the draft.",5:"Immer forbids circular references",6:"The first or second argument to `produce` must be a function",7:"The third argument to `produce` must be a function or undefined",8:"First argument to `createDraft` must be a plain object, an array, or an immerable object",9:"First argument to `finishDraft` must be a draft returned by `createDraft`",10:"The given draft is already finalized",11:"Object.defineProperty() cannot be used on an Immer draft",12:"Object.setPrototypeOf() cannot be used on an Immer draft",13:"Immer only supports deleting array indices",14:"Immer only supports setting array indices and the 'length' property",15:function(n){return"Cannot apply patch, path doesn't resolve: "+n},16:'Sets cannot have "replace" patches.',17:function(n){return"Unsupported patch operation: "+n},18:function(n){return"The plugin for '"+n+"' has not been loaded into Immer. To enable the plugin, import and call `enable"+n+"()` when initializing your application."},20:"Cannot use proxies if Proxy, Proxy.revocable or Reflect are not available",21:function(n){return"produce can only be called on things that are draftable: plain objects, arrays, Map, Set or classes that are marked with '[immerable]: true'. Got '"+n+"'"},22:function(n){return"'current' expects a draft, got: "+n},23:function(n){return"'original' expects a draft, got: "+n},24:"Patching reserved attributes like __proto__, prototype and constructor is not allowed"},Z=""+Object.prototype.constructor,nn="undefined"!=typeof Reflect&&Reflect.ownKeys?Reflect.ownKeys:void 0!==Object.getOwnPropertySymbols?function(n){return Object.getOwnPropertyNames(n).concat(Object.getOwnPropertySymbols(n))}:Object.getOwnPropertyNames,rn=Object.getOwnPropertyDescriptors||function(n){var r={};return nn(n).forEach((function(t){r[t]=Object.getOwnPropertyDescriptor(n,t)})),r},tn={},en={get:function(n,r){if(r===Q)return n;var e=p(n);if(!u(e,r))return function(n,r,t){var e,i=I(r,t);return i?"value"in i?i.value:null===(e=i.get)||void 0===e?void 0:e.call(n.k):void 0}(n,e,r);var i=e[r];return n.I||!t(i)?i:i===z(n.t,r)?(E(n),n.o[r]=R(n.A.h,i,n)):i},has:function(n,r){return r in p(n)},ownKeys:function(n){return Reflect.ownKeys(p(n))},set:function(n,r,t){var e=I(p(n),r);if(null==e?void 0:e.set)return e.set.call(n.k,t),!0;if(!n.P){var i=z(p(n),r),o=null==i?void 0:i[Q];if(o&&o.t===t)return n.o[r]=t,n.D[r]=!1,!0;if(c(t,i)&&(void 0!==t||u(n.t,r)))return!0;E(n),k(n)}return n.o[r]===t&&"number"!=typeof t&&(void 0!==t||r in n.o)||(n.o[r]=t,n.D[r]=!0,!0)},deleteProperty:function(n,r){return void 0!==z(n.t,r)||r in n.t?(n.D[r]=!1,E(n),k(n)):delete n.D[r],n.o&&delete n.o[r],!0},getOwnPropertyDescriptor:function(n,r){var t=p(n),e=Reflect.getOwnPropertyDescriptor(t,r);return e?{writable:!0,configurable:1!==n.i||"length"!==r,enumerable:e.enumerable,value:t[r]}:e},defineProperty:function(){n(11)},getPrototypeOf:function(n){return Object.getPrototypeOf(n.t)},setPrototypeOf:function(){n(12)}},on={};i(en,(function(n,r){on[n]=function(){return arguments[0]=arguments[0][0],r.apply(this,arguments)}})),on.deleteProperty=function(r,t){return true&&isNaN(parseInt(t))&&n(13),on.set.call(this,r,t,void 0)},on.set=function(r,t,e){return true&&"length"!==t&&isNaN(parseInt(t))&&n(14),en.set.call(this,r[0],t,e,r[0])};var un=function(){function e(r){var e=this;this.g=B,this.F=!0,this.produce=function(r,i,o){if("function"==typeof r&&"function"!=typeof i){var u=i;i=r;var a=e;return function(n){var r=this;void 0===n&&(n=u);for(var t=arguments.length,e=Array(t>1?t-1:0),o=1;o<t;o++)e[o-1]=arguments[o];return a.produce(n,(function(n){var t;return(t=i).call.apply(t,[r,n].concat(e))}))}}var f;if("function"!=typeof i&&n(6),void 0!==o&&"function"!=typeof o&&n(7),t(r)){var c=w(e),s=R(e,r,void 0),v=!0;try{f=i(s),v=!1}finally{v?O(c):g(c)}return"undefined"!=typeof Promise&&f instanceof Promise?f.then((function(n){return j(c,o),P(n,c)}),(function(n){throw O(c),n})):(j(c,o),P(f,c))}if(!r||"object"!=typeof r){if(void 0===(f=i(r))&&(f=r),f===H&&(f=void 0),e.F&&d(f,!0),o){var p=[],l=[];b("Patches").M(r,f,p,l),o(p,l)}return f}n(21,r)},this.produceWithPatches=function(n,r){if("function"==typeof n)return function(r){for(var t=arguments.length,i=Array(t>1?t-1:0),o=1;o<t;o++)i[o-1]=arguments[o];return e.produceWithPatches(r,(function(r){return n.apply(void 0,[r].concat(i))}))};var t,i,o=e.produce(n,r,(function(n,r){t=n,i=r}));return"undefined"!=typeof Promise&&o instanceof Promise?o.then((function(n){return[n,t,i]})):[o,t,i]},"boolean"==typeof(null==r?void 0:r.useProxies)&&this.setUseProxies(r.useProxies),"boolean"==typeof(null==r?void 0:r.autoFreeze)&&this.setAutoFreeze(r.autoFreeze)}var i=e.prototype;return i.createDraft=function(e){t(e)||n(8),r(e)&&(e=D(e));var i=w(this),o=R(this,e,void 0);return o[Q].C=!0,g(i),o},i.finishDraft=function(r,t){var e=r&&r[Q]; true&&(e&&e.C||n(9),e.I&&n(10));var i=e.A;return j(i,t),P(void 0,i)},i.setAutoFreeze=function(n){this.F=n},i.setUseProxies=function(r){r&&!B&&n(20),this.g=r},i.applyPatches=function(n,t){var e;for(e=t.length-1;e>=0;e--){var i=t[e];if(0===i.path.length&&"replace"===i.op){n=i.value;break}}e>-1&&(t=t.slice(e+1));var o=b("Patches").$;return r(n)?o(n,t):this.produce(n,(function(n){return o(n,t)}))},e}(),an=new un,fn=an.produce,cn=an.produceWithPatches.bind(an),sn=an.setAutoFreeze.bind(an),vn=an.setUseProxies.bind(an),pn=an.applyPatches.bind(an),ln=an.createDraft.bind(an),dn=an.finishDraft.bind(an);/* harmony default export */ __webpack_exports__["default"] = (fn);
 //# sourceMappingURL=immer.esm.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/is-hotkey/lib/index.js":
+/*!*********************************************!*\
+  !*** ./node_modules/is-hotkey/lib/index.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+/**
+ * Constants.
+ */
+
+var IS_MAC = typeof window != 'undefined' && /Mac|iPod|iPhone|iPad/.test(window.navigator.platform);
+
+var MODIFIERS = {
+  alt: 'altKey',
+  control: 'ctrlKey',
+  meta: 'metaKey',
+  shift: 'shiftKey'
+};
+
+var ALIASES = {
+  add: '+',
+  break: 'pause',
+  cmd: 'meta',
+  command: 'meta',
+  ctl: 'control',
+  ctrl: 'control',
+  del: 'delete',
+  down: 'arrowdown',
+  esc: 'escape',
+  ins: 'insert',
+  left: 'arrowleft',
+  mod: IS_MAC ? 'meta' : 'control',
+  opt: 'alt',
+  option: 'alt',
+  return: 'enter',
+  right: 'arrowright',
+  space: ' ',
+  spacebar: ' ',
+  up: 'arrowup',
+  win: 'meta',
+  windows: 'meta'
+};
+
+var CODES = {
+  backspace: 8,
+  tab: 9,
+  enter: 13,
+  shift: 16,
+  control: 17,
+  alt: 18,
+  pause: 19,
+  capslock: 20,
+  escape: 27,
+  ' ': 32,
+  pageup: 33,
+  pagedown: 34,
+  end: 35,
+  home: 36,
+  arrowleft: 37,
+  arrowup: 38,
+  arrowright: 39,
+  arrowdown: 40,
+  insert: 45,
+  delete: 46,
+  meta: 91,
+  numlock: 144,
+  scrolllock: 145,
+  ';': 186,
+  '=': 187,
+  ',': 188,
+  '-': 189,
+  '.': 190,
+  '/': 191,
+  '`': 192,
+  '[': 219,
+  '\\': 220,
+  ']': 221,
+  '\'': 222
+};
+
+for (var f = 1; f < 20; f++) {
+  CODES['f' + f] = 111 + f;
+}
+
+/**
+ * Is hotkey?
+ */
+
+function isHotkey(hotkey, options, event) {
+  if (options && !('byKey' in options)) {
+    event = options;
+    options = null;
+  }
+
+  if (!Array.isArray(hotkey)) {
+    hotkey = [hotkey];
+  }
+
+  var array = hotkey.map(function (string) {
+    return parseHotkey(string, options);
+  });
+  var check = function check(e) {
+    return array.some(function (object) {
+      return compareHotkey(object, e);
+    });
+  };
+  var ret = event == null ? check : check(event);
+  return ret;
+}
+
+function isCodeHotkey(hotkey, event) {
+  return isHotkey(hotkey, event);
+}
+
+function isKeyHotkey(hotkey, event) {
+  return isHotkey(hotkey, { byKey: true }, event);
+}
+
+/**
+ * Parse.
+ */
+
+function parseHotkey(hotkey, options) {
+  var byKey = options && options.byKey;
+  var ret = {};
+
+  // Special case to handle the `+` key since we use it as a separator.
+  hotkey = hotkey.replace('++', '+add');
+  var values = hotkey.split('+');
+  var length = values.length;
+
+  // Ensure that all the modifiers are set to false unless the hotkey has them.
+
+  for (var k in MODIFIERS) {
+    ret[MODIFIERS[k]] = false;
+  }
+
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = values[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var value = _step.value;
+
+      var optional = value.endsWith('?') && value.length > 1;
+
+      if (optional) {
+        value = value.slice(0, -1);
+      }
+
+      var name = toKeyName(value);
+      var modifier = MODIFIERS[name];
+
+      if (length === 1 || !modifier) {
+        if (byKey) {
+          ret.key = name;
+        } else {
+          ret.which = toKeyCode(value);
+        }
+      }
+
+      if (modifier) {
+        ret[modifier] = optional ? null : true;
+      }
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  return ret;
+}
+
+/**
+ * Compare.
+ */
+
+function compareHotkey(object, event) {
+  for (var key in object) {
+    var expected = object[key];
+    var actual = void 0;
+
+    if (expected == null) {
+      continue;
+    }
+
+    if (key === 'key' && event.key != null) {
+      actual = event.key.toLowerCase();
+    } else if (key === 'which') {
+      actual = expected === 91 && event.which === 93 ? 91 : event.which;
+    } else {
+      actual = event[key];
+    }
+
+    if (actual == null && expected === false) {
+      continue;
+    }
+
+    if (actual !== expected) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+/**
+ * Utils.
+ */
+
+function toKeyCode(name) {
+  name = toKeyName(name);
+  var code = CODES[name] || name.toUpperCase().charCodeAt(0);
+  return code;
+}
+
+function toKeyName(name) {
+  name = name.toLowerCase();
+  name = ALIASES[name] || name;
+  return name;
+}
+
+/**
+ * Export.
+ */
+
+exports.default = isHotkey;
+exports.isHotkey = isHotkey;
+exports.isCodeHotkey = isCodeHotkey;
+exports.isKeyHotkey = isKeyHotkey;
+exports.parseHotkey = parseHotkey;
+exports.compareHotkey = compareHotkey;
+exports.toKeyCode = toKeyCode;
+exports.toKeyName = toKeyName;
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_Symbol.js":
+/*!****************************************!*\
+  !*** ./node_modules/lodash/_Symbol.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var root = __webpack_require__(/*! ./_root */ "./node_modules/lodash/_root.js");
+
+/** Built-in value references. */
+var Symbol = root.Symbol;
+
+module.exports = Symbol;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseGetTag.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_baseGetTag.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Symbol = __webpack_require__(/*! ./_Symbol */ "./node_modules/lodash/_Symbol.js"),
+    getRawTag = __webpack_require__(/*! ./_getRawTag */ "./node_modules/lodash/_getRawTag.js"),
+    objectToString = __webpack_require__(/*! ./_objectToString */ "./node_modules/lodash/_objectToString.js");
+
+/** `Object#toString` result references. */
+var nullTag = '[object Null]',
+    undefinedTag = '[object Undefined]';
+
+/** Built-in value references. */
+var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
+
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  if (value == null) {
+    return value === undefined ? undefinedTag : nullTag;
+  }
+  return (symToStringTag && symToStringTag in Object(value))
+    ? getRawTag(value)
+    : objectToString(value);
+}
+
+module.exports = baseGetTag;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseTrim.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_baseTrim.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var trimmedEndIndex = __webpack_require__(/*! ./_trimmedEndIndex */ "./node_modules/lodash/_trimmedEndIndex.js");
+
+/** Used to match leading whitespace. */
+var reTrimStart = /^\s+/;
+
+/**
+ * The base implementation of `_.trim`.
+ *
+ * @private
+ * @param {string} string The string to trim.
+ * @returns {string} Returns the trimmed string.
+ */
+function baseTrim(string) {
+  return string
+    ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '')
+    : string;
+}
+
+module.exports = baseTrim;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_freeGlobal.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_freeGlobal.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+module.exports = freeGlobal;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_getRawTag.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_getRawTag.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Symbol = __webpack_require__(/*! ./_Symbol */ "./node_modules/lodash/_Symbol.js");
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString = objectProto.toString;
+
+/** Built-in value references. */
+var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
+
+/**
+ * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the raw `toStringTag`.
+ */
+function getRawTag(value) {
+  var isOwn = hasOwnProperty.call(value, symToStringTag),
+      tag = value[symToStringTag];
+
+  try {
+    value[symToStringTag] = undefined;
+    var unmasked = true;
+  } catch (e) {}
+
+  var result = nativeObjectToString.call(value);
+  if (unmasked) {
+    if (isOwn) {
+      value[symToStringTag] = tag;
+    } else {
+      delete value[symToStringTag];
+    }
+  }
+  return result;
+}
+
+module.exports = getRawTag;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_objectToString.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash/_objectToString.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString = objectProto.toString;
+
+/**
+ * Converts `value` to a string using `Object.prototype.toString`.
+ *
+ * @private
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ */
+function objectToString(value) {
+  return nativeObjectToString.call(value);
+}
+
+module.exports = objectToString;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_root.js":
+/*!**************************************!*\
+  !*** ./node_modules/lodash/_root.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var freeGlobal = __webpack_require__(/*! ./_freeGlobal */ "./node_modules/lodash/_freeGlobal.js");
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+module.exports = root;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_trimmedEndIndex.js":
+/*!*************************************************!*\
+  !*** ./node_modules/lodash/_trimmedEndIndex.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/** Used to match a single whitespace character. */
+var reWhitespace = /\s/;
+
+/**
+ * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
+ * character of `string`.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {number} Returns the index of the last non-whitespace character.
+ */
+function trimmedEndIndex(string) {
+  var index = string.length;
+
+  while (index-- && reWhitespace.test(string.charAt(index))) {}
+  return index;
+}
+
+module.exports = trimmedEndIndex;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/debounce.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/debounce.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(/*! ./isObject */ "./node_modules/lodash/isObject.js"),
+    now = __webpack_require__(/*! ./now */ "./node_modules/lodash/now.js"),
+    toNumber = __webpack_require__(/*! ./toNumber */ "./node_modules/lodash/toNumber.js");
+
+/** Error message constants. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max,
+    nativeMin = Math.min;
+
+/**
+ * Creates a debounced function that delays invoking `func` until after `wait`
+ * milliseconds have elapsed since the last time the debounced function was
+ * invoked. The debounced function comes with a `cancel` method to cancel
+ * delayed `func` invocations and a `flush` method to immediately invoke them.
+ * Provide `options` to indicate whether `func` should be invoked on the
+ * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+ * with the last arguments provided to the debounced function. Subsequent
+ * calls to the debounced function return the result of the last `func`
+ * invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the debounced function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.debounce` and `_.throttle`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to debounce.
+ * @param {number} [wait=0] The number of milliseconds to delay.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=false]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {number} [options.maxWait]
+ *  The maximum time `func` is allowed to be delayed before it's invoked.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new debounced function.
+ * @example
+ *
+ * // Avoid costly calculations while the window size is in flux.
+ * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+ *
+ * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+ * jQuery(element).on('click', _.debounce(sendMail, 300, {
+ *   'leading': true,
+ *   'trailing': false
+ * }));
+ *
+ * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+ * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+ * var source = new EventSource('/stream');
+ * jQuery(source).on('message', debounced);
+ *
+ * // Cancel the trailing debounced invocation.
+ * jQuery(window).on('popstate', debounced.cancel);
+ */
+function debounce(func, wait, options) {
+  var lastArgs,
+      lastThis,
+      maxWait,
+      result,
+      timerId,
+      lastCallTime,
+      lastInvokeTime = 0,
+      leading = false,
+      maxing = false,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  wait = toNumber(wait) || 0;
+  if (isObject(options)) {
+    leading = !!options.leading;
+    maxing = 'maxWait' in options;
+    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+
+  function invokeFunc(time) {
+    var args = lastArgs,
+        thisArg = lastThis;
+
+    lastArgs = lastThis = undefined;
+    lastInvokeTime = time;
+    result = func.apply(thisArg, args);
+    return result;
+  }
+
+  function leadingEdge(time) {
+    // Reset any `maxWait` timer.
+    lastInvokeTime = time;
+    // Start the timer for the trailing edge.
+    timerId = setTimeout(timerExpired, wait);
+    // Invoke the leading edge.
+    return leading ? invokeFunc(time) : result;
+  }
+
+  function remainingWait(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime,
+        timeWaiting = wait - timeSinceLastCall;
+
+    return maxing
+      ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke)
+      : timeWaiting;
+  }
+
+  function shouldInvoke(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime;
+
+    // Either this is the first call, activity has stopped and we're at the
+    // trailing edge, the system time has gone backwards and we're treating
+    // it as the trailing edge, or we've hit the `maxWait` limit.
+    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
+      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
+  }
+
+  function timerExpired() {
+    var time = now();
+    if (shouldInvoke(time)) {
+      return trailingEdge(time);
+    }
+    // Restart the timer.
+    timerId = setTimeout(timerExpired, remainingWait(time));
+  }
+
+  function trailingEdge(time) {
+    timerId = undefined;
+
+    // Only invoke if we have `lastArgs` which means `func` has been
+    // debounced at least once.
+    if (trailing && lastArgs) {
+      return invokeFunc(time);
+    }
+    lastArgs = lastThis = undefined;
+    return result;
+  }
+
+  function cancel() {
+    if (timerId !== undefined) {
+      clearTimeout(timerId);
+    }
+    lastInvokeTime = 0;
+    lastArgs = lastCallTime = lastThis = timerId = undefined;
+  }
+
+  function flush() {
+    return timerId === undefined ? result : trailingEdge(now());
+  }
+
+  function debounced() {
+    var time = now(),
+        isInvoking = shouldInvoke(time);
+
+    lastArgs = arguments;
+    lastThis = this;
+    lastCallTime = time;
+
+    if (isInvoking) {
+      if (timerId === undefined) {
+        return leadingEdge(lastCallTime);
+      }
+      if (maxing) {
+        // Handle invocations in a tight loop.
+        clearTimeout(timerId);
+        timerId = setTimeout(timerExpired, wait);
+        return invokeFunc(lastCallTime);
+      }
+    }
+    if (timerId === undefined) {
+      timerId = setTimeout(timerExpired, wait);
+    }
+    return result;
+  }
+  debounced.cancel = cancel;
+  debounced.flush = flush;
+  return debounced;
+}
+
+module.exports = debounce;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isObject.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/isObject.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return value != null && (type == 'object' || type == 'function');
+}
+
+module.exports = isObject;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isObjectLike.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/isObjectLike.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return value != null && typeof value == 'object';
+}
+
+module.exports = isObjectLike;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isSymbol.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/isSymbol.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ "./node_modules/lodash/_baseGetTag.js"),
+    isObjectLike = __webpack_require__(/*! ./isObjectLike */ "./node_modules/lodash/isObjectLike.js");
+
+/** `Object#toString` result references. */
+var symbolTag = '[object Symbol]';
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (isObjectLike(value) && baseGetTag(value) == symbolTag);
+}
+
+module.exports = isSymbol;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/now.js":
+/*!************************************!*\
+  !*** ./node_modules/lodash/now.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var root = __webpack_require__(/*! ./_root */ "./node_modules/lodash/_root.js");
+
+/**
+ * Gets the timestamp of the number of milliseconds that have elapsed since
+ * the Unix epoch (1 January 1970 00:00:00 UTC).
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Date
+ * @returns {number} Returns the timestamp.
+ * @example
+ *
+ * _.defer(function(stamp) {
+ *   console.log(_.now() - stamp);
+ * }, _.now());
+ * // => Logs the number of milliseconds it took for the deferred invocation.
+ */
+var now = function() {
+  return root.Date.now();
+};
+
+module.exports = now;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/throttle.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/throttle.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var debounce = __webpack_require__(/*! ./debounce */ "./node_modules/lodash/debounce.js"),
+    isObject = __webpack_require__(/*! ./isObject */ "./node_modules/lodash/isObject.js");
+
+/** Error message constants. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/**
+ * Creates a throttled function that only invokes `func` at most once per
+ * every `wait` milliseconds. The throttled function comes with a `cancel`
+ * method to cancel delayed `func` invocations and a `flush` method to
+ * immediately invoke them. Provide `options` to indicate whether `func`
+ * should be invoked on the leading and/or trailing edge of the `wait`
+ * timeout. The `func` is invoked with the last arguments provided to the
+ * throttled function. Subsequent calls to the throttled function return the
+ * result of the last `func` invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the throttled function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.throttle` and `_.debounce`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to throttle.
+ * @param {number} [wait=0] The number of milliseconds to throttle invocations to.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=true]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new throttled function.
+ * @example
+ *
+ * // Avoid excessively updating the position while scrolling.
+ * jQuery(window).on('scroll', _.throttle(updatePosition, 100));
+ *
+ * // Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.
+ * var throttled = _.throttle(renewToken, 300000, { 'trailing': false });
+ * jQuery(element).on('click', throttled);
+ *
+ * // Cancel the trailing throttled invocation.
+ * jQuery(window).on('popstate', throttled.cancel);
+ */
+function throttle(func, wait, options) {
+  var leading = true,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  if (isObject(options)) {
+    leading = 'leading' in options ? !!options.leading : leading;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+  return debounce(func, wait, {
+    'leading': leading,
+    'maxWait': wait,
+    'trailing': trailing
+  });
+}
+
+module.exports = throttle;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/toNumber.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/toNumber.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var baseTrim = __webpack_require__(/*! ./_baseTrim */ "./node_modules/lodash/_baseTrim.js"),
+    isObject = __webpack_require__(/*! ./isObject */ "./node_modules/lodash/isObject.js"),
+    isSymbol = __webpack_require__(/*! ./isSymbol */ "./node_modules/lodash/isSymbol.js");
+
+/** Used as references for various `Number` constants. */
+var NAN = 0 / 0;
+
+/** Used to detect bad signed hexadecimal string values. */
+var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+
+/** Used to detect binary string values. */
+var reIsBinary = /^0b[01]+$/i;
+
+/** Used to detect octal string values. */
+var reIsOctal = /^0o[0-7]+$/i;
+
+/** Built-in method references without a dependency on `root`. */
+var freeParseInt = parseInt;
+
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */
+function toNumber(value) {
+  if (typeof value == 'number') {
+    return value;
+  }
+  if (isSymbol(value)) {
+    return NAN;
+  }
+  if (isObject(value)) {
+    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+    value = isObject(other) ? (other + '') : other;
+  }
+  if (typeof value != 'string') {
+    return value === 0 ? value : +value;
+  }
+  value = baseTrim(value);
+  var isBinary = reIsBinary.test(value);
+  return (isBinary || reIsOctal.test(value))
+    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+    : (reIsBadHex.test(value) ? NAN : +value);
+}
+
+module.exports = toNumber;
 
 
 /***/ }),
@@ -31537,6 +32515,4400 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/scroll-into-view-if-needed/es/index.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/scroll-into-view-if-needed/es/index.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var compute_scroll_into_view__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! compute-scroll-into-view */ "./node_modules/compute-scroll-into-view/dist/index.module.js");
+
+
+function isOptionsObject(options) {
+  return options === Object(options) && Object.keys(options).length !== 0;
+}
+
+function defaultBehavior(actions, behavior) {
+  if (behavior === void 0) {
+    behavior = 'auto';
+  }
+
+  var canSmoothScroll = ('scrollBehavior' in document.body.style);
+  actions.forEach(function (_ref) {
+    var el = _ref.el,
+        top = _ref.top,
+        left = _ref.left;
+
+    if (el.scroll && canSmoothScroll) {
+      el.scroll({
+        top: top,
+        left: left,
+        behavior: behavior
+      });
+    } else {
+      el.scrollTop = top;
+      el.scrollLeft = left;
+    }
+  });
+}
+
+function getOptions(options) {
+  if (options === false) {
+    return {
+      block: 'end',
+      inline: 'nearest'
+    };
+  }
+
+  if (isOptionsObject(options)) {
+    return options;
+  }
+
+  return {
+    block: 'start',
+    inline: 'nearest'
+  };
+}
+
+function scrollIntoView(target, options) {
+  var targetIsDetached = !target.ownerDocument.documentElement.contains(target);
+
+  if (isOptionsObject(options) && typeof options.behavior === 'function') {
+    return options.behavior(targetIsDetached ? [] : Object(compute_scroll_into_view__WEBPACK_IMPORTED_MODULE_0__["default"])(target, options));
+  }
+
+  if (targetIsDetached) {
+    return;
+  }
+
+  var computeOptions = getOptions(options);
+  return defaultBehavior(Object(compute_scroll_into_view__WEBPACK_IMPORTED_MODULE_0__["default"])(target, computeOptions), computeOptions.behavior);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (scrollIntoView);
+
+/***/ }),
+
+/***/ "./node_modules/slate-react/dist/index.es.js":
+/*!***************************************************!*\
+  !*** ./node_modules/slate-react/dist/index.es.js ***!
+  \***************************************************/
+/*! exports provided: AndroidEditable, DefaultEditable, DefaultElement, DefaultLeaf, DefaultPlaceholder, Editable, ReactEditor, Slate, useEditor, useFocused, useReadOnly, useSelected, useSlate, useSlateStatic, withReact */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AndroidEditable", function() { return AndroidEditable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DefaultEditable", function() { return Editable$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DefaultElement", function() { return DefaultElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DefaultLeaf", function() { return DefaultLeaf; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DefaultPlaceholder", function() { return DefaultPlaceholder; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Editable", function() { return Editable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReactEditor", function() { return ReactEditor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Slate", function() { return Slate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useEditor", function() { return useEditor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useFocused", function() { return useFocused; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useReadOnly", function() { return useReadOnly; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useSelected", function() { return useSelected; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useSlate", function() { return useSlate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useSlateStatic", function() { return useSlateStatic; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withReact", function() { return withReact; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var slate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slate */ "./node_modules/slate/dist/index.es.js");
+/* harmony import */ var direction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! direction */ "./node_modules/direction/index.js");
+/* harmony import */ var direction__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(direction__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
+/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash/throttle */ "./node_modules/lodash/throttle.js");
+/* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_throttle__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var scroll_into_view_if_needed__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! scroll-into-view-if-needed */ "./node_modules/scroll-into-view-if-needed/es/index.js");
+/* harmony import */ var is_hotkey__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! is-hotkey */ "./node_modules/is-hotkey/lib/index.js");
+/* harmony import */ var is_hotkey__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(is_hotkey__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = _objectWithoutPropertiesLoose(source, excluded);
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
+var IS_IOS = typeof navigator !== 'undefined' && typeof window !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+var IS_APPLE = typeof navigator !== 'undefined' && /Mac OS X/.test(navigator.userAgent);
+var IS_ANDROID = typeof navigator !== 'undefined' && /Android/.test(navigator.userAgent);
+var IS_FIREFOX = typeof navigator !== 'undefined' && /^(?!.*Seamonkey)(?=.*Firefox).*/i.test(navigator.userAgent);
+var IS_SAFARI = typeof navigator !== 'undefined' && /Version\/[\d\.]+.*Safari/.test(navigator.userAgent); // "modern" Edge was released at 79.x
+
+var IS_EDGE_LEGACY = typeof navigator !== 'undefined' && /Edge?\/(?:[0-6][0-9]|[0-7][0-8])/i.test(navigator.userAgent);
+var IS_CHROME = typeof navigator !== 'undefined' && /Chrome/i.test(navigator.userAgent); // Native `beforeInput` events don't work well with react on Chrome 75
+// and older, Chrome 76+ can use `beforeInput` though.
+
+var IS_CHROME_LEGACY = typeof navigator !== 'undefined' && /Chrome?\/(?:[0-7][0-5]|[0-6][0-9])/i.test(navigator.userAgent); // Firefox did not support `beforeInput` until `v87`.
+
+var IS_FIREFOX_LEGACY = typeof navigator !== 'undefined' && /^(?!.*Seamonkey)(?=.*Firefox\/(?:[0-7][0-9]|[0-8][0-6])).*/i.test(navigator.userAgent); // qq browser
+
+var IS_QQBROWSER = typeof navigator !== 'undefined' && /.*QQBrowser/.test(navigator.userAgent); // UC mobile browser
+
+var IS_UC_MOBILE = typeof navigator !== 'undefined' && /.*UCBrowser/.test(navigator.userAgent); // Wechat browser
+
+var IS_WECHATBROWSER = typeof navigator !== 'undefined' && /.*Wechat/.test(navigator.userAgent); // Check if DOM is available as React does internally.
+// https://github.com/facebook/react/blob/master/packages/shared/ExecutionEnvironment.js
+
+var CAN_USE_DOM = !!(typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined'); // COMPAT: Firefox/Edge Legacy don't support the `beforeinput` event
+// Chrome Legacy doesn't support `beforeinput` correctly
+
+var HAS_BEFORE_INPUT_SUPPORT = !IS_CHROME_LEGACY && !IS_EDGE_LEGACY && // globalThis is undefined in older browsers
+typeof globalThis !== 'undefined' && globalThis.InputEvent && // @ts-ignore The `getTargetRanges` property isn't recognized.
+typeof globalThis.InputEvent.prototype.getTargetRanges === 'function';
+
+/**
+ * Prevent warning on SSR by falling back to useEffect when DOM isn't available
+ */
+
+var useIsomorphicLayoutEffect = CAN_USE_DOM ? react__WEBPACK_IMPORTED_MODULE_0__["useLayoutEffect"] : react__WEBPACK_IMPORTED_MODULE_0__["useEffect"];
+
+/**
+ * Leaf content strings.
+ */
+
+var String = props => {
+  var {
+    isLast,
+    leaf,
+    parent,
+    text
+  } = props;
+  var editor = useSlateStatic();
+  var path = ReactEditor.findPath(editor, text);
+  var parentPath = slate__WEBPACK_IMPORTED_MODULE_1__["Path"].parent(path); // COMPAT: Render text inside void nodes with a zero-width space.
+  // So the node can contain selection but the text is not visible.
+
+  if (editor.isVoid(parent)) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ZeroWidthString, {
+      length: slate__WEBPACK_IMPORTED_MODULE_1__["Node"].string(parent).length
+    });
+  } // COMPAT: If this is the last text node in an empty block, render a zero-
+  // width space that will convert into a line break when copying and pasting
+  // to support expected plain text.
+
+
+  if (leaf.text === '' && parent.children[parent.children.length - 1] === text && !editor.isInline(parent) && slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].string(editor, parentPath) === '') {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ZeroWidthString, {
+      isLineBreak: true
+    });
+  } // COMPAT: If the text is empty, it's because it's on the edge of an inline
+  // node, so we render a zero-width space so that the selection can be
+  // inserted next to it still.
+
+
+  if (leaf.text === '') {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ZeroWidthString, null);
+  } // COMPAT: Browsers will collapse trailing new lines at the end of blocks,
+  // so we need to add an extra trailing new lines to prevent that.
+
+
+  if (isLast && leaf.text.slice(-1) === '\n') {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextString, {
+      isTrailing: true,
+      text: leaf.text
+    });
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextString, {
+    text: leaf.text
+  });
+};
+/**
+ * Leaf strings with text in them.
+ */
+
+
+var TextString = props => {
+  var {
+    text,
+    isTrailing = false
+  } = props;
+  var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+
+  var getTextContent = () => {
+    return "".concat(text !== null && text !== void 0 ? text : '').concat(isTrailing ? '\n' : '');
+  }; // This is the actual text rendering boundary where we interface with the DOM
+  // The text is not rendered as part of the virtual DOM, as since we handle basic character insertions natively,
+  // updating the DOM is not a one way dataflow anymore. What we need here is not reconciliation and diffing
+  // with previous version of the virtual DOM, but rather diffing with the actual DOM element, and replace the DOM <span> content
+  // exactly if and only if its current content does not match our current virtual DOM.
+  // Otherwise the DOM TextNode would always be replaced by React as the user types, which interferes with native text features,
+  // eg makes native spellcheck opt out from checking the text node.
+  // useLayoutEffect: updating our span before browser paint
+
+
+  useIsomorphicLayoutEffect(() => {
+    // null coalescing text to make sure we're not outputing "null" as a string in the extreme case it is nullish at runtime
+    var textWithTrailing = getTextContent();
+
+    if (ref.current && ref.current.textContent !== textWithTrailing) {
+      ref.current.textContent = textWithTrailing;
+    } // intentionally not specifying dependencies, so that this effect runs on every render
+    // as this effectively replaces "specifying the text in the virtual DOM under the <span> below" on each render
+
+  }); // Render text content immediately if it's the first-time render
+  // Ensure that text content is rendered on server-side rendering
+
+  if (!ref.current) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      "data-slate-string": true,
+      ref: ref
+    }, getTextContent());
+  } // the span is intentionally same on every render in virtual DOM, actual rendering happens in the layout effect above
+
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    "data-slate-string": true,
+    ref: ref
+  });
+};
+/**
+ * Leaf strings without text, render as zero-width strings.
+ */
+
+
+var ZeroWidthString = props => {
+  var {
+    length = 0,
+    isLineBreak = false
+  } = props;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    "data-slate-zero-width": isLineBreak ? 'n' : 'z',
+    "data-slate-length": length
+  }, '\uFEFF', isLineBreak ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null) : null);
+};
+
+/**
+ * Two weak maps that allow us rebuild a path given a node. They are populated
+ * at render time such that after a render occurs we can always backtrack.
+ */
+var NODE_TO_INDEX = new WeakMap();
+var NODE_TO_PARENT = new WeakMap();
+/**
+ * Weak maps that allow us to go between Slate nodes and DOM nodes. These
+ * are used to resolve DOM event-related logic into Slate actions.
+ */
+
+var EDITOR_TO_WINDOW = new WeakMap();
+var EDITOR_TO_ELEMENT = new WeakMap();
+var ELEMENT_TO_NODE = new WeakMap();
+var NODE_TO_ELEMENT = new WeakMap();
+var NODE_TO_KEY = new WeakMap();
+var EDITOR_TO_KEY_TO_ELEMENT = new WeakMap();
+/**
+ * Weak maps for storing editor-related state.
+ */
+
+var IS_READ_ONLY = new WeakMap();
+var IS_FOCUSED = new WeakMap();
+var IS_COMPOSING = new WeakMap();
+var IS_ON_COMPOSITION_END = new WeakMap();
+/**
+ * Weak maps for saving text on composition stage.
+ */
+
+var EDITOR_ON_COMPOSITION_TEXT = new WeakMap();
+/**
+ * Weak map for associating the context `onChange` context with the plugin.
+ */
+
+var EDITOR_TO_ON_CHANGE = new WeakMap();
+var NODE_TO_RESTORE_DOM = new WeakMap();
+/**
+ * Symbols.
+ */
+
+var PLACEHOLDER_SYMBOL = Symbol('placeholder');
+
+/**
+ * Individual leaves in a text node with unique formatting.
+ */
+
+var Leaf = props => {
+  var {
+    leaf,
+    isLast,
+    text,
+    parent,
+    renderPlaceholder,
+    renderLeaf = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DefaultLeaf, Object.assign({}, props))
+  } = props;
+  var placeholderRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    var placeholderEl = placeholderRef === null || placeholderRef === void 0 ? void 0 : placeholderRef.current;
+    var editorEl = document.querySelector('[data-slate-editor="true"]');
+
+    if (!placeholderEl || !editorEl) {
+      return;
+    }
+
+    editorEl.style.minHeight = "".concat(placeholderEl.clientHeight, "px");
+    return () => {
+      editorEl.style.minHeight = 'auto';
+    };
+  }, [placeholderRef, leaf]);
+  var children = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(String, {
+    isLast: isLast,
+    leaf: leaf,
+    parent: parent,
+    text: text
+  });
+
+  if (leaf[PLACEHOLDER_SYMBOL]) {
+    var placeholderProps = {
+      children: leaf.placeholder,
+      attributes: {
+        'data-slate-placeholder': true,
+        style: {
+          position: 'absolute',
+          pointerEvents: 'none',
+          width: '100%',
+          maxWidth: '100%',
+          display: 'block',
+          opacity: '0.333',
+          userSelect: 'none',
+          textDecoration: 'none'
+        },
+        contentEditable: false,
+        ref: placeholderRef
+      }
+    };
+    children = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, renderPlaceholder(placeholderProps), children);
+  } // COMPAT: Having the `data-` attributes on these leaf elements ensures that
+  // in certain misbehaving browsers they aren't weirdly cloned/destroyed by
+  // contenteditable behaviors. (2019/05/08)
+
+
+  var attributes = {
+    'data-slate-leaf': true
+  };
+  return renderLeaf({
+    attributes,
+    children,
+    leaf,
+    text
+  });
+};
+
+var MemoizedLeaf = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.memo(Leaf, (prev, next) => {
+  return next.parent === prev.parent && next.isLast === prev.isLast && next.renderLeaf === prev.renderLeaf && next.renderPlaceholder === prev.renderPlaceholder && next.text === prev.text && slate__WEBPACK_IMPORTED_MODULE_1__["Text"].equals(next.leaf, prev.leaf) && next.leaf[PLACEHOLDER_SYMBOL] === prev.leaf[PLACEHOLDER_SYMBOL];
+});
+var DefaultLeaf = props => {
+  var {
+    attributes,
+    children
+  } = props;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", Object.assign({}, attributes), children);
+};
+
+var _excluded$3 = ["anchor", "focus"],
+    _excluded2 = ["anchor", "focus"];
+var shallowCompare = (obj1, obj2) => Object.keys(obj1).length === Object.keys(obj2).length && Object.keys(obj1).every(key => obj2.hasOwnProperty(key) && obj1[key] === obj2[key]);
+/**
+ * Check if a list of decorator ranges are equal to another.
+ *
+ * PERF: this requires the two lists to also have the ranges inside them in the
+ * same order, but this is an okay constraint for us since decorations are
+ * kept in order, and the odd case where they aren't is okay to re-render for.
+ */
+
+var isDecoratorRangeListEqual = (list, another) => {
+  if (list.length !== another.length) {
+    return false;
+  }
+
+  for (var i = 0; i < list.length; i++) {
+    var range = list[i];
+    var other = another[i];
+
+    var rangeOwnProps = _objectWithoutProperties(range, _excluded$3);
+
+    var otherOwnProps = _objectWithoutProperties(other, _excluded2);
+
+    if (!slate__WEBPACK_IMPORTED_MODULE_1__["Range"].equals(range, other) || range[PLACEHOLDER_SYMBOL] !== other[PLACEHOLDER_SYMBOL] || !shallowCompare(rangeOwnProps, otherOwnProps)) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+function useContentKey(node) {
+  var contentKeyRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(0);
+  var updateAnimationFrameRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  var [, setForceRerenderCounter] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    NODE_TO_RESTORE_DOM.set(node, () => {
+      // Update is already queued and node hasn't re-render yet
+      if (updateAnimationFrameRef.current) {
+        return;
+      }
+
+      updateAnimationFrameRef.current = requestAnimationFrame(() => {
+        setForceRerenderCounter(state => state + 1);
+        updateAnimationFrameRef.current = null;
+      });
+      contentKeyRef.current++;
+    });
+    return () => {
+      NODE_TO_RESTORE_DOM.delete(node);
+    };
+  }, [node]); // Node was restored => clear scheduled update
+
+  if (updateAnimationFrameRef.current) {
+    cancelAnimationFrame(updateAnimationFrameRef.current);
+    updateAnimationFrameRef.current = null;
+  }
+
+  return contentKeyRef.current;
+}
+
+/**
+ * Text.
+ */
+
+var Text = props => {
+  var {
+    decorations,
+    isLast,
+    parent,
+    renderPlaceholder,
+    renderLeaf,
+    text
+  } = props;
+  var editor = useSlateStatic();
+  var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  var leaves = slate__WEBPACK_IMPORTED_MODULE_1__["Text"].decorations(text, decorations);
+  var key = ReactEditor.findKey(editor, text);
+  var children = [];
+
+  for (var i = 0; i < leaves.length; i++) {
+    var leaf = leaves[i];
+    children.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MemoizedLeaf, {
+      isLast: isLast && i === leaves.length - 1,
+      key: "".concat(key.id, "-").concat(i),
+      renderPlaceholder: renderPlaceholder,
+      leaf: leaf,
+      text: text,
+      parent: parent,
+      renderLeaf: renderLeaf
+    }));
+  } // Update element-related weak maps with the DOM element ref.
+
+
+  useIsomorphicLayoutEffect(() => {
+    var KEY_TO_ELEMENT = EDITOR_TO_KEY_TO_ELEMENT.get(editor);
+
+    if (ref.current) {
+      KEY_TO_ELEMENT === null || KEY_TO_ELEMENT === void 0 ? void 0 : KEY_TO_ELEMENT.set(key, ref.current);
+      NODE_TO_ELEMENT.set(text, ref.current);
+      ELEMENT_TO_NODE.set(ref.current, text);
+    } else {
+      KEY_TO_ELEMENT === null || KEY_TO_ELEMENT === void 0 ? void 0 : KEY_TO_ELEMENT.delete(key);
+      NODE_TO_ELEMENT.delete(text);
+    }
+  });
+  var contentKey = IS_ANDROID ? useContentKey(text) : undefined;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    "data-slate-node": "text",
+    ref: ref,
+    key: contentKey
+  }, children);
+};
+
+var MemoizedText = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.memo(Text, (prev, next) => {
+  return next.parent === prev.parent && next.isLast === prev.isLast && next.renderLeaf === prev.renderLeaf && next.text === prev.text && isDecoratorRangeListEqual(next.decorations, prev.decorations);
+});
+
+/**
+ * Element.
+ */
+
+var Element = props => {
+  var {
+    decorations,
+    element,
+    renderElement = p => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DefaultElement, Object.assign({}, p)),
+    renderPlaceholder,
+    renderLeaf,
+    selection
+  } = props;
+  var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  var editor = useSlateStatic();
+  var readOnly = useReadOnly();
+  var isInline = editor.isInline(element);
+  var key = ReactEditor.findKey(editor, element);
+  var children = useChildren({
+    decorations,
+    node: element,
+    renderElement,
+    renderPlaceholder,
+    renderLeaf,
+    selection
+  }); // Attributes that the developer must mix into the element in their
+  // custom node renderer component.
+
+  var attributes = {
+    'data-slate-node': 'element',
+    ref
+  };
+
+  if (isInline) {
+    attributes['data-slate-inline'] = true;
+  } // If it's a block node with inline children, add the proper `dir` attribute
+  // for text direction.
+
+
+  if (!isInline && slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].hasInlines(editor, element)) {
+    var text = slate__WEBPACK_IMPORTED_MODULE_1__["Node"].string(element);
+    var dir = direction__WEBPACK_IMPORTED_MODULE_2___default()(text);
+
+    if (dir === 'rtl') {
+      attributes.dir = dir;
+    }
+  } // If it's a void node, wrap the children in extra void-specific elements.
+
+
+  if (slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isVoid(editor, element)) {
+    attributes['data-slate-void'] = true;
+
+    if (!readOnly && isInline) {
+      attributes.contentEditable = false;
+    }
+
+    var Tag = isInline ? 'span' : 'div';
+    var [[_text]] = slate__WEBPACK_IMPORTED_MODULE_1__["Node"].texts(element);
+    children = readOnly ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Tag, {
+      "data-slate-spacer": true,
+      style: {
+        height: '0',
+        color: 'transparent',
+        outline: 'none',
+        position: 'absolute'
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MemoizedText, {
+      renderPlaceholder: renderPlaceholder,
+      decorations: [],
+      isLast: false,
+      parent: element,
+      text: _text
+    }));
+    NODE_TO_INDEX.set(_text, 0);
+    NODE_TO_PARENT.set(_text, element);
+  } // Update element-related weak maps with the DOM element ref.
+
+
+  useIsomorphicLayoutEffect(() => {
+    var KEY_TO_ELEMENT = EDITOR_TO_KEY_TO_ELEMENT.get(editor);
+
+    if (ref.current) {
+      KEY_TO_ELEMENT === null || KEY_TO_ELEMENT === void 0 ? void 0 : KEY_TO_ELEMENT.set(key, ref.current);
+      NODE_TO_ELEMENT.set(element, ref.current);
+      ELEMENT_TO_NODE.set(ref.current, element);
+    } else {
+      KEY_TO_ELEMENT === null || KEY_TO_ELEMENT === void 0 ? void 0 : KEY_TO_ELEMENT.delete(key);
+      NODE_TO_ELEMENT.delete(element);
+    }
+  });
+  var content = renderElement({
+    attributes,
+    children,
+    element
+  });
+
+  if (IS_ANDROID) {
+    var contentKey = useContentKey(element);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+      key: contentKey
+    }, content);
+  }
+
+  return content;
+};
+
+var MemoizedElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.memo(Element, (prev, next) => {
+  return prev.element === next.element && prev.renderElement === next.renderElement && prev.renderLeaf === next.renderLeaf && isDecoratorRangeListEqual(prev.decorations, next.decorations) && (prev.selection === next.selection || !!prev.selection && !!next.selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].equals(prev.selection, next.selection));
+});
+/**
+ * The default element renderer.
+ */
+
+var DefaultElement = props => {
+  var {
+    attributes,
+    children,
+    element
+  } = props;
+  var editor = useSlateStatic();
+  var Tag = editor.isInline(element) ? 'span' : 'div';
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Tag, Object.assign({}, attributes, {
+    style: {
+      position: 'relative'
+    }
+  }), children);
+};
+
+/**
+ * A React context for sharing the editor object.
+ */
+
+var EditorContext = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])(null);
+/**
+ * Get the current editor object from the React context.
+ */
+
+var useSlateStatic = () => {
+  var editor = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(EditorContext);
+
+  if (!editor) {
+    throw new Error("The `useSlateStatic` hook must be used inside the <Slate> component's context.");
+  }
+
+  return editor;
+};
+
+/**
+ * A React context for sharing the `decorate` prop of the editable.
+ */
+
+var DecorateContext = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])(() => []);
+/**
+ * Get the current `decorate` prop of the editable.
+ */
+
+var useDecorate = () => {
+  return Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(DecorateContext);
+};
+
+/**
+ * A React context for sharing the `selected` state of an element.
+ */
+
+var SelectedContext = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])(false);
+/**
+ * Get the current `selected` state of an element.
+ */
+
+var useSelected = () => {
+  return Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(SelectedContext);
+};
+
+/**
+ * Children.
+ */
+
+var useChildren = props => {
+  var {
+    decorations,
+    node,
+    renderElement,
+    renderPlaceholder,
+    renderLeaf,
+    selection
+  } = props;
+  var decorate = useDecorate();
+  var editor = useSlateStatic();
+  var path = ReactEditor.findPath(editor, node);
+  var children = [];
+  var isLeafBlock = slate__WEBPACK_IMPORTED_MODULE_1__["Element"].isElement(node) && !editor.isInline(node) && slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].hasInlines(editor, node);
+
+  for (var i = 0; i < node.children.length; i++) {
+    var p = path.concat(i);
+    var n = node.children[i];
+    var key = ReactEditor.findKey(editor, n);
+    var range = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].range(editor, p);
+    var sel = selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].intersection(range, selection);
+    var ds = decorate([n, p]);
+
+    for (var dec of decorations) {
+      var d = slate__WEBPACK_IMPORTED_MODULE_1__["Range"].intersection(dec, range);
+
+      if (d) {
+        ds.push(d);
+      }
+    }
+
+    if (slate__WEBPACK_IMPORTED_MODULE_1__["Element"].isElement(n)) {
+      children.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SelectedContext.Provider, {
+        key: "provider-".concat(key.id),
+        value: !!sel
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MemoizedElement, {
+        decorations: ds,
+        element: n,
+        key: key.id,
+        renderElement: renderElement,
+        renderPlaceholder: renderPlaceholder,
+        renderLeaf: renderLeaf,
+        selection: sel
+      })));
+    } else {
+      children.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MemoizedText, {
+        decorations: ds,
+        key: key.id,
+        isLast: isLeafBlock && i === node.children.length - 1,
+        parent: node,
+        renderPlaceholder: renderPlaceholder,
+        renderLeaf: renderLeaf,
+        text: n
+      }));
+    }
+
+    NODE_TO_INDEX.set(n, i);
+    NODE_TO_PARENT.set(n, node);
+  }
+
+  return children;
+};
+
+/**
+ * Hotkey mappings for each platform.
+ */
+
+var HOTKEYS = {
+  bold: 'mod+b',
+  compose: ['down', 'left', 'right', 'up', 'backspace', 'enter'],
+  moveBackward: 'left',
+  moveForward: 'right',
+  moveWordBackward: 'ctrl+left',
+  moveWordForward: 'ctrl+right',
+  deleteBackward: 'shift?+backspace',
+  deleteForward: 'shift?+delete',
+  extendBackward: 'shift+left',
+  extendForward: 'shift+right',
+  italic: 'mod+i',
+  splitBlock: 'shift?+enter',
+  undo: 'mod+z'
+};
+var APPLE_HOTKEYS = {
+  moveLineBackward: 'opt+up',
+  moveLineForward: 'opt+down',
+  moveWordBackward: 'opt+left',
+  moveWordForward: 'opt+right',
+  deleteBackward: ['ctrl+backspace', 'ctrl+h'],
+  deleteForward: ['ctrl+delete', 'ctrl+d'],
+  deleteLineBackward: 'cmd+shift?+backspace',
+  deleteLineForward: ['cmd+shift?+delete', 'ctrl+k'],
+  deleteWordBackward: 'opt+shift?+backspace',
+  deleteWordForward: 'opt+shift?+delete',
+  extendLineBackward: 'opt+shift+up',
+  extendLineForward: 'opt+shift+down',
+  redo: 'cmd+shift+z',
+  transposeCharacter: 'ctrl+t'
+};
+var WINDOWS_HOTKEYS = {
+  deleteWordBackward: 'ctrl+shift?+backspace',
+  deleteWordForward: 'ctrl+shift?+delete',
+  redo: ['ctrl+y', 'ctrl+shift+z']
+};
+/**
+ * Create a platform-aware hotkey checker.
+ */
+
+var create = key => {
+  var generic = HOTKEYS[key];
+  var apple = APPLE_HOTKEYS[key];
+  var windows = WINDOWS_HOTKEYS[key];
+  var isGeneric = generic && Object(is_hotkey__WEBPACK_IMPORTED_MODULE_6__["isKeyHotkey"])(generic);
+  var isApple = apple && Object(is_hotkey__WEBPACK_IMPORTED_MODULE_6__["isKeyHotkey"])(apple);
+  var isWindows = windows && Object(is_hotkey__WEBPACK_IMPORTED_MODULE_6__["isKeyHotkey"])(windows);
+  return event => {
+    if (isGeneric && isGeneric(event)) return true;
+    if (IS_APPLE && isApple && isApple(event)) return true;
+    if (!IS_APPLE && isWindows && isWindows(event)) return true;
+    return false;
+  };
+};
+/**
+ * Hotkeys.
+ */
+
+
+var Hotkeys = {
+  isBold: create('bold'),
+  isCompose: create('compose'),
+  isMoveBackward: create('moveBackward'),
+  isMoveForward: create('moveForward'),
+  isDeleteBackward: create('deleteBackward'),
+  isDeleteForward: create('deleteForward'),
+  isDeleteLineBackward: create('deleteLineBackward'),
+  isDeleteLineForward: create('deleteLineForward'),
+  isDeleteWordBackward: create('deleteWordBackward'),
+  isDeleteWordForward: create('deleteWordForward'),
+  isExtendBackward: create('extendBackward'),
+  isExtendForward: create('extendForward'),
+  isExtendLineBackward: create('extendLineBackward'),
+  isExtendLineForward: create('extendLineForward'),
+  isItalic: create('italic'),
+  isMoveLineBackward: create('moveLineBackward'),
+  isMoveLineForward: create('moveLineForward'),
+  isMoveWordBackward: create('moveWordBackward'),
+  isMoveWordForward: create('moveWordForward'),
+  isRedo: create('redo'),
+  isSplitBlock: create('splitBlock'),
+  isTransposeCharacter: create('transposeCharacter'),
+  isUndo: create('undo')
+};
+
+/**
+ * A React context for sharing the `readOnly` state of the editor.
+ */
+
+var ReadOnlyContext = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])(false);
+/**
+ * Get the current `readOnly` state of the editor.
+ */
+
+var useReadOnly = () => {
+  return Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(ReadOnlyContext);
+};
+
+/**
+ * A React context for sharing the editor object, in a way that re-renders the
+ * context whenever changes occur.
+ */
+
+var SlateContext = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])(null);
+/**
+ * Get the current editor object from the React context.
+ */
+
+var useSlate = () => {
+  var context = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(SlateContext);
+
+  if (!context) {
+    throw new Error("The `useSlate` hook must be used inside the <Slate> component's context.");
+  }
+
+  var [editor] = context;
+  return editor;
+};
+
+/**
+ * Types.
+ */
+/**
+ * Returns the host window of a DOM node
+ */
+
+var getDefaultView = value => {
+  return value && value.ownerDocument && value.ownerDocument.defaultView || null;
+};
+/**
+ * Check if a DOM node is a comment node.
+ */
+
+var isDOMComment = value => {
+  return isDOMNode(value) && value.nodeType === 8;
+};
+/**
+ * Check if a DOM node is an element node.
+ */
+
+var isDOMElement = value => {
+  return isDOMNode(value) && value.nodeType === 1;
+};
+/**
+ * Check if a value is a DOM node.
+ */
+
+var isDOMNode = value => {
+  var window = getDefaultView(value);
+  return !!window && value instanceof window.Node;
+};
+/**
+ * Check if a value is a DOM selection.
+ */
+
+var isDOMSelection = value => {
+  var window = value && value.anchorNode && getDefaultView(value.anchorNode);
+  return !!window && value instanceof window.Selection;
+};
+/**
+ * Check if a DOM node is an element node.
+ */
+
+var isDOMText = value => {
+  return isDOMNode(value) && value.nodeType === 3;
+};
+/**
+ * Checks whether a paste event is a plaintext-only event.
+ */
+
+var isPlainTextOnlyPaste = event => {
+  return event.clipboardData && event.clipboardData.getData('text/plain') !== '' && event.clipboardData.types.length === 1;
+};
+/**
+ * Normalize a DOM point so that it always refers to a text node.
+ */
+
+var normalizeDOMPoint = domPoint => {
+  var [node, offset] = domPoint; // If it's an element node, its offset refers to the index of its children
+  // including comment nodes, so try to find the right text child node.
+
+  if (isDOMElement(node) && node.childNodes.length) {
+    var isLast = offset === node.childNodes.length;
+    var index = isLast ? offset - 1 : offset;
+    [node, index] = getEditableChildAndIndex(node, index, isLast ? 'backward' : 'forward'); // If the editable child found is in front of input offset, we instead seek to its end
+
+    isLast = index < offset; // If the node has children, traverse until we have a leaf node. Leaf nodes
+    // can be either text nodes, or other void DOM nodes.
+
+    while (isDOMElement(node) && node.childNodes.length) {
+      var i = isLast ? node.childNodes.length - 1 : 0;
+      node = getEditableChild(node, i, isLast ? 'backward' : 'forward');
+    } // Determine the new offset inside the text node.
+
+
+    offset = isLast && node.textContent != null ? node.textContent.length : 0;
+  } // Return the node and offset.
+
+
+  return [node, offset];
+};
+/**
+ * Determines wether the active element is nested within a shadowRoot
+ */
+
+var hasShadowRoot = () => {
+  return !!(window.document.activeElement && window.document.activeElement.shadowRoot);
+};
+/**
+ * Get the nearest editable child and index at `index` in a `parent`, preferring
+ * `direction`.
+ */
+
+var getEditableChildAndIndex = (parent, index, direction) => {
+  var {
+    childNodes
+  } = parent;
+  var child = childNodes[index];
+  var i = index;
+  var triedForward = false;
+  var triedBackward = false; // While the child is a comment node, or an element node with no children,
+  // keep iterating to find a sibling non-void, non-comment node.
+
+  while (isDOMComment(child) || isDOMElement(child) && child.childNodes.length === 0 || isDOMElement(child) && child.getAttribute('contenteditable') === 'false') {
+    if (triedForward && triedBackward) {
+      break;
+    }
+
+    if (i >= childNodes.length) {
+      triedForward = true;
+      i = index - 1;
+      direction = 'backward';
+      continue;
+    }
+
+    if (i < 0) {
+      triedBackward = true;
+      i = index + 1;
+      direction = 'forward';
+      continue;
+    }
+
+    child = childNodes[i];
+    index = i;
+    i += direction === 'forward' ? 1 : -1;
+  }
+
+  return [child, index];
+};
+/**
+ * Get the nearest editable child at `index` in a `parent`, preferring
+ * `direction`.
+ */
+
+var getEditableChild = (parent, index, direction) => {
+  var [child] = getEditableChildAndIndex(parent, index, direction);
+  return child;
+};
+/**
+ * Get a plaintext representation of the content of a node, accounting for block
+ * elements which get a newline appended.
+ *
+ * The domNode must be attached to the DOM.
+ */
+
+var getPlainText = domNode => {
+  var text = '';
+
+  if (isDOMText(domNode) && domNode.nodeValue) {
+    return domNode.nodeValue;
+  }
+
+  if (isDOMElement(domNode)) {
+    for (var childNode of Array.from(domNode.childNodes)) {
+      text += getPlainText(childNode);
+    }
+
+    var display = getComputedStyle(domNode).getPropertyValue('display');
+
+    if (display === 'block' || display === 'list' || domNode.tagName === 'BR') {
+      text += '\n';
+    }
+  }
+
+  return text;
+};
+/**
+ * Get x-slate-fragment attribute from data-slate-fragment
+ */
+
+var catchSlateFragment = /data-slate-fragment="(.+?)"/m;
+var getSlateFragmentAttribute = dataTransfer => {
+  var htmlData = dataTransfer.getData('text/html');
+  var [, fragment] = htmlData.match(catchSlateFragment) || [];
+  return fragment;
+};
+/**
+ * Get the x-slate-fragment attribute that exist in text/html data
+ * and append it to the DataTransfer object
+ */
+
+var getClipboardData = dataTransfer => {
+  if (!dataTransfer.getData('application/x-slate-fragment')) {
+    var fragment = getSlateFragmentAttribute(dataTransfer);
+
+    if (fragment) {
+      var clipboardData = new DataTransfer();
+      dataTransfer.types.forEach(type => {
+        clipboardData.setData(type, dataTransfer.getData(type));
+      });
+      clipboardData.setData('application/x-slate-fragment', fragment);
+      return clipboardData;
+    }
+  }
+
+  return dataTransfer;
+};
+
+var _excluded$2 = ["autoFocus", "decorate", "onDOMBeforeInput", "placeholder", "readOnly", "renderElement", "renderLeaf", "renderPlaceholder", "scrollSelectionIntoView", "style", "as"];
+
+function ownKeys$1(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread$1(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys$1(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys$1(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+var Children = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, useChildren(props));
+/**
+ * Editable.
+ */
+
+
+var Editable$1 = props => {
+  var {
+    autoFocus,
+    decorate = defaultDecorate,
+    onDOMBeforeInput: propsOnDOMBeforeInput,
+    placeholder,
+    readOnly = false,
+    renderElement,
+    renderLeaf,
+    renderPlaceholder = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DefaultPlaceholder, Object.assign({}, props)),
+    scrollSelectionIntoView = defaultScrollSelectionIntoView,
+    style = {},
+    as: Component = 'div'
+  } = props,
+      attributes = _objectWithoutProperties(props, _excluded$2);
+
+  var editor = useSlate(); // Rerender editor when composition status changed
+
+  var [isComposing, setIsComposing] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  var deferredOperations = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])([]); // Update internal state on each render.
+
+  IS_READ_ONLY.set(editor, readOnly); // Keep track of some state for the event handler logic.
+
+  var state = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(() => ({
+    isComposing: false,
+    hasInsertPrefixInCompositon: false,
+    isDraggingInternally: false,
+    isUpdatingSelection: false,
+    latestElement: null
+  }), []); // Whenever the editor updates...
+
+  useIsomorphicLayoutEffect(() => {
+    // Update element-related weak maps with the DOM element ref.
+    var window;
+
+    if (ref.current && (window = getDefaultView(ref.current))) {
+      EDITOR_TO_WINDOW.set(editor, window);
+      EDITOR_TO_ELEMENT.set(editor, ref.current);
+      NODE_TO_ELEMENT.set(editor, ref.current);
+      ELEMENT_TO_NODE.set(ref.current, editor);
+    } else {
+      NODE_TO_ELEMENT.delete(editor);
+    } // Make sure the DOM selection state is in sync.
+
+
+    var {
+      selection
+    } = editor;
+    var root = ReactEditor.findDocumentOrShadowRoot(editor);
+    var domSelection = root.getSelection();
+
+    if (state.isComposing || !domSelection || !ReactEditor.isFocused(editor)) {
+      return;
+    }
+
+    var hasDomSelection = domSelection.type !== 'None'; // If the DOM selection is properly unset, we're done.
+
+    if (!selection && !hasDomSelection) {
+      return;
+    } // verify that the dom selection is in the editor
+
+
+    var editorElement = EDITOR_TO_ELEMENT.get(editor);
+    var hasDomSelectionInEditor = false;
+
+    if (editorElement.contains(domSelection.anchorNode) && editorElement.contains(domSelection.focusNode)) {
+      hasDomSelectionInEditor = true;
+    } // If the DOM selection is in the editor and the editor selection is already correct, we're done.
+
+
+    if (hasDomSelection && hasDomSelectionInEditor && selection) {
+      var slateRange = ReactEditor.toSlateRange(editor, domSelection, {
+        exactMatch: true,
+        // domSelection is not necessarily a valid Slate range
+        // (e.g. when clicking on contentEditable:false element)
+        suppressThrow: true
+      });
+
+      if (slateRange && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].equals(slateRange, selection)) {
+        return;
+      }
+    } // when <Editable/> is being controlled through external value
+    // then its children might just change - DOM responds to it on its own
+    // but Slate's value is not being updated through any operation
+    // and thus it doesn't transform selection on its own
+
+
+    if (selection && !ReactEditor.hasRange(editor, selection)) {
+      editor.selection = ReactEditor.toSlateRange(editor, domSelection, {
+        exactMatch: false,
+        suppressThrow: false
+      });
+      return;
+    } // Otherwise the DOM selection is out of sync, so update it.
+
+
+    state.isUpdatingSelection = true;
+    var newDomRange = selection && hasDomSelectionInEditor && ReactEditor.toDOMRange(editor, selection);
+
+    if (newDomRange) {
+      if (slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isBackward(selection)) {
+        domSelection.setBaseAndExtent(newDomRange.endContainer, newDomRange.endOffset, newDomRange.startContainer, newDomRange.startOffset);
+      } else {
+        domSelection.setBaseAndExtent(newDomRange.startContainer, newDomRange.startOffset, newDomRange.endContainer, newDomRange.endOffset);
+      }
+
+      scrollSelectionIntoView(editor, newDomRange);
+    } else {
+      domSelection.removeAllRanges();
+    }
+
+    setTimeout(() => {
+      // COMPAT: In Firefox, it's not enough to create a range, you also need
+      // to focus the contenteditable element too. (2016/11/16)
+      if (newDomRange && IS_FIREFOX) {
+        var el = ReactEditor.toDOMNode(editor, editor);
+        el.focus();
+      }
+
+      state.isUpdatingSelection = false;
+    });
+  }); // The autoFocus TextareaHTMLAttribute doesn't do anything on a div, so it
+  // needs to be manually focused.
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (ref.current && autoFocus) {
+      ref.current.focus();
+    }
+  }, [autoFocus]); // Listen on the native `selectionchange` event to be able to update any time
+  // the selection changes. This is required because React's `onSelect` is leaky
+  // and non-standard so it doesn't fire until after a selection has been
+  // released. This causes issues in situations where another change happens
+  // while a selection is being dragged.
+
+  var onDOMSelectionChange = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(lodash_throttle__WEBPACK_IMPORTED_MODULE_4___default()(() => {
+    if (!state.isComposing && !state.isUpdatingSelection && !state.isDraggingInternally) {
+      var root = ReactEditor.findDocumentOrShadowRoot(editor);
+      var {
+        activeElement
+      } = root;
+      var el = ReactEditor.toDOMNode(editor, editor);
+      var domSelection = root.getSelection();
+
+      if (activeElement === el) {
+        state.latestElement = activeElement;
+        IS_FOCUSED.set(editor, true);
+      } else {
+        IS_FOCUSED.delete(editor);
+      }
+
+      if (!domSelection) {
+        return slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].deselect(editor);
+      }
+
+      var {
+        anchorNode,
+        focusNode
+      } = domSelection;
+      var anchorNodeSelectable = hasEditableTarget(editor, anchorNode) || isTargetInsideNonReadonlyVoid(editor, anchorNode);
+      var focusNodeSelectable = hasEditableTarget(editor, focusNode) || isTargetInsideNonReadonlyVoid(editor, focusNode);
+
+      if (anchorNodeSelectable && focusNodeSelectable) {
+        var range = ReactEditor.toSlateRange(editor, domSelection, {
+          exactMatch: false,
+          suppressThrow: false
+        });
+        slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].select(editor, range);
+      }
+    }
+  }, 100), [readOnly]);
+  var scheduleOnDOMSelectionChange = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(() => lodash_debounce__WEBPACK_IMPORTED_MODULE_3___default()(onDOMSelectionChange, 0), [onDOMSelectionChange]); // Listen on the native `beforeinput` event to get real "Level 2" events. This
+  // is required because React's `beforeinput` is fake and never really attaches
+  // to the real event sadly. (2019/11/01)
+  // https://github.com/facebook/react/issues/11211
+
+  var onDOMBeforeInput = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+    if (!readOnly && hasEditableTarget(editor, event.target) && !isDOMEventHandled(event, propsOnDOMBeforeInput)) {
+      // Some IMEs/Chrome extensions like e.g. Grammarly set the selection immediately before
+      // triggering a `beforeinput` expecting the change to be applied to the immediately before
+      // set selection.
+      scheduleOnDOMSelectionChange.flush();
+      onDOMSelectionChange.flush();
+      var {
+        selection
+      } = editor;
+      var {
+        inputType: type
+      } = event;
+      var data = event.dataTransfer || event.data || undefined; // These two types occur while a user is composing text and can't be
+      // cancelled. Let them through and wait for the composition to end.
+
+      if (type === 'insertCompositionText' || type === 'deleteCompositionText') {
+        return;
+      }
+
+      var native = false;
+
+      if (type === 'insertText' && selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isCollapsed(selection) && // Only use native character insertion for single characters a-z or space for now.
+      // Long-press events (hold a + press 4 = ä) to choose a special character otherwise
+      // causes duplicate inserts.
+      event.data && event.data.length === 1 && /[a-z ]/i.test(event.data) && // Chrome has issues correctly editing the start of nodes: https://bugs.chromium.org/p/chromium/issues/detail?id=1249405
+      // When there is an inline element, e.g. a link, and you select
+      // right after it (the start of the next node).
+      selection.anchor.offset !== 0) {
+        native = true; // Skip native if there are marks, as
+        // `insertText` will insert a node, not just text.
+
+        if (editor.marks) {
+          native = false;
+        } // Chrome also has issues correctly editing the end of nodes: https://bugs.chromium.org/p/chromium/issues/detail?id=1259100
+        // Therefore we don't allow native events to insert text at the end of nodes.
+
+
+        var {
+          anchor
+        } = selection;
+        var inline = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].above(editor, {
+          at: anchor,
+          match: n => slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isInline(editor, n),
+          mode: 'highest'
+        });
+
+        if (inline) {
+          var [, inlinePath] = inline;
+
+          if (slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isEnd(editor, selection.anchor, inlinePath)) {
+            native = false;
+          }
+        }
+      }
+
+      if (!native) {
+        event.preventDefault();
+      } // COMPAT: For the deleting forward/backward input types we don't want
+      // to change the selection because it is the range that will be deleted,
+      // and those commands determine that for themselves.
+
+
+      if (!type.startsWith('delete') || type.startsWith('deleteBy')) {
+        var [targetRange] = event.getTargetRanges();
+
+        if (targetRange) {
+          var range = ReactEditor.toSlateRange(editor, targetRange, {
+            exactMatch: false,
+            suppressThrow: false
+          });
+
+          if (!selection || !slate__WEBPACK_IMPORTED_MODULE_1__["Range"].equals(selection, range)) {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].select(editor, range);
+          }
+        }
+      } // COMPAT: If the selection is expanded, even if the command seems like
+      // a delete forward/backward command it should delete the selection.
+
+
+      if (selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(selection) && type.startsWith('delete')) {
+        var direction = type.endsWith('Backward') ? 'backward' : 'forward';
+        slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteFragment(editor, {
+          direction
+        });
+        return;
+      }
+
+      switch (type) {
+        case 'deleteByComposition':
+        case 'deleteByCut':
+        case 'deleteByDrag':
+          {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteFragment(editor);
+            break;
+          }
+
+        case 'deleteContent':
+        case 'deleteContentForward':
+          {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteForward(editor);
+            break;
+          }
+
+        case 'deleteContentBackward':
+          {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteBackward(editor);
+            break;
+          }
+
+        case 'deleteEntireSoftLine':
+          {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteBackward(editor, {
+              unit: 'line'
+            });
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteForward(editor, {
+              unit: 'line'
+            });
+            break;
+          }
+
+        case 'deleteHardLineBackward':
+          {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteBackward(editor, {
+              unit: 'block'
+            });
+            break;
+          }
+
+        case 'deleteSoftLineBackward':
+          {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteBackward(editor, {
+              unit: 'line'
+            });
+            break;
+          }
+
+        case 'deleteHardLineForward':
+          {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteForward(editor, {
+              unit: 'block'
+            });
+            break;
+          }
+
+        case 'deleteSoftLineForward':
+          {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteForward(editor, {
+              unit: 'line'
+            });
+            break;
+          }
+
+        case 'deleteWordBackward':
+          {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteBackward(editor, {
+              unit: 'word'
+            });
+            break;
+          }
+
+        case 'deleteWordForward':
+          {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteForward(editor, {
+              unit: 'word'
+            });
+            break;
+          }
+
+        case 'insertLineBreak':
+        case 'insertParagraph':
+          {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].insertBreak(editor);
+            break;
+          }
+
+        case 'insertFromComposition':
+        case 'insertFromDrop':
+        case 'insertFromPaste':
+        case 'insertFromYank':
+        case 'insertReplacementText':
+        case 'insertText':
+          {
+            if (type === 'insertFromComposition') {
+              // COMPAT: in Safari, `compositionend` is dispatched after the
+              // `beforeinput` for "insertFromComposition". But if we wait for it
+              // then we will abort because we're still composing and the selection
+              // won't be updated properly.
+              // https://www.w3.org/TR/input-events-2/
+              state.isComposing && setIsComposing(false);
+              state.isComposing = false;
+            } // use a weak comparison instead of 'instanceof' to allow
+            // programmatic access of paste events coming from external windows
+            // like cypress where cy.window does not work realibly
+
+
+            if ((data === null || data === void 0 ? void 0 : data.constructor.name) === 'DataTransfer') {
+              ReactEditor.insertData(editor, data);
+            } else if (typeof data === 'string') {
+              // Only insertText operations use the native functionality, for now.
+              // Potentially expand to single character deletes, as well.
+              if (native) {
+                deferredOperations.current.push(() => slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].insertText(editor, data));
+              } else {
+                slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].insertText(editor, data);
+              }
+            }
+
+            break;
+          }
+      }
+    }
+  }, [readOnly, propsOnDOMBeforeInput]); // Attach a native DOM event handler for `beforeinput` events, because React's
+  // built-in `onBeforeInput` is actually a leaky polyfill that doesn't expose
+  // real `beforeinput` events sadly... (2019/11/04)
+  // https://github.com/facebook/react/issues/11211
+
+  useIsomorphicLayoutEffect(() => {
+    if (ref.current && HAS_BEFORE_INPUT_SUPPORT) {
+      // @ts-ignore The `beforeinput` event isn't recognized.
+      ref.current.addEventListener('beforeinput', onDOMBeforeInput);
+    }
+
+    return () => {
+      if (ref.current && HAS_BEFORE_INPUT_SUPPORT) {
+        // @ts-ignore The `beforeinput` event isn't recognized.
+        ref.current.removeEventListener('beforeinput', onDOMBeforeInput);
+      }
+    };
+  }, [onDOMBeforeInput]); // Attach a native DOM event handler for `selectionchange`, because React's
+  // built-in `onSelect` handler doesn't fire for all selection changes. It's a
+  // leaky polyfill that only fires on keypresses or clicks. Instead, we want to
+  // fire for any change to the selection inside the editor. (2019/11/04)
+  // https://github.com/facebook/react/issues/5785
+
+  useIsomorphicLayoutEffect(() => {
+    var window = ReactEditor.getWindow(editor);
+    window.document.addEventListener('selectionchange', scheduleOnDOMSelectionChange);
+    return () => {
+      window.document.removeEventListener('selectionchange', scheduleOnDOMSelectionChange);
+    };
+  }, [scheduleOnDOMSelectionChange]);
+  var decorations = decorate([editor, []]);
+
+  if (placeholder && editor.children.length === 1 && Array.from(slate__WEBPACK_IMPORTED_MODULE_1__["Node"].texts(editor)).length === 1 && slate__WEBPACK_IMPORTED_MODULE_1__["Node"].string(editor) === '' && !isComposing) {
+    var start = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].start(editor, []);
+    decorations.push({
+      [PLACEHOLDER_SYMBOL]: true,
+      placeholder,
+      anchor: start,
+      focus: start
+    });
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ReadOnlyContext.Provider, {
+    value: readOnly
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DecorateContext.Provider, {
+    value: decorate
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, Object.assign({
+    role: readOnly ? undefined : 'textbox'
+  }, attributes, {
+    // COMPAT: Certain browsers don't support the `beforeinput` event, so we'd
+    // have to use hacks to make these replacement-based features work.
+    // For SSR situations HAS_BEFORE_INPUT_SUPPORT is false and results in prop
+    // mismatch warning app moves to browser. Pass-through consumer props when
+    // not CAN_USE_DOM (SSR) and default to falsy value
+    spellCheck: HAS_BEFORE_INPUT_SUPPORT || !CAN_USE_DOM ? attributes.spellCheck : false,
+    autoCorrect: HAS_BEFORE_INPUT_SUPPORT || !CAN_USE_DOM ? attributes.autoCorrect : 'false',
+    autoCapitalize: HAS_BEFORE_INPUT_SUPPORT || !CAN_USE_DOM ? attributes.autoCapitalize : 'false',
+    "data-slate-editor": true,
+    "data-slate-node": "value",
+    // explicitly set this
+    contentEditable: !readOnly,
+    // in some cases, a decoration needs access to the range / selection to decorate a text node,
+    // then you will select the whole text node when you select part the of text
+    // this magic zIndex="-1" will fix it
+    zindex: -1,
+    suppressContentEditableWarning: true,
+    ref: ref,
+    style: _objectSpread$1({
+      // Allow positioning relative to the editable element.
+      position: 'relative',
+      // Prevent the default outline styles.
+      outline: 'none',
+      // Preserve adjacent whitespace and new lines.
+      whiteSpace: 'pre-wrap',
+      // Allow words to break if they are too long.
+      wordWrap: 'break-word'
+    }, style),
+    onBeforeInput: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      // COMPAT: Certain browsers don't support the `beforeinput` event, so we
+      // fall back to React's leaky polyfill instead just for it. It
+      // only works for the `insertText` input type.
+      if (!HAS_BEFORE_INPUT_SUPPORT && !readOnly && !isEventHandled(event, attributes.onBeforeInput) && hasEditableTarget(editor, event.target)) {
+        event.preventDefault();
+
+        if (!state.isComposing) {
+          var text = event.data;
+          slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].insertText(editor, text);
+        }
+      }
+    }, [readOnly]),
+    onInput: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      // Flush native operations, as native events will have propogated
+      // and we can correctly compare DOM text values in components
+      // to stop rendering, so that browser functions like autocorrect
+      // and spellcheck work as expected.
+      for (var op of deferredOperations.current) {
+        op();
+      }
+
+      deferredOperations.current = [];
+    }, []),
+    onBlur: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (readOnly || state.isUpdatingSelection || !hasEditableTarget(editor, event.target) || isEventHandled(event, attributes.onBlur)) {
+        return;
+      } // COMPAT: If the current `activeElement` is still the previous
+      // one, this is due to the window being blurred when the tab
+      // itself becomes unfocused, so we want to abort early to allow to
+      // editor to stay focused when the tab becomes focused again.
+
+
+      var root = ReactEditor.findDocumentOrShadowRoot(editor);
+
+      if (state.latestElement === root.activeElement) {
+        return;
+      }
+
+      var {
+        relatedTarget
+      } = event;
+      var el = ReactEditor.toDOMNode(editor, editor); // COMPAT: The event should be ignored if the focus is returning
+      // to the editor from an embedded editable element (eg. an <input>
+      // element inside a void node).
+
+      if (relatedTarget === el) {
+        return;
+      } // COMPAT: The event should be ignored if the focus is moving from
+      // the editor to inside a void node's spacer element.
+
+
+      if (isDOMElement(relatedTarget) && relatedTarget.hasAttribute('data-slate-spacer')) {
+        return;
+      } // COMPAT: The event should be ignored if the focus is moving to a
+      // non- editable section of an element that isn't a void node (eg.
+      // a list item of the check list example).
+
+
+      if (relatedTarget != null && isDOMNode(relatedTarget) && ReactEditor.hasDOMNode(editor, relatedTarget)) {
+        var node = ReactEditor.toSlateNode(editor, relatedTarget);
+
+        if (slate__WEBPACK_IMPORTED_MODULE_1__["Element"].isElement(node) && !editor.isVoid(node)) {
+          return;
+        }
+      } // COMPAT: Safari doesn't always remove the selection even if the content-
+      // editable element no longer has focus. Refer to:
+      // https://stackoverflow.com/questions/12353247/force-contenteditable-div-to-stop-accepting-input-after-it-loses-focus-under-web
+
+
+      if (IS_SAFARI) {
+        var domSelection = root.getSelection();
+        domSelection === null || domSelection === void 0 ? void 0 : domSelection.removeAllRanges();
+      }
+
+      IS_FOCUSED.delete(editor);
+    }, [readOnly, attributes.onBlur]),
+    onClick: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (!readOnly && hasTarget(editor, event.target) && !isEventHandled(event, attributes.onClick) && isDOMNode(event.target)) {
+        var node = ReactEditor.toSlateNode(editor, event.target);
+        var path = ReactEditor.findPath(editor, node); // At this time, the Slate document may be arbitrarily different,
+        // because onClick handlers can change the document before we get here.
+        // Therefore we must check that this path actually exists,
+        // and that it still refers to the same node.
+
+        if (slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].hasPath(editor, path)) {
+          var lookupNode = slate__WEBPACK_IMPORTED_MODULE_1__["Node"].get(editor, path);
+
+          if (lookupNode === node) {
+            var _start = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].start(editor, path);
+
+            var end = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].end(editor, path);
+            var startVoid = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].void(editor, {
+              at: _start
+            });
+            var endVoid = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].void(editor, {
+              at: end
+            });
+
+            if (startVoid && endVoid && slate__WEBPACK_IMPORTED_MODULE_1__["Path"].equals(startVoid[1], endVoid[1])) {
+              var range = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].range(editor, _start);
+              slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].select(editor, range);
+            }
+          }
+        }
+      }
+    }, [readOnly, attributes.onClick]),
+    onCompositionEnd: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onCompositionEnd)) {
+        state.isComposing && setIsComposing(false);
+        state.isComposing = false; // COMPAT: In Chrome, `beforeinput` events for compositions
+        // aren't correct and never fire the "insertFromComposition"
+        // type that we need. So instead, insert whenever a composition
+        // ends since it will already have been committed to the DOM.
+
+        if (!IS_SAFARI && !IS_FIREFOX_LEGACY && !IS_IOS && !IS_QQBROWSER && !IS_WECHATBROWSER && !IS_UC_MOBILE && event.data) {
+          slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].insertText(editor, event.data);
+        }
+
+        if (editor.selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isCollapsed(editor.selection)) {
+          var leafPath = editor.selection.anchor.path;
+          var currentTextNode = slate__WEBPACK_IMPORTED_MODULE_1__["Node"].leaf(editor, leafPath);
+
+          if (state.hasInsertPrefixInCompositon) {
+            state.hasInsertPrefixInCompositon = false;
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].withoutNormalizing(editor, () => {
+              // remove Unicode BOM prefix added in `onCompositionStart`
+              var text = currentTextNode.text.replace(/^\uFEFF/, '');
+              slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].delete(editor, {
+                distance: currentTextNode.text.length,
+                reverse: true
+              });
+              slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].insertText(editor, text);
+            });
+          }
+        }
+      }
+    }, [attributes.onCompositionEnd]),
+    onCompositionUpdate: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onCompositionUpdate)) {
+        !state.isComposing && setIsComposing(true);
+        state.isComposing = true;
+      }
+    }, [attributes.onCompositionUpdate]),
+    onCompositionStart: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onCompositionStart)) {
+        var {
+          selection,
+          marks
+        } = editor;
+
+        if (selection) {
+          if (slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(selection)) {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteFragment(editor);
+            return;
+          }
+
+          var inline = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].above(editor, {
+            match: n => slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isInline(editor, n),
+            mode: 'highest'
+          });
+
+          if (inline) {
+            var [, inlinePath] = inline;
+
+            if (slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isEnd(editor, selection.anchor, inlinePath)) {
+              var point = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].after(editor, inlinePath);
+              slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].setSelection(editor, {
+                anchor: point,
+                focus: point
+              });
+            }
+          } // insert new node in advance to ensure composition text will insert
+          // along with final input text
+          // add Unicode BOM prefix to avoid normalize removing this node
+
+
+          if (marks) {
+            state.hasInsertPrefixInCompositon = true;
+            slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].insertNodes(editor, _objectSpread$1({
+              text: '\uFEFF'
+            }, marks), {
+              select: true
+            });
+          }
+        }
+      }
+    }, [attributes.onCompositionStart]),
+    onCopy: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onCopy)) {
+        event.preventDefault();
+        ReactEditor.setFragmentData(editor, event.clipboardData, 'copy');
+      }
+    }, [attributes.onCopy]),
+    onCut: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (!readOnly && hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onCut)) {
+        event.preventDefault();
+        ReactEditor.setFragmentData(editor, event.clipboardData, 'cut');
+        var {
+          selection
+        } = editor;
+
+        if (selection) {
+          if (slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(selection)) {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteFragment(editor);
+          } else {
+            var node = slate__WEBPACK_IMPORTED_MODULE_1__["Node"].parent(editor, selection.anchor.path);
+
+            if (slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isVoid(editor, node)) {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].delete(editor);
+            }
+          }
+        }
+      }
+    }, [readOnly, attributes.onCut]),
+    onDragOver: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (hasTarget(editor, event.target) && !isEventHandled(event, attributes.onDragOver)) {
+        // Only when the target is void, call `preventDefault` to signal
+        // that drops are allowed. Editable content is droppable by
+        // default, and calling `preventDefault` hides the cursor.
+        var node = ReactEditor.toSlateNode(editor, event.target);
+
+        if (slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isVoid(editor, node)) {
+          event.preventDefault();
+        }
+      }
+    }, [attributes.onDragOver]),
+    onDragStart: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (!readOnly && hasTarget(editor, event.target) && !isEventHandled(event, attributes.onDragStart)) {
+        var node = ReactEditor.toSlateNode(editor, event.target);
+        var path = ReactEditor.findPath(editor, node);
+        var voidMatch = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isVoid(editor, node) || slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].void(editor, {
+          at: path,
+          voids: true
+        }); // If starting a drag on a void node, make sure it is selected
+        // so that it shows up in the selection's fragment.
+
+        if (voidMatch) {
+          var range = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].range(editor, path);
+          slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].select(editor, range);
+        }
+
+        state.isDraggingInternally = true;
+        ReactEditor.setFragmentData(editor, event.dataTransfer, 'drag');
+      }
+    }, [readOnly, attributes.onDragStart]),
+    onDrop: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (!readOnly && hasTarget(editor, event.target) && !isEventHandled(event, attributes.onDrop)) {
+        event.preventDefault(); // Keep a reference to the dragged range before updating selection
+
+        var draggedRange = editor.selection; // Find the range where the drop happened
+
+        var range = ReactEditor.findEventRange(editor, event);
+        var data = event.dataTransfer;
+        slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].select(editor, range);
+
+        if (state.isDraggingInternally) {
+          if (draggedRange && !slate__WEBPACK_IMPORTED_MODULE_1__["Range"].equals(draggedRange, range) && !slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].void(editor, {
+            at: range,
+            voids: true
+          })) {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].delete(editor, {
+              at: draggedRange
+            });
+          }
+
+          state.isDraggingInternally = false;
+        }
+
+        ReactEditor.insertData(editor, data); // When dragging from another source into the editor, it's possible
+        // that the current editor does not have focus.
+
+        if (!ReactEditor.isFocused(editor)) {
+          ReactEditor.focus(editor);
+        }
+      }
+    }, [readOnly, attributes.onDrop]),
+    onDragEnd: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      // When dropping on a different droppable element than the current editor,
+      // `onDrop` is not called. So we need to clean up in `onDragEnd` instead.
+      // Note: `onDragEnd` is only called when `onDrop` is not called
+      if (!readOnly && state.isDraggingInternally && hasTarget(editor, event.target) && !isEventHandled(event, attributes.onDragEnd)) {
+        state.isDraggingInternally = false;
+      }
+    }, [readOnly, attributes.onDragEnd]),
+    onFocus: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (!readOnly && !state.isUpdatingSelection && hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onFocus)) {
+        var el = ReactEditor.toDOMNode(editor, editor);
+        var root = ReactEditor.findDocumentOrShadowRoot(editor);
+        state.latestElement = root.activeElement; // COMPAT: If the editor has nested editable elements, the focus
+        // can go to them. In Firefox, this must be prevented because it
+        // results in issues with keyboard navigation. (2017/03/30)
+
+        if (IS_FIREFOX && event.target !== el) {
+          el.focus();
+          return;
+        }
+
+        IS_FOCUSED.set(editor, true);
+      }
+    }, [readOnly, attributes.onFocus]),
+    onKeyDown: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (!readOnly && !state.isComposing && hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onKeyDown)) {
+        var {
+          nativeEvent
+        } = event;
+        var {
+          selection
+        } = editor;
+        var element = editor.children[selection !== null ? selection.focus.path[0] : 0];
+        var isRTL = direction__WEBPACK_IMPORTED_MODULE_2___default()(slate__WEBPACK_IMPORTED_MODULE_1__["Node"].string(element)) === 'rtl'; // COMPAT: Since we prevent the default behavior on
+        // `beforeinput` events, the browser doesn't think there's ever
+        // any history stack to undo or redo, so we have to manage these
+        // hotkeys ourselves. (2019/11/06)
+
+        if (Hotkeys.isRedo(nativeEvent)) {
+          event.preventDefault();
+          var maybeHistoryEditor = editor;
+
+          if (typeof maybeHistoryEditor.redo === 'function') {
+            maybeHistoryEditor.redo();
+          }
+
+          return;
+        }
+
+        if (Hotkeys.isUndo(nativeEvent)) {
+          event.preventDefault();
+          var _maybeHistoryEditor = editor;
+
+          if (typeof _maybeHistoryEditor.undo === 'function') {
+            _maybeHistoryEditor.undo();
+          }
+
+          return;
+        } // COMPAT: Certain browsers don't handle the selection updates
+        // properly. In Chrome, the selection isn't properly extended.
+        // And in Firefox, the selection isn't properly collapsed.
+        // (2017/10/17)
+
+
+        if (Hotkeys.isMoveLineBackward(nativeEvent)) {
+          event.preventDefault();
+          slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].move(editor, {
+            unit: 'line',
+            reverse: true
+          });
+          return;
+        }
+
+        if (Hotkeys.isMoveLineForward(nativeEvent)) {
+          event.preventDefault();
+          slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].move(editor, {
+            unit: 'line'
+          });
+          return;
+        }
+
+        if (Hotkeys.isExtendLineBackward(nativeEvent)) {
+          event.preventDefault();
+          slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].move(editor, {
+            unit: 'line',
+            edge: 'focus',
+            reverse: true
+          });
+          return;
+        }
+
+        if (Hotkeys.isExtendLineForward(nativeEvent)) {
+          event.preventDefault();
+          slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].move(editor, {
+            unit: 'line',
+            edge: 'focus'
+          });
+          return;
+        } // COMPAT: If a void node is selected, or a zero-width text node
+        // adjacent to an inline is selected, we need to handle these
+        // hotkeys manually because browsers won't be able to skip over
+        // the void node with the zero-width space not being an empty
+        // string.
+
+
+        if (Hotkeys.isMoveBackward(nativeEvent)) {
+          event.preventDefault();
+
+          if (selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isCollapsed(selection)) {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].move(editor, {
+              reverse: !isRTL
+            });
+          } else {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].collapse(editor, {
+              edge: 'start'
+            });
+          }
+
+          return;
+        }
+
+        if (Hotkeys.isMoveForward(nativeEvent)) {
+          event.preventDefault();
+
+          if (selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isCollapsed(selection)) {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].move(editor, {
+              reverse: isRTL
+            });
+          } else {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].collapse(editor, {
+              edge: 'end'
+            });
+          }
+
+          return;
+        }
+
+        if (Hotkeys.isMoveWordBackward(nativeEvent)) {
+          event.preventDefault();
+
+          if (selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(selection)) {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].collapse(editor, {
+              edge: 'focus'
+            });
+          }
+
+          slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].move(editor, {
+            unit: 'word',
+            reverse: !isRTL
+          });
+          return;
+        }
+
+        if (Hotkeys.isMoveWordForward(nativeEvent)) {
+          event.preventDefault();
+
+          if (selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(selection)) {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].collapse(editor, {
+              edge: 'focus'
+            });
+          }
+
+          slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].move(editor, {
+            unit: 'word',
+            reverse: isRTL
+          });
+          return;
+        } // COMPAT: Certain browsers don't support the `beforeinput` event, so we
+        // fall back to guessing at the input intention for hotkeys.
+        // COMPAT: In iOS, some of these hotkeys are handled in the
+
+
+        if (!HAS_BEFORE_INPUT_SUPPORT) {
+          // We don't have a core behavior for these, but they change the
+          // DOM if we don't prevent them, so we have to.
+          if (Hotkeys.isBold(nativeEvent) || Hotkeys.isItalic(nativeEvent) || Hotkeys.isTransposeCharacter(nativeEvent)) {
+            event.preventDefault();
+            return;
+          }
+
+          if (Hotkeys.isSplitBlock(nativeEvent)) {
+            event.preventDefault();
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].insertBreak(editor);
+            return;
+          }
+
+          if (Hotkeys.isDeleteBackward(nativeEvent)) {
+            event.preventDefault();
+
+            if (selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(selection)) {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteFragment(editor, {
+                direction: 'backward'
+              });
+            } else {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteBackward(editor);
+            }
+
+            return;
+          }
+
+          if (Hotkeys.isDeleteForward(nativeEvent)) {
+            event.preventDefault();
+
+            if (selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(selection)) {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteFragment(editor, {
+                direction: 'forward'
+              });
+            } else {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteForward(editor);
+            }
+
+            return;
+          }
+
+          if (Hotkeys.isDeleteLineBackward(nativeEvent)) {
+            event.preventDefault();
+
+            if (selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(selection)) {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteFragment(editor, {
+                direction: 'backward'
+              });
+            } else {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteBackward(editor, {
+                unit: 'line'
+              });
+            }
+
+            return;
+          }
+
+          if (Hotkeys.isDeleteLineForward(nativeEvent)) {
+            event.preventDefault();
+
+            if (selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(selection)) {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteFragment(editor, {
+                direction: 'forward'
+              });
+            } else {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteForward(editor, {
+                unit: 'line'
+              });
+            }
+
+            return;
+          }
+
+          if (Hotkeys.isDeleteWordBackward(nativeEvent)) {
+            event.preventDefault();
+
+            if (selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(selection)) {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteFragment(editor, {
+                direction: 'backward'
+              });
+            } else {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteBackward(editor, {
+                unit: 'word'
+              });
+            }
+
+            return;
+          }
+
+          if (Hotkeys.isDeleteWordForward(nativeEvent)) {
+            event.preventDefault();
+
+            if (selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(selection)) {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteFragment(editor, {
+                direction: 'forward'
+              });
+            } else {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteForward(editor, {
+                unit: 'word'
+              });
+            }
+
+            return;
+          }
+        } else {
+          if (IS_CHROME || IS_SAFARI) {
+            // COMPAT: Chrome and Safari support `beforeinput` event but do not fire
+            // an event when deleting backwards in a selected void inline node
+            if (selection && (Hotkeys.isDeleteBackward(nativeEvent) || Hotkeys.isDeleteForward(nativeEvent)) && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isCollapsed(selection)) {
+              var currentNode = slate__WEBPACK_IMPORTED_MODULE_1__["Node"].parent(editor, selection.anchor.path);
+
+              if (slate__WEBPACK_IMPORTED_MODULE_1__["Element"].isElement(currentNode) && slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isVoid(editor, currentNode) && slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isInline(editor, currentNode)) {
+                event.preventDefault();
+                slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteBackward(editor, {
+                  unit: 'block'
+                });
+                return;
+              }
+            }
+          }
+        }
+      }
+    }, [readOnly, attributes.onKeyDown]),
+    onPaste: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (!readOnly && hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onPaste)) {
+        // COMPAT: Certain browsers don't support the `beforeinput` event, so we
+        // fall back to React's `onPaste` here instead.
+        // COMPAT: Firefox, Chrome and Safari don't emit `beforeinput` events
+        // when "paste without formatting" is used, so fallback. (2020/02/20)
+        if (!HAS_BEFORE_INPUT_SUPPORT || isPlainTextOnlyPaste(event.nativeEvent)) {
+          event.preventDefault();
+          ReactEditor.insertData(editor, event.clipboardData);
+        }
+      }
+    }, [readOnly, attributes.onPaste])
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Children, {
+    decorations: decorations,
+    node: editor,
+    renderElement: renderElement,
+    renderPlaceholder: renderPlaceholder,
+    renderLeaf: renderLeaf,
+    selection: editor.selection
+  }))));
+};
+/**
+ * The default placeholder element
+ */
+
+var DefaultPlaceholder = _ref => {
+  var {
+    attributes,
+    children
+  } = _ref;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", Object.assign({}, attributes), children);
+};
+/**
+ * A default memoized decorate function.
+ */
+
+var defaultDecorate = () => [];
+/**
+ * A default implement to scroll dom range into view.
+ */
+
+var defaultScrollSelectionIntoView = (editor, domRange) => {
+  // This was affecting the selection of multiple blocks and dragging behavior,
+  // so enabled only if the selection has been collapsed.
+  if (!editor.selection || editor.selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isCollapsed(editor.selection)) {
+    var leafEl = domRange.startContainer.parentElement;
+    leafEl.getBoundingClientRect = domRange.getBoundingClientRect.bind(domRange);
+    Object(scroll_into_view_if_needed__WEBPACK_IMPORTED_MODULE_5__["default"])(leafEl, {
+      scrollMode: 'if-needed'
+    });
+    delete leafEl.getBoundingClientRect;
+  }
+};
+/**
+ * Check if the target is in the editor.
+ */
+
+var hasTarget = (editor, target) => {
+  return isDOMNode(target) && ReactEditor.hasDOMNode(editor, target);
+};
+/**
+ * Check if the target is editable and in the editor.
+ */
+
+var hasEditableTarget = (editor, target) => {
+  return isDOMNode(target) && ReactEditor.hasDOMNode(editor, target, {
+    editable: true
+  });
+};
+/**
+ * Check if the target is inside void and in an non-readonly editor.
+ */
+
+var isTargetInsideNonReadonlyVoid = (editor, target) => {
+  if (IS_READ_ONLY.get(editor)) return false;
+  var slateNode = hasTarget(editor, target) && ReactEditor.toSlateNode(editor, target);
+  return slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isVoid(editor, slateNode);
+};
+/**
+ * Check if an event is overrided by a handler.
+ */
+
+var isEventHandled = (event, handler) => {
+  if (!handler) {
+    return false;
+  } // The custom event handler may return a boolean to specify whether the event
+  // shall be treated as being handled or not.
+
+
+  var shouldTreatEventAsHandled = handler(event);
+
+  if (shouldTreatEventAsHandled != null) {
+    return shouldTreatEventAsHandled;
+  }
+
+  return event.isDefaultPrevented() || event.isPropagationStopped();
+};
+/**
+ * Check if a DOM event is overrided by a handler.
+ */
+
+var isDOMEventHandled = (event, handler) => {
+  if (!handler) {
+    return false;
+  } // The custom event handler may return a boolean to specify whether the event
+  // shall be treated as being handled or not.
+
+
+  var shouldTreatEventAsHandled = handler(event);
+
+  if (shouldTreatEventAsHandled != null) {
+    return shouldTreatEventAsHandled;
+  }
+
+  return event.defaultPrevented;
+};
+
+/**
+ * Returns the number of characters that are the same at the beginning of the
+ * String.
+ *
+ * @param prev  the previous text
+ * @param next  the next text
+ * @returns the offset of the start of the difference; null if there is no difference
+ */
+
+function getDiffStart(prev, next) {
+  var length = Math.min(prev.length, next.length);
+
+  for (var i = 0; i < length; i++) {
+    if (prev.charAt(i) !== next.charAt(i)) return i;
+  }
+
+  if (prev.length !== next.length) return length;
+  return null;
+}
+/**
+ * Returns the number of characters that are the same at the end of the String
+ * up to `max`. Max prevents double-counting characters when there are
+ * multiple duplicate characters around the diff area.
+ *
+ * @param prev  the previous text
+ * @param next  the next text
+ * @param max  the max length to test.
+ * @returns number of characters that are the same at the end of the string
+ */
+
+
+function getDiffEnd(prev, next, max) {
+  var prevLength = prev.length;
+  var nextLength = next.length;
+  var length = Math.min(prevLength, nextLength, max);
+
+  for (var i = 0; i < length; i++) {
+    var prevChar = prev.charAt(prevLength - i - 1);
+    var nextChar = next.charAt(nextLength - i - 1);
+    if (prevChar !== nextChar) return i;
+  }
+
+  if (prev.length !== next.length) return length;
+  return null;
+}
+/**
+ * Takes two strings and returns an object representing two offsets. The
+ * first, `start` represents the number of characters that are the same at
+ * the front of the String. The `end` represents the number of characters
+ * that are the same at the end of the String.
+ *
+ * Returns null if they are identical.
+ *
+ * @param prev  the previous text
+ * @param next  the next text
+ * @returns the difference text range; null if there are no differences.
+ */
+
+
+function getDiffOffsets(prev, next) {
+  if (prev === next) return null;
+  var start = getDiffStart(prev, next);
+  if (start === null) return null;
+  var maxEnd = Math.min(prev.length - start, next.length - start);
+  var end = getDiffEnd(prev, next, maxEnd);
+  if (end === null) return null;
+  return {
+    start,
+    end
+  };
+}
+/**
+ * Takes a text string and returns a slice from the string at the given text range
+ *
+ * @param text  the text
+ * @param offsets  the text range
+ * @returns the text slice at text range
+ */
+
+
+function sliceText(text, offsets) {
+  return text.slice(offsets.start, text.length - offsets.end);
+}
+/**
+ * Takes two strings and returns a smart diff that can be used to describe the
+ * change in a way that can be used as operations like inserting, removing or
+ * replacing text.
+ *
+ * @param prev the previous text
+ * @param next the next text
+ * @returns the text difference
+ */
+
+
+function diffText(prev, next) {
+  if (prev === undefined || next === undefined) return null;
+  var offsets = getDiffOffsets(prev, next);
+  if (offsets == null) return null;
+  var insertText = sliceText(next, offsets);
+  var removeText = sliceText(prev, offsets);
+  return {
+    start: offsets.start,
+    end: prev.length - offsets.end,
+    insertText,
+    removeText
+  };
+}
+function combineInsertedText(insertedText) {
+  return insertedText.reduce((acc, _ref) => {
+    var {
+      text
+    } = _ref;
+    return "".concat(acc).concat(text.insertText);
+  }, '');
+}
+function getTextInsertion(editor, domNode) {
+  var node = ReactEditor.toSlateNode(editor, domNode);
+
+  if (!slate__WEBPACK_IMPORTED_MODULE_1__["Text"].isText(node)) {
+    return undefined;
+  }
+
+  var prevText = node.text;
+  var nextText = domNode.textContent; // textContent will pad an extra \n when the textContent ends with an \n
+
+  if (nextText.endsWith('\n')) {
+    nextText = nextText.slice(0, nextText.length - 1);
+  } // If the text is no different, there is no diff.
+
+
+  if (nextText !== prevText) {
+    var textDiff = diffText(prevText, nextText);
+
+    if (textDiff !== null) {
+      var textPath = ReactEditor.findPath(editor, node);
+      return {
+        text: textDiff,
+        path: textPath
+      };
+    }
+  }
+
+  return undefined;
+}
+function normalizeTextInsertionRange(editor, range, _ref2) {
+  var {
+    path,
+    text
+  } = _ref2;
+  var insertionRange = {
+    anchor: {
+      path,
+      offset: text.start
+    },
+    focus: {
+      path,
+      offset: text.end
+    }
+  };
+
+  if (!range || !slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isCollapsed(range)) {
+    return insertionRange;
+  }
+
+  var {
+    insertText,
+    removeText
+  } = text;
+  var isSingleCharacterInsertion = insertText.length === 1 || removeText.length === 1;
+  /**
+   * This code handles edge cases that arise from text diffing when the
+   * inserted or removed character is a single character, and the character
+   * right before or after the anchor is the same as the one being inserted or
+   * removed.
+   *
+   * Take this example: hello|o
+   *
+   * If another `o` is inserted at the selection's anchor in the example above,
+   * it should be inserted at the anchor, but using text diffing, we actually
+   * detect that the character was inserted after the second `o`:
+   *
+   * helloo[o]|
+   *
+   * Instead, in these very specific edge cases, we assume that the character
+   * needs to be inserted after the anchor rather than where the diff was found:
+   *
+   * hello[o]|o
+   */
+
+  if (isSingleCharacterInsertion && slate__WEBPACK_IMPORTED_MODULE_1__["Path"].equals(range.anchor.path, path)) {
+    var [_text] = Array.from(slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].nodes(editor, {
+      at: range,
+      match: slate__WEBPACK_IMPORTED_MODULE_1__["Text"].isText
+    }));
+
+    if (_text) {
+      var [node] = _text;
+      var {
+        anchor
+      } = range;
+      var characterBeforeAnchor = node.text[anchor.offset - 1];
+      var characterAfterAnchor = node.text[anchor.offset];
+
+      if (insertText.length === 1 && insertText === characterAfterAnchor) {
+        // Assume text should be inserted at the anchor
+        return range;
+      }
+
+      if (removeText.length === 1 && removeText === characterBeforeAnchor) {
+        // Assume text should be removed right before the anchor
+        return {
+          anchor: {
+            path,
+            offset: anchor.offset - 1
+          },
+          focus: {
+            path,
+            offset: anchor.offset
+          }
+        };
+      }
+    }
+  }
+
+  return insertionRange;
+}
+
+/**
+ * An auto-incrementing identifier for keys.
+ */
+var n = 0;
+/**
+ * A class that keeps track of a key string. We use a full class here because we
+ * want to be able to use them as keys in `WeakMap` objects.
+ */
+
+class Key {
+  constructor() {
+    this.id = "".concat(n++);
+  }
+
+}
+
+var ReactEditor = {
+  /**
+   * Return the host window of the current editor.
+   */
+  getWindow(editor) {
+    var window = EDITOR_TO_WINDOW.get(editor);
+
+    if (!window) {
+      throw new Error('Unable to find a host window element for this editor');
+    }
+
+    return window;
+  },
+
+  /**
+   * Find a key for a Slate node.
+   */
+  findKey(editor, node) {
+    var key = NODE_TO_KEY.get(node);
+
+    if (!key) {
+      key = new Key();
+      NODE_TO_KEY.set(node, key);
+    }
+
+    return key;
+  },
+
+  /**
+   * Find the path of Slate node.
+   */
+  findPath(editor, node) {
+    var path = [];
+    var child = node;
+
+    while (true) {
+      var parent = NODE_TO_PARENT.get(child);
+
+      if (parent == null) {
+        if (slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isEditor(child)) {
+          return path;
+        } else {
+          break;
+        }
+      }
+
+      var i = NODE_TO_INDEX.get(child);
+
+      if (i == null) {
+        break;
+      }
+
+      path.unshift(i);
+      child = parent;
+    }
+
+    throw new Error("Unable to find the path for Slate node: ".concat(JSON.stringify(node)));
+  },
+
+  /**
+   * Find the DOM node that implements DocumentOrShadowRoot for the editor.
+   */
+  findDocumentOrShadowRoot(editor) {
+    var el = ReactEditor.toDOMNode(editor, editor);
+    var root = el.getRootNode();
+
+    if ((root instanceof Document || root instanceof ShadowRoot) && root.getSelection != null) {
+      return root;
+    }
+
+    return el.ownerDocument;
+  },
+
+  /**
+   * Check if the editor is focused.
+   */
+  isFocused(editor) {
+    return !!IS_FOCUSED.get(editor);
+  },
+
+  /**
+   * Check if the editor is in read-only mode.
+   */
+  isReadOnly(editor) {
+    return !!IS_READ_ONLY.get(editor);
+  },
+
+  /**
+   * Blur the editor.
+   */
+  blur(editor) {
+    var el = ReactEditor.toDOMNode(editor, editor);
+    var root = ReactEditor.findDocumentOrShadowRoot(editor);
+    IS_FOCUSED.set(editor, false);
+
+    if (root.activeElement === el) {
+      el.blur();
+    }
+  },
+
+  /**
+   * Focus the editor.
+   */
+  focus(editor) {
+    var el = ReactEditor.toDOMNode(editor, editor);
+    var root = ReactEditor.findDocumentOrShadowRoot(editor);
+    IS_FOCUSED.set(editor, true);
+
+    if (root.activeElement !== el) {
+      el.focus({
+        preventScroll: true
+      });
+    }
+  },
+
+  /**
+   * Deselect the editor.
+   */
+  deselect(editor) {
+    ReactEditor.toDOMNode(editor, editor);
+    var {
+      selection
+    } = editor;
+    var root = ReactEditor.findDocumentOrShadowRoot(editor);
+    var domSelection = root.getSelection();
+
+    if (domSelection && domSelection.rangeCount > 0) {
+      domSelection.removeAllRanges();
+    }
+
+    if (selection) {
+      slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].deselect(editor);
+    }
+  },
+
+  /**
+   * Check if a DOM node is within the editor.
+   */
+  hasDOMNode(editor, target) {
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    var {
+      editable = false
+    } = options;
+    var editorEl = ReactEditor.toDOMNode(editor, editor);
+    var targetEl; // COMPAT: In Firefox, reading `target.nodeType` will throw an error if
+    // target is originating from an internal "restricted" element (e.g. a
+    // stepper arrow on a number input). (2018/05/04)
+    // https://github.com/ianstormtaylor/slate/issues/1819
+
+    try {
+      targetEl = isDOMElement(target) ? target : target.parentElement;
+    } catch (err) {
+      if (!err.message.includes('Permission denied to access property "nodeType"')) {
+        throw err;
+      }
+    }
+
+    if (!targetEl) {
+      return false;
+    }
+
+    return targetEl.closest("[data-slate-editor]") === editorEl && (!editable || targetEl.isContentEditable ? true : typeof targetEl.isContentEditable === 'boolean' && // isContentEditable exists only on HTMLElement, and on other nodes it will be undefined
+    // this is the core logic that lets you know you got the right editor.selection instead of null when editor is contenteditable="false"(readOnly)
+    targetEl.closest('[contenteditable="false"]') === editorEl || !!targetEl.getAttribute('data-slate-zero-width'));
+  },
+
+  /**
+   * Insert data from a `DataTransfer` into the editor.
+   */
+  insertData(editor, data) {
+    editor.insertData(data);
+  },
+
+  /**
+   * Insert fragment data from a `DataTransfer` into the editor.
+   */
+  insertFragmentData(editor, data) {
+    return editor.insertFragmentData(data);
+  },
+
+  /**
+   * Insert text data from a `DataTransfer` into the editor.
+   */
+  insertTextData(editor, data) {
+    return editor.insertTextData(data);
+  },
+
+  /**
+   * Sets data from the currently selected fragment on a `DataTransfer`.
+   */
+  setFragmentData(editor, data, originEvent) {
+    editor.setFragmentData(data, originEvent);
+  },
+
+  /**
+   * Find the native DOM element from a Slate node.
+   */
+  toDOMNode(editor, node) {
+    var KEY_TO_ELEMENT = EDITOR_TO_KEY_TO_ELEMENT.get(editor);
+    var domNode = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isEditor(node) ? EDITOR_TO_ELEMENT.get(editor) : KEY_TO_ELEMENT === null || KEY_TO_ELEMENT === void 0 ? void 0 : KEY_TO_ELEMENT.get(ReactEditor.findKey(editor, node));
+
+    if (!domNode) {
+      throw new Error("Cannot resolve a DOM node from Slate node: ".concat(JSON.stringify(node)));
+    }
+
+    return domNode;
+  },
+
+  /**
+   * Find a native DOM selection point from a Slate point.
+   */
+  toDOMPoint(editor, point) {
+    var [node] = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].node(editor, point.path);
+    var el = ReactEditor.toDOMNode(editor, node);
+    var domPoint; // If we're inside a void node, force the offset to 0, otherwise the zero
+    // width spacing character will result in an incorrect offset of 1
+
+    if (slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].void(editor, {
+      at: point
+    })) {
+      point = {
+        path: point.path,
+        offset: 0
+      };
+    } // For each leaf, we need to isolate its content, which means filtering
+    // to its direct text and zero-width spans. (We have to filter out any
+    // other siblings that may have been rendered alongside them.)
+
+
+    var selector = "[data-slate-string], [data-slate-zero-width]";
+    var texts = Array.from(el.querySelectorAll(selector));
+    var start = 0;
+
+    for (var text of texts) {
+      var domNode = text.childNodes[0];
+
+      if (domNode == null || domNode.textContent == null) {
+        continue;
+      }
+
+      var {
+        length
+      } = domNode.textContent;
+      var attr = text.getAttribute('data-slate-length');
+      var trueLength = attr == null ? length : parseInt(attr, 10);
+      var end = start + trueLength;
+
+      if (point.offset <= end) {
+        var offset = Math.min(length, Math.max(0, point.offset - start));
+        domPoint = [domNode, offset];
+        break;
+      }
+
+      start = end;
+    }
+
+    if (!domPoint) {
+      throw new Error("Cannot resolve a DOM point from Slate point: ".concat(JSON.stringify(point)));
+    }
+
+    return domPoint;
+  },
+
+  /**
+   * Find a native DOM range from a Slate `range`.
+   *
+   * Notice: the returned range will always be ordinal regardless of the direction of Slate `range` due to DOM API limit.
+   *
+   * there is no way to create a reverse DOM Range using Range.setStart/setEnd
+   * according to https://dom.spec.whatwg.org/#concept-range-bp-set.
+   */
+  toDOMRange(editor, range) {
+    var {
+      anchor,
+      focus
+    } = range;
+    var isBackward = slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isBackward(range);
+    var domAnchor = ReactEditor.toDOMPoint(editor, anchor);
+    var domFocus = slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isCollapsed(range) ? domAnchor : ReactEditor.toDOMPoint(editor, focus);
+    var window = ReactEditor.getWindow(editor);
+    var domRange = window.document.createRange();
+    var [startNode, startOffset] = isBackward ? domFocus : domAnchor;
+    var [endNode, endOffset] = isBackward ? domAnchor : domFocus; // A slate Point at zero-width Leaf always has an offset of 0 but a native DOM selection at
+    // zero-width node has an offset of 1 so we have to check if we are in a zero-width node and
+    // adjust the offset accordingly.
+
+    var startEl = isDOMElement(startNode) ? startNode : startNode.parentElement;
+    var isStartAtZeroWidth = !!startEl.getAttribute('data-slate-zero-width');
+    var endEl = isDOMElement(endNode) ? endNode : endNode.parentElement;
+    var isEndAtZeroWidth = !!endEl.getAttribute('data-slate-zero-width');
+    domRange.setStart(startNode, isStartAtZeroWidth ? 1 : startOffset);
+    domRange.setEnd(endNode, isEndAtZeroWidth ? 1 : endOffset);
+    return domRange;
+  },
+
+  /**
+   * Find a Slate node from a native DOM `element`.
+   */
+  toSlateNode(editor, domNode) {
+    var domEl = isDOMElement(domNode) ? domNode : domNode.parentElement;
+
+    if (domEl && !domEl.hasAttribute('data-slate-node')) {
+      domEl = domEl.closest("[data-slate-node]");
+    }
+
+    var node = domEl ? ELEMENT_TO_NODE.get(domEl) : null;
+
+    if (!node) {
+      throw new Error("Cannot resolve a Slate node from DOM node: ".concat(domEl));
+    }
+
+    return node;
+  },
+
+  /**
+   * Get the target range from a DOM `event`.
+   */
+  findEventRange(editor, event) {
+    if ('nativeEvent' in event) {
+      event = event.nativeEvent;
+    }
+
+    var {
+      clientX: x,
+      clientY: y,
+      target
+    } = event;
+
+    if (x == null || y == null) {
+      throw new Error("Cannot resolve a Slate range from a DOM event: ".concat(event));
+    }
+
+    var node = ReactEditor.toSlateNode(editor, event.target);
+    var path = ReactEditor.findPath(editor, node); // If the drop target is inside a void node, move it into either the
+    // next or previous node, depending on which side the `x` and `y`
+    // coordinates are closest to.
+
+    if (slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isVoid(editor, node)) {
+      var rect = target.getBoundingClientRect();
+      var isPrev = editor.isInline(node) ? x - rect.left < rect.left + rect.width - x : y - rect.top < rect.top + rect.height - y;
+      var edge = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].point(editor, path, {
+        edge: isPrev ? 'start' : 'end'
+      });
+      var point = isPrev ? slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].before(editor, edge) : slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].after(editor, edge);
+
+      if (point) {
+        var _range = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].range(editor, point);
+
+        return _range;
+      }
+    } // Else resolve a range from the caret position where the drop occured.
+
+
+    var domRange;
+    var {
+      document
+    } = ReactEditor.getWindow(editor); // COMPAT: In Firefox, `caretRangeFromPoint` doesn't exist. (2016/07/25)
+
+    if (document.caretRangeFromPoint) {
+      domRange = document.caretRangeFromPoint(x, y);
+    } else {
+      var position = document.caretPositionFromPoint(x, y);
+
+      if (position) {
+        domRange = document.createRange();
+        domRange.setStart(position.offsetNode, position.offset);
+        domRange.setEnd(position.offsetNode, position.offset);
+      }
+    }
+
+    if (!domRange) {
+      throw new Error("Cannot resolve a Slate range from a DOM event: ".concat(event));
+    } // Resolve a Slate range from the DOM range.
+
+
+    var range = ReactEditor.toSlateRange(editor, domRange, {
+      exactMatch: false,
+      suppressThrow: false
+    });
+    return range;
+  },
+
+  /**
+   * Find a Slate point from a DOM selection's `domNode` and `domOffset`.
+   */
+  toSlatePoint(editor, domPoint, options) {
+    var {
+      exactMatch,
+      suppressThrow
+    } = options;
+    var [nearestNode, nearestOffset] = exactMatch ? domPoint : normalizeDOMPoint(domPoint);
+    var parentNode = nearestNode.parentNode;
+    var textNode = null;
+    var offset = 0;
+
+    if (parentNode) {
+      var _domNode$textContent;
+
+      var voidNode = parentNode.closest('[data-slate-void="true"]');
+      var leafNode = parentNode.closest('[data-slate-leaf]');
+      var domNode = null; // Calculate how far into the text node the `nearestNode` is, so that we
+      // can determine what the offset relative to the text node is.
+
+      if (leafNode) {
+        textNode = leafNode.closest('[data-slate-node="text"]');
+
+        if (textNode) {
+          var window = ReactEditor.getWindow(editor);
+          var range = window.document.createRange();
+          range.setStart(textNode, 0);
+          range.setEnd(nearestNode, nearestOffset);
+          var contents = range.cloneContents();
+          var removals = [...Array.prototype.slice.call(contents.querySelectorAll('[data-slate-zero-width]')), ...Array.prototype.slice.call(contents.querySelectorAll('[contenteditable=false]'))];
+          removals.forEach(el => {
+            el.parentNode.removeChild(el);
+          }); // COMPAT: Edge has a bug where Range.prototype.toString() will
+          // convert \n into \r\n. The bug causes a loop when slate-react
+          // attempts to reposition its cursor to match the native position. Use
+          // textContent.length instead.
+          // https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/10291116/
+
+          offset = contents.textContent.length;
+          domNode = textNode;
+        }
+      } else if (voidNode) {
+        // For void nodes, the element with the offset key will be a cousin, not an
+        // ancestor, so find it by going down from the nearest void parent.
+        leafNode = voidNode.querySelector('[data-slate-leaf]'); // COMPAT: In read-only editors the leaf is not rendered.
+
+        if (!leafNode) {
+          offset = 1;
+        } else {
+          textNode = leafNode.closest('[data-slate-node="text"]');
+          domNode = leafNode;
+          offset = domNode.textContent.length;
+          domNode.querySelectorAll('[data-slate-zero-width]').forEach(el => {
+            offset -= el.textContent.length;
+          });
+        }
+      }
+
+      if (domNode && offset === domNode.textContent.length && (parentNode.hasAttribute('data-slate-zero-width') || IS_FIREFOX && (_domNode$textContent = domNode.textContent) !== null && _domNode$textContent !== void 0 && _domNode$textContent.endsWith('\n\n'))) {
+        offset--;
+      }
+    }
+
+    if (!textNode) {
+      if (suppressThrow) {
+        return null;
+      }
+
+      throw new Error("Cannot resolve a Slate point from DOM point: ".concat(domPoint));
+    } // COMPAT: If someone is clicking from one Slate editor into another,
+    // the select event fires twice, once for the old editor's `element`
+    // first, and then afterwards for the correct `element`. (2017/03/03)
+
+
+    var slateNode = ReactEditor.toSlateNode(editor, textNode);
+    var path = ReactEditor.findPath(editor, slateNode);
+    return {
+      path,
+      offset
+    };
+  },
+
+  /**
+   * Find a Slate range from a DOM range or selection.
+   */
+  toSlateRange(editor, domRange, options) {
+    var {
+      exactMatch,
+      suppressThrow
+    } = options;
+    var el = isDOMSelection(domRange) ? domRange.anchorNode : domRange.startContainer;
+    var anchorNode;
+    var anchorOffset;
+    var focusNode;
+    var focusOffset;
+    var isCollapsed;
+
+    if (el) {
+      if (isDOMSelection(domRange)) {
+        anchorNode = domRange.anchorNode;
+        anchorOffset = domRange.anchorOffset;
+        focusNode = domRange.focusNode;
+        focusOffset = domRange.focusOffset; // COMPAT: There's a bug in chrome that always returns `true` for
+        // `isCollapsed` for a Selection that comes from a ShadowRoot.
+        // (2020/08/08)
+        // https://bugs.chromium.org/p/chromium/issues/detail?id=447523
+
+        if (IS_CHROME && hasShadowRoot()) {
+          isCollapsed = domRange.anchorNode === domRange.focusNode && domRange.anchorOffset === domRange.focusOffset;
+        } else {
+          isCollapsed = domRange.isCollapsed;
+        }
+      } else {
+        anchorNode = domRange.startContainer;
+        anchorOffset = domRange.startOffset;
+        focusNode = domRange.endContainer;
+        focusOffset = domRange.endOffset;
+        isCollapsed = domRange.collapsed;
+      }
+    }
+
+    if (anchorNode == null || focusNode == null || anchorOffset == null || focusOffset == null) {
+      throw new Error("Cannot resolve a Slate range from DOM range: ".concat(domRange));
+    }
+
+    var anchor = ReactEditor.toSlatePoint(editor, [anchorNode, anchorOffset], {
+      exactMatch,
+      suppressThrow
+    });
+
+    if (!anchor) {
+      return null;
+    }
+
+    var focus = isCollapsed ? anchor : ReactEditor.toSlatePoint(editor, [focusNode, focusOffset], {
+      exactMatch,
+      suppressThrow
+    });
+
+    if (!focus) {
+      return null;
+    }
+
+    var range = {
+      anchor: anchor,
+      focus: focus
+    }; // if the selection is a hanging range that ends in a void
+    // and the DOM focus is an Element
+    // (meaning that the selection ends before the element)
+    // unhang the range to avoid mistakenly including the void
+
+    if (slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(range) && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isForward(range) && isDOMElement(focusNode) && slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].void(editor, {
+      at: range.focus,
+      mode: 'highest'
+    })) {
+      range = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].unhangRange(editor, range, {
+        voids: true
+      });
+    }
+
+    return range;
+  },
+
+  hasRange(editor, range) {
+    var {
+      anchor,
+      focus
+    } = range;
+    return slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].hasPath(editor, anchor.path) && slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].hasPath(editor, focus.path);
+  }
+
+};
+
+function gatherMutationData(editor, mutations) {
+  var addedNodes = [];
+  var removedNodes = [];
+  var insertedText = [];
+  var characterDataMutations = [];
+  mutations.forEach(mutation => {
+    switch (mutation.type) {
+      case 'childList':
+        {
+          if (mutation.addedNodes.length) {
+            mutation.addedNodes.forEach(addedNode => {
+              addedNodes.push(addedNode);
+            });
+          }
+
+          mutation.removedNodes.forEach(removedNode => {
+            removedNodes.push(removedNode);
+          });
+          break;
+        }
+
+      case 'characterData':
+        {
+          characterDataMutations.push(mutation); // Changes to text nodes should consider the parent element
+
+          var {
+            parentNode
+          } = mutation.target;
+
+          if (!parentNode) {
+            return;
+          }
+
+          var textInsertion = getTextInsertion(editor, parentNode);
+
+          if (!textInsertion) {
+            return;
+          } // If we've already detected a diff at that path, we can return early
+
+
+          if (insertedText.some(_ref => {
+            var {
+              path
+            } = _ref;
+            return slate__WEBPACK_IMPORTED_MODULE_1__["Path"].equals(path, textInsertion.path);
+          })) {
+            return;
+          } // Add the text diff to the array of detected text insertions that need to be reconciled
+
+
+          insertedText.push(textInsertion);
+        }
+    }
+  });
+  return {
+    addedNodes,
+    removedNodes,
+    insertedText,
+    characterDataMutations
+  };
+}
+/**
+ * In general, when a line break occurs, there will be more `addedNodes` than `removedNodes`.
+ *
+ * This isn't always the case however. In some cases, there will be more `removedNodes` than
+ * `addedNodes`.
+ *
+ * To account for these edge cases, the most reliable strategy to detect line break mutations
+ * is to check whether a new block was inserted of the same type as the current block.
+ */
+
+var isLineBreak = (editor, _ref2) => {
+  var {
+    addedNodes
+  } = _ref2;
+  var {
+    selection
+  } = editor;
+  var parentNode = selection ? slate__WEBPACK_IMPORTED_MODULE_1__["Node"].parent(editor, selection.anchor.path) : null;
+  var parentDOMNode = parentNode ? ReactEditor.toDOMNode(editor, parentNode) : null;
+
+  if (!parentDOMNode) {
+    return false;
+  }
+
+  return addedNodes.some(addedNode => addedNode instanceof HTMLElement && addedNode.tagName === (parentDOMNode === null || parentDOMNode === void 0 ? void 0 : parentDOMNode.tagName));
+};
+/**
+ * So long as we check for line break mutations before deletion mutations,
+ * we can safely assume that a set of mutations was a deletion if there are
+ * removed nodes.
+ */
+
+var isDeletion = (_, _ref3) => {
+  var {
+    removedNodes
+  } = _ref3;
+  return removedNodes.length > 0;
+};
+/**
+ * If the selection was expanded and there are removed nodes,
+ * the contents of the selection need to be replaced with the diff
+ */
+
+var isReplaceExpandedSelection = (_ref4, _ref5) => {
+  var {
+    selection
+  } = _ref4;
+  var {
+    removedNodes
+  } = _ref5;
+  return selection ? slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(selection) && removedNodes.length > 0 : false;
+};
+/**
+ * Plain text insertion
+ */
+
+var isTextInsertion = (_, _ref6) => {
+  var {
+    insertedText
+  } = _ref6;
+  return insertedText.length > 0;
+};
+/**
+ * Edge case. Detect mutations that remove leaf nodes and also update character data
+ */
+
+var isRemoveLeafNodes = (_, _ref7) => {
+  var {
+    addedNodes,
+    characterDataMutations,
+    removedNodes
+  } = _ref7;
+  return removedNodes.length > 0 && addedNodes.length === 0 && characterDataMutations.length > 0;
+};
+
+/**
+ * Based loosely on:
+ *
+ * https://github.com/facebook/draft-js/blob/master/src/component/handlers/composition/DOMObserver.js
+ * https://github.com/ProseMirror/prosemirror-view/blob/master/src/domobserver.js
+ *
+ * The input manager attempts to map observed mutations on the document to a
+ * set of operations in order to reconcile Slate's internal value with the DOM.
+ *
+ * Mutations are processed synchronously as they come in. Only mutations that occur
+ * during a user input loop are processed, as other mutations can occur within the
+ * document that were not initiated by user input.
+ *
+ * The mutation reconciliation process attempts to match mutations to the following
+ * patterns:
+ *
+ * - Text updates
+ * - Deletions
+ * - Line breaks
+ *
+ * @param editor
+ * @param restoreDOM
+ */
+
+
+class AndroidInputManager {
+  constructor(editor, restoreDOM) {
+    this.editor = editor;
+    this.restoreDOM = restoreDOM;
+    /**
+     * Handle MutationObserver flush
+     *
+     * @param mutations
+     */
+
+    this.flush = mutations => {
+
+      try {
+        this.reconcileMutations(mutations);
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error(err); // Failed to reconcile mutations, restore DOM to its previous state
+
+        this.restoreDOM();
+      }
+    };
+    /**
+     * Reconcile a batch of mutations
+     *
+     * @param mutations
+     */
+
+
+    this.reconcileMutations = mutations => {
+      var mutationData = gatherMutationData(this.editor, mutations);
+      var {
+        insertedText,
+        removedNodes
+      } = mutationData;
+
+      if (isReplaceExpandedSelection(this.editor, mutationData)) {
+        var text = combineInsertedText(insertedText);
+        this.replaceExpandedSelection(text);
+      } else if (isLineBreak(this.editor, mutationData)) {
+        this.insertBreak();
+      } else if (isRemoveLeafNodes(this.editor, mutationData)) {
+        this.removeLeafNodes(removedNodes);
+      } else if (isDeletion(this.editor, mutationData)) {
+        this.deleteBackward();
+      } else if (isTextInsertion(this.editor, mutationData)) {
+        this.insertText(insertedText);
+      }
+    };
+    /**
+     * Apply text diff
+     */
+
+
+    this.insertText = insertedText => {
+      var {
+        selection
+      } = this.editor; // If it is in composing or after `onCompositionend`, set `EDITOR_ON_COMPOSITION_TEXT` and return.
+      // Text will be inserted on compositionend event.
+
+      if (IS_COMPOSING.get(this.editor) || IS_ON_COMPOSITION_END.get(this.editor)) {
+        EDITOR_ON_COMPOSITION_TEXT.set(this.editor, insertedText);
+        IS_ON_COMPOSITION_END.set(this.editor, false);
+        return;
+      } // Insert the batched text diffs
+
+
+      insertedText.forEach(insertion => {
+        var text = insertion.text.insertText;
+        var at = normalizeTextInsertionRange(this.editor, selection, insertion);
+        slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].setSelection(this.editor, at);
+        slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].insertText(this.editor, text);
+      });
+    };
+    /**
+     * Handle line breaks
+     */
+
+
+    this.insertBreak = () => {
+      var {
+        selection
+      } = this.editor;
+      slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].insertBreak(this.editor);
+      this.restoreDOM();
+
+      if (selection) {
+        // Compat: Move selection to the newly inserted block if it has not moved
+        setTimeout(() => {
+          if (this.editor.selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].equals(selection, this.editor.selection)) {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].move(this.editor);
+          }
+        }, 100);
+      }
+    };
+    /**
+     * Handle expanded selection being deleted or replaced by text
+     */
+
+
+    this.replaceExpandedSelection = text => {
+
+      slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteFragment(this.editor);
+
+      if (text.length) {
+        // Selection was replaced by text, insert the entire text diff
+        slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].insertText(this.editor, text);
+      }
+
+      this.restoreDOM();
+    };
+    /**
+     * Handle `backspace` that merges blocks
+     */
+
+
+    this.deleteBackward = () => {
+      slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteBackward(this.editor);
+      ReactEditor.focus(this.editor);
+      this.restoreDOM();
+    };
+    /**
+     * Handle mutations that remove specific leaves
+     */
+
+
+    this.removeLeafNodes = nodes => {
+      for (var node of nodes) {
+        var slateNode = ReactEditor.toSlateNode(this.editor, node);
+
+        if (slateNode) {
+          var path = ReactEditor.findPath(this.editor, slateNode);
+          slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].delete(this.editor, {
+            at: path
+          });
+          this.restoreDOM();
+        }
+      }
+    };
+
+    this.editor = editor;
+    this.restoreDOM = restoreDOM;
+  }
+
+}
+
+function useMutationObserver(node, callback, options) {
+  var [mutationObserver] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(() => new MutationObserver(callback));
+  useIsomorphicLayoutEffect(() => {
+    // Disconnect mutation observer during render phase
+    mutationObserver.disconnect();
+  });
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (!node.current) {
+      throw new Error('Failed to attach MutationObserver, `node` is undefined');
+    } // Attach mutation observer after render phase has finished
+
+
+    mutationObserver.observe(node.current, options); // Clean up after effect
+
+    return mutationObserver.disconnect.bind(mutationObserver);
+  });
+}
+
+var MUTATION_OBSERVER_CONFIG$1 = {
+  childList: true,
+  characterData: true,
+  subtree: true
+};
+
+function findClosestKnowSlateNode(domNode) {
+  var _domEl;
+
+  var domEl = isDOMElement(domNode) ? domNode : domNode.parentElement;
+
+  if (domEl && !domEl.hasAttribute('data-slate-node')) {
+    domEl = domEl.closest("[data-slate-node]");
+  }
+
+  var slateNode = domEl && ELEMENT_TO_NODE.get(domEl);
+
+  if (slateNode) {
+    return slateNode;
+  } // Unknown dom element with a slate-slate-node attribute => the IME
+  // most likely duplicated the node so we have to restore the parent
+
+
+  return (_domEl = domEl) !== null && _domEl !== void 0 && _domEl.parentElement ? findClosestKnowSlateNode(domEl.parentElement) : null;
+}
+
+function useRestoreDom(node, receivedUserInput) {
+  var editor = useSlateStatic();
+  var mutatedNodes = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(new Set());
+  var handleDOMMutation = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(mutations => {
+    if (!receivedUserInput.current) {
+      return;
+    }
+
+    mutations.forEach(_ref => {
+      var {
+        target
+      } = _ref;
+      var slateNode = findClosestKnowSlateNode(target);
+
+      if (!slateNode) {
+        return;
+      }
+
+      return mutatedNodes.current.add(slateNode);
+    });
+  }, []);
+  useMutationObserver(node, handleDOMMutation, MUTATION_OBSERVER_CONFIG$1); // Clear mutated nodes on every render
+
+  mutatedNodes.current.clear();
+  var restore = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(() => {
+    var mutated = Array.from(mutatedNodes.current.values()); // Filter out child nodes of nodes that will be restored anyway
+
+    var nodesToRestore = mutated.filter(n => !mutated.some(m => slate__WEBPACK_IMPORTED_MODULE_1__["Path"].isParent(ReactEditor.findPath(editor, m), ReactEditor.findPath(editor, n))));
+    nodesToRestore.forEach(n => {
+      var _NODE_TO_RESTORE_DOM$;
+
+      (_NODE_TO_RESTORE_DOM$ = NODE_TO_RESTORE_DOM.get(n)) === null || _NODE_TO_RESTORE_DOM$ === void 0 ? void 0 : _NODE_TO_RESTORE_DOM$();
+    });
+    mutatedNodes.current.clear();
+  }, []);
+  return restore;
+}
+
+function useTrackUserInput() {
+  var editor = useSlateStatic();
+  var receivedUserInput = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(false);
+  var animationFrameRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  var onUserInput = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(() => {
+    if (receivedUserInput.current === false) {
+      var window = ReactEditor.getWindow(editor);
+      receivedUserInput.current = true;
+
+      if (animationFrameRef.current) {
+        window.cancelAnimationFrame(animationFrameRef.current);
+      }
+
+      animationFrameRef.current = window.requestAnimationFrame(() => {
+        receivedUserInput.current = false;
+        animationFrameRef.current = null;
+      });
+    }
+  }, []);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    // Reset user input tracking on every render
+    if (receivedUserInput.current) {
+      receivedUserInput.current = false;
+    }
+  });
+  return {
+    receivedUserInput,
+    onUserInput
+  };
+}
+
+var MUTATION_OBSERVER_CONFIG = {
+  childList: true,
+  characterData: true,
+  characterDataOldValue: true,
+  subtree: true
+};
+function useAndroidInputManager(node) {
+  var editor = useSlateStatic();
+  var {
+    receivedUserInput,
+    onUserInput
+  } = useTrackUserInput();
+  var restoreDom = useRestoreDom(node, receivedUserInput);
+  var inputManager = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(() => new AndroidInputManager(editor, restoreDom), [restoreDom, editor]);
+  var timeoutId = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  var isReconciling = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(false);
+  var flush = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(mutations => {
+    if (!receivedUserInput.current) {
+      return;
+    }
+
+    isReconciling.current = true;
+    inputManager.flush(mutations);
+
+    if (timeoutId.current) {
+      clearTimeout(timeoutId.current);
+    }
+
+    timeoutId.current = setTimeout(() => {
+      isReconciling.current = false;
+      timeoutId.current = null;
+    }, 250);
+  }, []);
+  useMutationObserver(node, flush, MUTATION_OBSERVER_CONFIG);
+  return {
+    isReconciling,
+    onUserInput
+  };
+}
+
+var _excluded$1 = ["autoFocus", "decorate", "onDOMBeforeInput", "placeholder", "readOnly", "renderElement", "renderLeaf", "renderPlaceholder", "style", "as"];
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+/**
+ * Editable.
+ */
+// https://github.com/facebook/draft-js/blob/main/src/component/handlers/composition/DraftEditorCompositionHandler.js#L41
+// When using keyboard English association function, conpositionEnd triggered too fast, resulting in after `insertText` still maintain association state.
+
+var RESOLVE_DELAY = 20;
+var AndroidEditable = props => {
+  var {
+    autoFocus,
+    decorate = defaultDecorate,
+    onDOMBeforeInput: propsOnDOMBeforeInput,
+    placeholder,
+    readOnly = false,
+    renderElement,
+    renderLeaf,
+    renderPlaceholder = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DefaultPlaceholder, Object.assign({}, props)),
+    style = {},
+    as: Component = 'div'
+  } = props,
+      attributes = _objectWithoutProperties(props, _excluded$1);
+
+  var editor = useSlate(); // Rerender editor when composition status changed
+
+  var [isComposing, setIsComposing] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  var inputManager = useAndroidInputManager(ref); // Update internal state on each render.
+
+  IS_READ_ONLY.set(editor, readOnly); // Keep track of some state for the event handler logic.
+
+  var state = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(() => ({
+    isComposing: false,
+    isUpdatingSelection: false,
+    latestElement: null
+  }), []);
+  var contentKey = useContentKey(editor); // Whenever the editor updates...
+
+  useIsomorphicLayoutEffect(() => {
+    // Update element-related weak maps with the DOM element ref.
+    var window;
+
+    if (ref.current && (window = getDefaultView(ref.current))) {
+      EDITOR_TO_WINDOW.set(editor, window);
+      EDITOR_TO_ELEMENT.set(editor, ref.current);
+      NODE_TO_ELEMENT.set(editor, ref.current);
+      ELEMENT_TO_NODE.set(ref.current, editor);
+    } else {
+      NODE_TO_ELEMENT.delete(editor);
+    }
+
+    try {
+      // Make sure the DOM selection state is in sync.
+      var {
+        selection
+      } = editor;
+      var root = ReactEditor.findDocumentOrShadowRoot(editor);
+      var domSelection = root.getSelection();
+
+      if (state.isComposing || !domSelection || !ReactEditor.isFocused(editor)) {
+        return;
+      }
+
+      var hasDomSelection = domSelection.type !== 'None'; // If the DOM selection is properly unset, we're done.
+
+      if (!selection && !hasDomSelection) {
+        return;
+      } // verify that the dom selection is in the editor
+
+
+      var editorElement = EDITOR_TO_ELEMENT.get(editor);
+      var hasDomSelectionInEditor = false;
+
+      if (editorElement.contains(domSelection.anchorNode) && editorElement.contains(domSelection.focusNode)) {
+        hasDomSelectionInEditor = true;
+      } // If the DOM selection is in the editor and the editor selection is already correct, we're done.
+
+
+      if (hasDomSelection && hasDomSelectionInEditor && selection) {
+        var slateRange = ReactEditor.toSlateRange(editor, domSelection, {
+          exactMatch: true,
+          suppressThrow: true
+        });
+
+        if (slateRange && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].equals(slateRange, selection)) {
+          return;
+        }
+      } // when <Editable/> is being controlled through external value
+      // then its children might just change - DOM responds to it on its own
+      // but Slate's value is not being updated through any operation
+      // and thus it doesn't transform selection on its own
+
+
+      if (selection && !ReactEditor.hasRange(editor, selection)) {
+        editor.selection = ReactEditor.toSlateRange(editor, domSelection, {
+          exactMatch: false,
+          suppressThrow: false
+        });
+        return;
+      } // Otherwise the DOM selection is out of sync, so update it.
+
+
+      var el = ReactEditor.toDOMNode(editor, editor);
+      state.isUpdatingSelection = true;
+      var newDomRange = selection && ReactEditor.toDOMRange(editor, selection);
+
+      if (newDomRange) {
+        if (slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isBackward(selection)) {
+          domSelection.setBaseAndExtent(newDomRange.endContainer, newDomRange.endOffset, newDomRange.startContainer, newDomRange.startOffset);
+        } else {
+          domSelection.setBaseAndExtent(newDomRange.startContainer, newDomRange.startOffset, newDomRange.endContainer, newDomRange.endOffset);
+        }
+
+        var leafEl = newDomRange.startContainer.parentElement;
+        leafEl.getBoundingClientRect = newDomRange.getBoundingClientRect.bind(newDomRange);
+        Object(scroll_into_view_if_needed__WEBPACK_IMPORTED_MODULE_5__["default"])(leafEl, {
+          scrollMode: 'if-needed',
+          boundary: el
+        }); // @ts-ignore
+
+        delete leafEl.getBoundingClientRect;
+      } else {
+        domSelection.removeAllRanges();
+      }
+
+      setTimeout(() => {
+        state.isUpdatingSelection = false;
+      });
+    } catch (_unused) {
+      // Failed to update selection, likely due to reconciliation error
+      state.isUpdatingSelection = false;
+    }
+  }); // The autoFocus TextareaHTMLAttribute doesn't do anything on a div, so it
+  // needs to be manually focused.
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (ref.current && autoFocus) {
+      ref.current.focus();
+    }
+  }, [autoFocus]); // Listen on the native `selectionchange` event to be able to update any time
+  // the selection changes. This is required because React's `onSelect` is leaky
+  // and non-standard so it doesn't fire until after a selection has been
+  // released. This causes issues in situations where another change happens
+  // while a selection is being dragged.
+
+  var onDOMSelectionChange = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(lodash_throttle__WEBPACK_IMPORTED_MODULE_4___default()(() => {
+    try {
+      if (!state.isComposing && !state.isUpdatingSelection && !inputManager.isReconciling.current) {
+        var root = ReactEditor.findDocumentOrShadowRoot(editor);
+        var {
+          activeElement
+        } = root;
+        var el = ReactEditor.toDOMNode(editor, editor);
+        var domSelection = root.getSelection();
+
+        if (activeElement === el) {
+          state.latestElement = activeElement;
+          IS_FOCUSED.set(editor, true);
+        } else {
+          IS_FOCUSED.delete(editor);
+        }
+
+        if (!domSelection) {
+          return slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].deselect(editor);
+        }
+
+        var {
+          anchorNode,
+          focusNode
+        } = domSelection;
+        var anchorNodeSelectable = hasEditableTarget(editor, anchorNode) || isTargetInsideNonReadonlyVoid(editor, anchorNode);
+        var focusNodeSelectable = hasEditableTarget(editor, focusNode) || isTargetInsideNonReadonlyVoid(editor, focusNode);
+
+        if (anchorNodeSelectable && focusNodeSelectable) {
+          var range = ReactEditor.toSlateRange(editor, domSelection, {
+            exactMatch: false,
+            suppressThrow: false
+          });
+          slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].select(editor, range);
+        } else {
+          slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].deselect(editor);
+        }
+      }
+    } catch (_unused2) {// Failed to update selection, likely due to reconciliation error
+    }
+  }, 100), [readOnly]);
+  var scheduleOnDOMSelectionChange = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(() => lodash_debounce__WEBPACK_IMPORTED_MODULE_3___default()(onDOMSelectionChange, 0), [onDOMSelectionChange]); // Listen on the native `beforeinput` event to get real "Level 2" events. This
+  // is required because React's `beforeinput` is fake and never really attaches
+  // to the real event sadly. (2019/11/01)
+  // https://github.com/facebook/react/issues/11211
+
+  var onDOMBeforeInput = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+    if (!readOnly && hasEditableTarget(editor, event.target) && !isDOMEventHandled(event, propsOnDOMBeforeInput)) {
+      // Some IMEs/Chrome extensions like e.g. Grammarly set the selection immediately before
+      // triggering a `beforeinput` expecting the change to be applied to the immediately before
+      // set selection.
+      scheduleOnDOMSelectionChange.flush();
+      inputManager.onUserInput();
+    }
+  }, [readOnly, propsOnDOMBeforeInput]); // Attach a native DOM event handler for `beforeinput` events, because React's
+  // built-in `onBeforeInput` is actually a leaky polyfill that doesn't expose
+  // real `beforeinput` events sadly... (2019/11/04)
+
+  useIsomorphicLayoutEffect(() => {
+    var node = ref.current; // @ts-ignore The `beforeinput` event isn't recognized.
+
+    node === null || node === void 0 ? void 0 : node.addEventListener('beforeinput', onDOMBeforeInput); // @ts-ignore The `beforeinput` event isn't recognized.
+
+    return () => node === null || node === void 0 ? void 0 : node.removeEventListener('beforeinput', onDOMBeforeInput);
+  }, [contentKey, propsOnDOMBeforeInput]); // Attach a native DOM event handler for `selectionchange`, because React's
+  // built-in `onSelect` handler doesn't fire for all selection changes. It's a
+  // leaky polyfill that only fires on keypresses or clicks. Instead, we want to
+  // fire for any change to the selection inside the editor. (2019/11/04)
+  // https://github.com/facebook/react/issues/5785
+
+  useIsomorphicLayoutEffect(() => {
+    var window = ReactEditor.getWindow(editor);
+    window.document.addEventListener('selectionchange', scheduleOnDOMSelectionChange);
+    return () => {
+      window.document.removeEventListener('selectionchange', scheduleOnDOMSelectionChange);
+    };
+  }, [scheduleOnDOMSelectionChange]);
+  var decorations = decorate([editor, []]);
+
+  if (placeholder && editor.children.length === 1 && Array.from(slate__WEBPACK_IMPORTED_MODULE_1__["Node"].texts(editor)).length === 1 && slate__WEBPACK_IMPORTED_MODULE_1__["Node"].string(editor) === '' && !isComposing) {
+    var start = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].start(editor, []);
+    decorations.push({
+      [PLACEHOLDER_SYMBOL]: true,
+      placeholder,
+      anchor: start,
+      focus: start
+    });
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ReadOnlyContext.Provider, {
+    value: readOnly
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DecorateContext.Provider, {
+    value: decorate
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, Object.assign({
+    key: contentKey,
+    role: readOnly ? undefined : 'textbox'
+  }, attributes, {
+    spellCheck: attributes.spellCheck,
+    autoCorrect: attributes.autoCorrect,
+    autoCapitalize: attributes.autoCapitalize,
+    "data-slate-editor": true,
+    "data-slate-node": "value",
+    contentEditable: readOnly ? undefined : true,
+    suppressContentEditableWarning: true,
+    ref: ref,
+    style: _objectSpread({
+      // Allow positioning relative to the editable element.
+      position: 'relative',
+      // Prevent the default outline styles.
+      outline: 'none',
+      // Preserve adjacent whitespace and new lines.
+      whiteSpace: 'pre-wrap',
+      // Allow words to break if they are too long.
+      wordWrap: 'break-word'
+    }, style),
+    onCopy: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onCopy)) {
+        event.preventDefault();
+        ReactEditor.setFragmentData(editor, event.clipboardData, 'copy');
+      }
+    }, [attributes.onCopy]),
+    onCut: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (!readOnly && hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onCut)) {
+        event.preventDefault();
+        ReactEditor.setFragmentData(editor, event.clipboardData, 'cut');
+        var {
+          selection
+        } = editor;
+
+        if (selection) {
+          if (slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isExpanded(selection)) {
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].deleteFragment(editor);
+          } else {
+            var node = slate__WEBPACK_IMPORTED_MODULE_1__["Node"].parent(editor, selection.anchor.path);
+
+            if (slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isVoid(editor, node)) {
+              slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].delete(editor);
+            }
+          }
+        }
+      }
+    }, [readOnly, attributes.onCut]),
+    onFocus: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (!readOnly && !state.isUpdatingSelection && hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onFocus)) {
+        var root = ReactEditor.findDocumentOrShadowRoot(editor);
+        state.latestElement = root.activeElement;
+        IS_FOCUSED.set(editor, true);
+      }
+    }, [readOnly, attributes.onFocus]),
+    onBlur: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (readOnly || state.isUpdatingSelection || !hasEditableTarget(editor, event.target) || isEventHandled(event, attributes.onBlur)) {
+        return;
+      } // COMPAT: If the current `activeElement` is still the previous
+      // one, this is due to the window being blurred when the tab
+      // itself becomes unfocused, so we want to abort early to allow to
+      // editor to stay focused when the tab becomes focused again.
+
+
+      var root = ReactEditor.findDocumentOrShadowRoot(editor);
+
+      if (state.latestElement === root.activeElement) {
+        return;
+      }
+
+      var {
+        relatedTarget
+      } = event;
+      var el = ReactEditor.toDOMNode(editor, editor); // COMPAT: The event should be ignored if the focus is returning
+      // to the editor from an embedded editable element (eg. an <input>
+      // element inside a void node).
+
+      if (relatedTarget === el) {
+        return;
+      } // COMPAT: The event should be ignored if the focus is moving from
+      // the editor to inside a void node's spacer element.
+
+
+      if (isDOMElement(relatedTarget) && relatedTarget.hasAttribute('data-slate-spacer')) {
+        return;
+      } // COMPAT: The event should be ignored if the focus is moving to a
+      // non- editable section of an element that isn't a void node (eg.
+      // a list item of the check list example).
+
+
+      if (relatedTarget != null && isDOMNode(relatedTarget) && ReactEditor.hasDOMNode(editor, relatedTarget)) {
+        var node = ReactEditor.toSlateNode(editor, relatedTarget);
+
+        if (slate__WEBPACK_IMPORTED_MODULE_1__["Element"].isElement(node) && !editor.isVoid(node)) {
+          return;
+        }
+      }
+
+      IS_FOCUSED.delete(editor);
+    }, [readOnly, attributes.onBlur]),
+    onClick: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (!readOnly && hasTarget(editor, event.target) && !isEventHandled(event, attributes.onClick) && isDOMNode(event.target)) {
+        var node = ReactEditor.toSlateNode(editor, event.target);
+        var path = ReactEditor.findPath(editor, node); // At this time, the Slate document may be arbitrarily different,
+        // because onClick handlers can change the document before we get here.
+        // Therefore we must check that this path actually exists,
+        // and that it still refers to the same node.
+
+        if (slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].hasPath(editor, path)) {
+          var lookupNode = slate__WEBPACK_IMPORTED_MODULE_1__["Node"].get(editor, path);
+
+          if (lookupNode === node) {
+            var _start = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].start(editor, path);
+
+            var end = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].end(editor, path);
+            var startVoid = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].void(editor, {
+              at: _start
+            });
+            var endVoid = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].void(editor, {
+              at: end
+            });
+
+            if (startVoid && endVoid && slate__WEBPACK_IMPORTED_MODULE_1__["Path"].equals(startVoid[1], endVoid[1])) {
+              var range = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].range(editor, _start);
+              slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].select(editor, range);
+            }
+          }
+        }
+      }
+    }, [readOnly, attributes.onClick]),
+    onCompositionEnd: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onCompositionEnd)) {
+        scheduleOnDOMSelectionChange.flush();
+        setTimeout(() => {
+          state.isComposing && setIsComposing(false);
+          state.isComposing = false;
+          IS_COMPOSING.set(editor, false);
+          IS_ON_COMPOSITION_END.set(editor, true);
+          var insertedText = EDITOR_ON_COMPOSITION_TEXT.get(editor) || []; // `insertedText` is set in `MutationObserver` constructor.
+          // If open phone keyboard association function, `CompositionEvent` will be triggered.
+
+          if (!insertedText.length) {
+            return;
+          }
+
+          EDITOR_ON_COMPOSITION_TEXT.set(editor, []);
+          var {
+            selection
+          } = editor;
+          insertedText.forEach(insertion => {
+            var text = insertion.text.insertText;
+            var at = normalizeTextInsertionRange(editor, selection, insertion);
+            slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].setSelection(editor, at);
+            slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].insertText(editor, text);
+          });
+        }, RESOLVE_DELAY);
+      }
+    }, [attributes.onCompositionEnd]),
+    onCompositionUpdate: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onCompositionUpdate)) {
+        !state.isComposing && setIsComposing(true);
+        state.isComposing = true;
+        IS_COMPOSING.set(editor, true);
+      }
+    }, [attributes.onCompositionUpdate]),
+    onCompositionStart: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      if (hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onCompositionStart)) {
+        !state.isComposing && setIsComposing(true);
+        state.isComposing = true;
+        IS_COMPOSING.set(editor, true);
+      }
+    }, [attributes.onCompositionStart]),
+    onPaste: Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(event => {
+      // this will make application/x-slate-fragment exist when onPaste attributes is passed
+      event.clipboardData = getClipboardData(event.clipboardData); // This unfortunately needs to be handled with paste events instead.
+
+      if (hasEditableTarget(editor, event.target) && !isEventHandled(event, attributes.onPaste) && !readOnly) {
+        event.preventDefault();
+        ReactEditor.insertData(editor, event.clipboardData);
+      }
+    }, [readOnly, attributes.onPaste])
+  }), useChildren({
+    decorations,
+    node: editor,
+    renderElement,
+    renderPlaceholder,
+    renderLeaf,
+    selection: editor.selection
+  }))));
+};
+
+/**
+ * A React context for sharing the `focused` state of the editor.
+ */
+
+var FocusedContext = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])(false);
+/**
+ * Get the current `focused` state of the editor.
+ */
+
+var useFocused = () => {
+  return Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(FocusedContext);
+};
+
+var _excluded = ["editor", "children", "onChange", "value"];
+/**
+ * A wrapper around the provider to handle `onChange` events, because the editor
+ * is a mutable singleton so it won't ever register as "changed" otherwise.
+ */
+
+var Slate = props => {
+  var {
+    editor,
+    children,
+    onChange,
+    value
+  } = props,
+      rest = _objectWithoutProperties(props, _excluded);
+
+  var [context, setContext] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(() => {
+    if (!slate__WEBPACK_IMPORTED_MODULE_1__["Node"].isNodeList(value)) {
+      throw new Error("[Slate] value is invalid! Expected a list of elements" + "but got: ".concat(JSON.stringify(value)));
+    }
+
+    if (!slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isEditor(editor)) {
+      throw new Error("[Slate] editor is invalid! you passed:" + "".concat(JSON.stringify(editor)));
+    }
+
+    editor.children = value;
+    Object.assign(editor, rest);
+    return [editor];
+  });
+  var onContextChange = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(() => {
+    onChange(editor.children);
+    setContext([editor]);
+  }, [onChange]);
+  EDITOR_TO_ON_CHANGE.set(editor, onContextChange);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    return () => {
+      EDITOR_TO_ON_CHANGE.set(editor, () => {});
+    };
+  }, []);
+  var [isFocused, setIsFocused] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(ReactEditor.isFocused(editor));
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    setIsFocused(ReactEditor.isFocused(editor));
+  });
+  useIsomorphicLayoutEffect(() => {
+    var fn = () => {
+      setTimeout(() => {
+        setIsFocused(ReactEditor.isFocused(editor));
+      }, 0);
+    };
+
+    document.addEventListener('focus', fn, true);
+    document.addEventListener('blur', fn, true);
+    return () => {
+      document.removeEventListener('focus', fn, true);
+      document.removeEventListener('blur', fn, true);
+    };
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SlateContext.Provider, {
+    value: context
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(EditorContext.Provider, {
+    value: editor
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FocusedContext.Provider, {
+    value: isFocused
+  }, children)));
+};
+
+/**
+ * Get the current editor object from the React context.
+ * @deprecated Use useSlateStatic instead.
+ */
+
+var useEditor = () => {
+  var editor = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(EditorContext);
+
+  if (!editor) {
+    throw new Error("The `useEditor` hook must be used inside the <Slate> component's context.");
+  }
+
+  return editor;
+};
+
+/**
+ * Utilities for single-line deletion
+ */
+
+var doRectsIntersect = (rect, compareRect) => {
+  var middle = (compareRect.top + compareRect.bottom) / 2;
+  return rect.top <= middle && rect.bottom >= middle;
+};
+
+var areRangesSameLine = (editor, range1, range2) => {
+  var rect1 = ReactEditor.toDOMRange(editor, range1).getBoundingClientRect();
+  var rect2 = ReactEditor.toDOMRange(editor, range2).getBoundingClientRect();
+  return doRectsIntersect(rect1, rect2) && doRectsIntersect(rect2, rect1);
+};
+/**
+ * A helper utility that returns the end portion of a `Range`
+ * which is located on a single line.
+ *
+ * @param {Editor} editor The editor object to compare against
+ * @param {Range} parentRange The parent range to compare against
+ * @returns {Range} A valid portion of the parentRange which is one a single line
+ */
+
+
+var findCurrentLineRange = (editor, parentRange) => {
+  var parentRangeBoundary = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].range(editor, slate__WEBPACK_IMPORTED_MODULE_1__["Range"].end(parentRange));
+  var positions = Array.from(slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].positions(editor, {
+    at: parentRange
+  }));
+  var left = 0;
+  var right = positions.length;
+  var middle = Math.floor(right / 2);
+
+  if (areRangesSameLine(editor, slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].range(editor, positions[left]), parentRangeBoundary)) {
+    return slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].range(editor, positions[left], parentRangeBoundary);
+  }
+
+  if (positions.length < 2) {
+    return slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].range(editor, positions[positions.length - 1], parentRangeBoundary);
+  }
+
+  while (middle !== positions.length && middle !== left) {
+    if (areRangesSameLine(editor, slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].range(editor, positions[middle]), parentRangeBoundary)) {
+      right = middle;
+    } else {
+      left = middle;
+    }
+
+    middle = Math.floor((left + right) / 2);
+  }
+
+  return slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].range(editor, positions[right], parentRangeBoundary);
+};
+
+/**
+ * `withReact` adds React and DOM specific behaviors to the editor.
+ *
+ * If you are using TypeScript, you must extend Slate's CustomTypes to use
+ * this plugin.
+ *
+ * See https://docs.slatejs.org/concepts/11-typescript to learn how.
+ */
+
+var withReact = editor => {
+  var e = editor;
+  var {
+    apply,
+    onChange,
+    deleteBackward
+  } = e; // The WeakMap which maps a key to a specific HTMLElement must be scoped to the editor instance to
+  // avoid collisions between editors in the DOM that share the same value.
+
+  EDITOR_TO_KEY_TO_ELEMENT.set(e, new WeakMap());
+
+  e.deleteBackward = unit => {
+    if (unit !== 'line') {
+      return deleteBackward(unit);
+    }
+
+    if (editor.selection && slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isCollapsed(editor.selection)) {
+      var parentBlockEntry = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].above(editor, {
+        match: n => slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].isBlock(editor, n),
+        at: editor.selection
+      });
+
+      if (parentBlockEntry) {
+        var [, parentBlockPath] = parentBlockEntry;
+        var parentElementRange = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].range(editor, parentBlockPath, editor.selection.anchor);
+        var currentLineRange = findCurrentLineRange(e, parentElementRange);
+
+        if (!slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isCollapsed(currentLineRange)) {
+          slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].delete(editor, {
+            at: currentLineRange
+          });
+        }
+      }
+    }
+  };
+
+  e.apply = op => {
+    var matches = [];
+
+    switch (op.type) {
+      case 'insert_text':
+      case 'remove_text':
+      case 'set_node':
+        {
+          for (var [node, path] of slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].levels(e, {
+            at: op.path
+          })) {
+            var key = ReactEditor.findKey(e, node);
+            matches.push([path, key]);
+          }
+
+          break;
+        }
+
+      case 'insert_node':
+      case 'remove_node':
+      case 'merge_node':
+      case 'split_node':
+        {
+          for (var [_node, _path] of slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].levels(e, {
+            at: slate__WEBPACK_IMPORTED_MODULE_1__["Path"].parent(op.path)
+          })) {
+            var _key = ReactEditor.findKey(e, _node);
+
+            matches.push([_path, _key]);
+          }
+
+          break;
+        }
+
+      case 'move_node':
+        {
+          for (var [_node2, _path2] of slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].levels(e, {
+            at: slate__WEBPACK_IMPORTED_MODULE_1__["Path"].common(slate__WEBPACK_IMPORTED_MODULE_1__["Path"].parent(op.path), slate__WEBPACK_IMPORTED_MODULE_1__["Path"].parent(op.newPath))
+          })) {
+            var _key2 = ReactEditor.findKey(e, _node2);
+
+            matches.push([_path2, _key2]);
+          }
+
+          break;
+        }
+    }
+
+    apply(op);
+
+    for (var [_path3, _key3] of matches) {
+      var [_node3] = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].node(e, _path3);
+      NODE_TO_KEY.set(_node3, _key3);
+    }
+  };
+
+  e.setFragmentData = data => {
+    var {
+      selection
+    } = e;
+
+    if (!selection) {
+      return;
+    }
+
+    var [start, end] = slate__WEBPACK_IMPORTED_MODULE_1__["Range"].edges(selection);
+    var startVoid = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].void(e, {
+      at: start.path
+    });
+    var endVoid = slate__WEBPACK_IMPORTED_MODULE_1__["Editor"].void(e, {
+      at: end.path
+    });
+
+    if (slate__WEBPACK_IMPORTED_MODULE_1__["Range"].isCollapsed(selection) && !startVoid) {
+      return;
+    } // Create a fake selection so that we can add a Base64-encoded copy of the
+    // fragment to the HTML, to decode on future pastes.
+
+
+    var domRange = ReactEditor.toDOMRange(e, selection);
+    var contents = domRange.cloneContents();
+    var attach = contents.childNodes[0]; // Make sure attach is non-empty, since empty nodes will not get copied.
+
+    contents.childNodes.forEach(node => {
+      if (node.textContent && node.textContent.trim() !== '') {
+        attach = node;
+      }
+    }); // COMPAT: If the end node is a void node, we need to move the end of the
+    // range from the void node's spacer span, to the end of the void node's
+    // content, since the spacer is before void's content in the DOM.
+
+    if (endVoid) {
+      var [voidNode] = endVoid;
+      var r = domRange.cloneRange();
+      var domNode = ReactEditor.toDOMNode(e, voidNode);
+      r.setEndAfter(domNode);
+      contents = r.cloneContents();
+    } // COMPAT: If the start node is a void node, we need to attach the encoded
+    // fragment to the void node's content node instead of the spacer, because
+    // attaching it to empty `<div>/<span>` nodes will end up having it erased by
+    // most browsers. (2018/04/27)
+
+
+    if (startVoid) {
+      attach = contents.querySelector('[data-slate-spacer]');
+    } // Remove any zero-width space spans from the cloned DOM so that they don't
+    // show up elsewhere when pasted.
+
+
+    Array.from(contents.querySelectorAll('[data-slate-zero-width]')).forEach(zw => {
+      var isNewline = zw.getAttribute('data-slate-zero-width') === 'n';
+      zw.textContent = isNewline ? '\n' : '';
+    }); // Set a `data-slate-fragment` attribute on a non-empty node, so it shows up
+    // in the HTML, and can be used for intra-Slate pasting. If it's a text
+    // node, wrap it in a `<span>` so we have something to set an attribute on.
+
+    if (isDOMText(attach)) {
+      var span = attach.ownerDocument.createElement('span'); // COMPAT: In Chrome and Safari, if we don't add the `white-space` style
+      // then leading and trailing spaces will be ignored. (2017/09/21)
+
+      span.style.whiteSpace = 'pre';
+      span.appendChild(attach);
+      contents.appendChild(span);
+      attach = span;
+    }
+
+    var fragment = e.getFragment();
+    var string = JSON.stringify(fragment);
+    var encoded = window.btoa(encodeURIComponent(string));
+    attach.setAttribute('data-slate-fragment', encoded);
+    data.setData('application/x-slate-fragment', encoded); // Add the content to a <div> so that we can get its inner HTML.
+
+    var div = contents.ownerDocument.createElement('div');
+    div.appendChild(contents);
+    div.setAttribute('hidden', 'true');
+    contents.ownerDocument.body.appendChild(div);
+    data.setData('text/html', div.innerHTML);
+    data.setData('text/plain', getPlainText(div));
+    contents.ownerDocument.body.removeChild(div);
+    return data;
+  };
+
+  e.insertData = data => {
+    if (!e.insertFragmentData(data)) {
+      e.insertTextData(data);
+    }
+  };
+
+  e.insertFragmentData = data => {
+    /**
+     * Checking copied fragment from application/x-slate-fragment or data-slate-fragment
+     */
+    var fragment = data.getData('application/x-slate-fragment') || getSlateFragmentAttribute(data);
+
+    if (fragment) {
+      var decoded = decodeURIComponent(window.atob(fragment));
+      var parsed = JSON.parse(decoded);
+      e.insertFragment(parsed);
+      return true;
+    }
+
+    return false;
+  };
+
+  e.insertTextData = data => {
+    var text = data.getData('text/plain');
+
+    if (text) {
+      var lines = text.split(/\r\n|\r|\n/);
+      var split = false;
+
+      for (var line of lines) {
+        if (split) {
+          slate__WEBPACK_IMPORTED_MODULE_1__["Transforms"].splitNodes(e, {
+            always: true
+          });
+        }
+
+        e.insertText(line);
+        split = true;
+      }
+
+      return true;
+    }
+
+    return false;
+  };
+
+  e.onChange = () => {
+    // COMPAT: React doesn't batch `setState` hook calls, which means that the
+    // children and selection can get out of sync for one render pass. So we
+    // have to use this unstable API to ensure it batches them. (2019/12/03)
+    // https://github.com/facebook/react/issues/14259#issuecomment-439702367
+    react_dom__WEBPACK_IMPORTED_MODULE_7___default.a.unstable_batchedUpdates(() => {
+      var onContextChange = EDITOR_TO_ON_CHANGE.get(e);
+
+      if (onContextChange) {
+        onContextChange();
+      }
+
+      onChange();
+    });
+  };
+
+  return e;
+};
+
+// Components
+var Editable = IS_ANDROID ? AndroidEditable : Editable$1;
+
+
+//# sourceMappingURL=index.es.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/slate/dist/index.es.js":
 /*!*********************************************!*\
   !*** ./node_modules/slate/dist/index.es.js ***!
@@ -37501,6 +42873,37 @@ function isPlainObject(o) {
 }
 
 
+
+
+/***/ }),
+
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
 
 
 /***/ })
