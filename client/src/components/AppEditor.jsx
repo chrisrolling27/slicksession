@@ -15,13 +15,16 @@ const AppEditor = () => {
   ])
 
   return (
-    <Slate
-      editor={editor}
-      value={value}
-      onChange={newValue => setValue(newValue)}
-    >
-      <Editable />
-    </Slate>
+
+    <div className="sessionAdder">
+      <Slate
+        editor={editor}
+        value={value}
+        onChange={newValue => setValue(newValue)}
+      >
+        <Editable />
+      </Slate>
+    </div>
   )
 }
 

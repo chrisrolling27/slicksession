@@ -42,10 +42,10 @@ class App extends React.Component {
     return (
 
       <div onKeyDown={this.keyStroke} tabIndex='0'>
-        <AppEditor> </AppEditor>
+
         <div> {this.state.mySessions.map((sesh) => <SessionCard session={sesh} key={sesh.id}> </SessionCard>)} </div>
 
-        <div> {this.state.addSession ? <Session > </Session> : ''}</div>
+        <div> {this.state.addSession ? <AppEditor> </AppEditor> : ''}</div>
 
         <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
       </div>

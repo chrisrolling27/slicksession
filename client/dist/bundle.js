@@ -184,12 +184,12 @@ var App = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         onKeyDown: this.keyStroke,
         tabIndex: "0"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_AppEditor_jsx__WEBPACK_IMPORTED_MODULE_10__["default"], null, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.mySessions.map(function (sesh) {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.mySessions.map(function (sesh) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_SessionCard_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
           session: sesh,
           key: sesh.id
         }, " ");
-      }), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.addSession ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Session_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null, " ") : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+      }), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.addSession ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_AppEditor_jsx__WEBPACK_IMPORTED_MODULE_10__["default"], null, " ") : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         className: "addSessionButton",
         onClick: this.makeSession
       }, " + "), " "));
@@ -240,13 +240,15 @@ var AppEditor = function AppEditor() {
       value = _useState4[0],
       setValue = _useState4[1];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(slate_react__WEBPACK_IMPORTED_MODULE_3__["Slate"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "sessionAdder"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(slate_react__WEBPACK_IMPORTED_MODULE_3__["Slate"], {
     editor: editor,
     value: value,
     onChange: function onChange(newValue) {
       return setValue(newValue);
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(slate_react__WEBPACK_IMPORTED_MODULE_3__["Editable"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(slate_react__WEBPACK_IMPORTED_MODULE_3__["Editable"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AppEditor);
