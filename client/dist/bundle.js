@@ -245,8 +245,18 @@ var AppEditor = function AppEditor() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(slate_react__WEBPACK_IMPORTED_MODULE_3__["Slate"], {
     editor: editor,
     value: value,
-    onChange: function onChange(newValue) {
-      return setValue(newValue);
+    onChange: function onChange(value) {
+      setValue(value); //detects changes?
+
+      var isAstChange = editor.operations.some(function (op) {
+        return 'set_selection' !== op.type;
+      });
+
+      if (isAstChange) {
+        var content = JSON.stringify(value);
+        console.log('change made');
+        localStorage.setItem('content', content);
+      }
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(slate_react__WEBPACK_IMPORTED_MODULE_3__["Editable"], null)));
 };

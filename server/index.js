@@ -31,6 +31,22 @@ app.post('/session', (req, res) => {
   })
 })
 
+
+//AppEditor post
+app.post('/Richpost', (req, res) => {
+ // let querystring = `INSERT INTO sessions (text) VALUES ("${req.body.text}")`;
+  console.log(req.body.text);
+  // db.query(querystring, (err, results) => {
+  //   if (err) {
+  //     res.status(500).send(err);
+  //   } else {
+  //     console.log('posted successfully')
+  //     res.status(201).send(results);
+  //   }
+  // })
+})
+
+
 app.get('/sessions', (req, res) => {
   let querystring = 'SELECT * FROM sessions';
   console.log(querystring)
