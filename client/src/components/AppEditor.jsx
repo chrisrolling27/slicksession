@@ -3,7 +3,6 @@ import { createEditor } from 'slate';
 import { Slate, Editable, withReact } from 'slate-react';
 
 
-
 const AppEditor = () => {
 
   const [editor] = useState(() => withReact(createEditor()))
