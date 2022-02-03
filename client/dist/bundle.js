@@ -230,10 +230,10 @@ var AppEditor = function AppEditor() {
       _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 1),
       editor = _useState2[0];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([{
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(JSON.parse(localStorage.getItem('content')) || [{
     type: 'paragraph',
     children: [{
-      text: 'Enter your text.'
+      text: 'Enter text here.'
     }]
   }]),
       _useState4 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState3, 2),
@@ -250,11 +250,11 @@ var AppEditor = function AppEditor() {
 
       var isAstChange = editor.operations.some(function (op) {
         return 'set_selection' !== op.type;
-      });
+      }); //this example assumes you wish to save sessions through refreshes, which isnt a bad idea actually.
 
       if (isAstChange) {
         var content = JSON.stringify(value);
-        console.log('change made');
+        console.log(value);
         localStorage.setItem('content', content);
       }
     }

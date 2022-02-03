@@ -7,12 +7,14 @@ import { Slate, Editable, withReact } from 'slate-react';
 const AppEditor = () => {
 
   const [editor] = useState(() => withReact(createEditor()))
-  const [value, setValue] = useState([
-    {
-      type: 'paragraph',
-      children: [{ text: 'Enter your text.' }],
-    },
-  ])
+  const [value, setValue] = useState(
+    JSON.parse(localStorage.getItem('content')) || [
+      {
+        type: 'paragraph',
+        children: [{ text: 'Enter text here.' }],
+      },
+    ]
+  )
 
   return (
 
@@ -26,9 +28,11 @@ const AppEditor = () => {
           //detects changes?
           const isAstChange = editor.operations.some(op => 'set_selection' !== op.type
           )
+
+          //this example assumes you wish to save sessions through refreshes, which isnt a bad idea actually.
           if (isAstChange) {
             const content = JSON.stringify(value)
-            console.log('change made');
+            console.log(value);
             localStorage.setItem('content', content)
           }
         }}
