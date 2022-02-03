@@ -2,7 +2,7 @@ import React from 'react'
 import Session from './Session.jsx';
 import SessionCard from './SessionCard.jsx';
 import axios from 'axios';
-import AppEditor from './AppEditor.jsx';
+
 
 
 class App extends React.Component {
@@ -45,7 +45,7 @@ class App extends React.Component {
 
         <div> {this.state.mySessions.map((sesh) => <SessionCard session={sesh} key={sesh.id}> </SessionCard>)} </div>
 
-        <div> {this.state.addSession ? <AppEditor> </AppEditor> : ''}</div>
+        <div> {this.state.addSession ? <Session> </Session> : ''}</div>
 
         <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
       </div>

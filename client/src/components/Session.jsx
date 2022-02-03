@@ -37,13 +37,16 @@ class Session extends React.Component {
       <div>
         <div className="sessionAdder">
 
-          <form onSubmit={this.submitSession}>
-            <label>
 
-              <input type="text" required name="sessionText" onChange={this.handleChange} />
-            </label>
-            <input type="submit" value="Submit" />
-          </form>
+          <textarea id="session" name="sessionText" rows="4" cols="50" onChange={this.handleChange} onSubmit={this.submitSession} defaultValue={'At JAIL you will learn how to make a website'}>
+
+          </textarea>
+
+
+
+
+
+
 
         </div>
       </div>
