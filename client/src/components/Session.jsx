@@ -38,7 +38,9 @@ class Session extends React.Component {
         <div className="sessionAdder">
 
 
-          <textarea id="session" name="sessionText" rows="4" cols="50" onChange={this.handleChange} onSubmit={this.submitSession} defaultValue={'At JAIL you will learn how to make a website'}>
+          <textarea id="session" name="sessionText" rows="4" cols="50" onChange={this.handleChange} onSubmit={this.submitSession} defaultValue={'At JAIL you will learn how to make a website'}  >
+
+
 
           </textarea>
 

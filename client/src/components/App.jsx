@@ -30,7 +30,7 @@ class App extends React.Component {
   }
 
   keyStroke(e) {
-    if (e.key === 'Enter') {
+    if (e.key === 'l') {
       this.setState({ addSession: !this.state.addSession });
     }
   }

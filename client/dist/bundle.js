@@ -170,7 +170,7 @@ var App = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "keyStroke",
     value: function keyStroke(e) {
-      if (e.key === 'Enter') {
+      if (e.key === 'l') {
         this.setState({
           addSession: !this.state.addSession
         });
