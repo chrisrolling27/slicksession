@@ -169,12 +169,9 @@ var App = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "keyStroke",
-    value: function keyStroke(e) {
-      if (e.key === 'l') {
-        this.setState({
-          addSession: !this.state.addSession
-        });
-      }
+    value: function keyStroke(e) {// if (e.key === 'l') {
+      //   this.setState({ addSession: !this.state.addSession });
+      // }
     }
   }, {
     key: "render",
@@ -283,15 +280,18 @@ var Session = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "sessionAdder"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("textarea", {
-        id: "session",
-        name: "sessionText",
-        rows: "4",
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+        onSubmit: this.submitSession
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("textarea", {
+        rows: "5",
         cols: "50",
-        onChange: this.handleChange,
-        onSubmit: this.submitSession,
-        defaultValue: 'At JAIL you will learn how to make a website'
-      })));
+        name: "sessiontext",
+        defaultValue: "Notes here",
+        onChange: this.handleChange
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+        type: "submit",
+        value: "submit"
+      }))));
     }
   }]);
 
