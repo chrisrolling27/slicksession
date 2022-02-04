@@ -18,8 +18,8 @@ class SessionCard extends React.Component {
     return (
       <div>
         <div className="sessionCard">
-          {this.props.session.text}
-          {this.props.session.date}
+          text
+          date
         </div>
       </div>
     );

@@ -5,7 +5,6 @@ import axios from 'axios';
 import Column from './Column.jsx';
 
 
-
 class App extends React.Component {
 
   constructor(props) {
@@ -43,7 +42,7 @@ class App extends React.Component {
     return (
 
       <div onKeyDown={this.keyStroke} tabIndex='0'>
-
+        <div> <Column> </Column> </div>
         <div> {this.state.mySessions.map((sesh) => <SessionCard session={sesh} key={sesh.id}> </SessionCard>)} </div>
 
         <div> {this.state.addSession ? <Session> </Session> : ''}</div>
