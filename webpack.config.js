@@ -27,7 +27,8 @@ module.exports = {
                 {
                   "regenerator": true
                 }
-              ]
+              ],
+              ["babel-plugin-styled-components"]
             ]
           }
         }

@@ -2,6 +2,7 @@ import React from 'react'
 import Session from './Session.jsx';
 import SessionCard from './SessionCard.jsx';
 import axios from 'axios';
+import Column from './Column.jsx';
 
 
 
