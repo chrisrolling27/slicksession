@@ -16,14 +16,19 @@ const SessionList = styled.div`
   paddings: 8px;
 `;
 
-
-
 export default class Column extends React.Component {
+
+
   render() {
     return (
       <Container>
         <Title> title from props here </Title>
-        <SessionCard> Tasks go here </SessionCard>
+
+
+
+        <div> {this.props.sessions.map((session) => <SessionCard session={session} key={session.id}> </SessionCard>)} </div>
+
+
       </Container>
 
     );

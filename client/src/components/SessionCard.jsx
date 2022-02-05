@@ -1,15 +1,10 @@
 import React from 'react';
 
 
-class SessionCard extends React.Component {
+export default class SessionCard extends React.Component {
 
   constructor(props) {
     super(props);
-
-
-    this.state = {
-      sessionText: ''
-    };
 
   }
 
@@ -18,14 +13,13 @@ class SessionCard extends React.Component {
     return (
       <div>
         <div className="sessionCard">
-          text
-          date
+        {this.props.session.text}
+        {this.props.session.date}
+
+
         </div>
       </div>
     );
   }
 }
 
-
-
-export default SessionCard;

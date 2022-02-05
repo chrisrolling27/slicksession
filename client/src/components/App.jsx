@@ -42,8 +42,8 @@ class App extends React.Component {
     return (
 
       <div onKeyDown={this.keyStroke} tabIndex='0'>
-        <div> <Column> </Column> </div>
-        <div> {this.state.mySessions.map((sesh) => <SessionCard session={sesh} key={sesh.id}> </SessionCard>)} </div>
+        <div> <Column sessions={this.state.mySessions}> </Column> </div>
+
 
         <div> {this.state.addSession ? <Session> </Session> : ''}</div>
 
