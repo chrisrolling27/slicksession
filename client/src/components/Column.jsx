@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SessionCard from './SessionCard.jsx';
+import { Droppable } from 'react-beautiful-dnd';
 
 
 const Container = styled.div`
@@ -23,12 +24,11 @@ export default class Column extends React.Component {
     return (
       <Container>
         <Title> title from props here </Title>
-
-
+        {/* <Droppable  droppableId={this.props.session}> */}
 
         <div> {this.props.sessions.map((session) => <SessionCard session={session} key={session.id}> </SessionCard>)} </div>
 
-
+        </Droppable>
       </Container>
 
     );
