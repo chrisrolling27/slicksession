@@ -7,7 +7,7 @@ export default class SessionCard extends React.Component {
     super(props);
 
   }
-
+//
 
   render() {
     return (
