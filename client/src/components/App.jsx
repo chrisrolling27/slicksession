@@ -36,7 +36,7 @@ class App extends React.Component {
     // }
   }
 
-  onDragEnd(result) => {
+  onDragEnd(result) {
   //come back later. onDragStart and onDragUpdate are the other two callbacks
   }
 

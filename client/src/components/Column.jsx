@@ -28,7 +28,7 @@ export default class Column extends React.Component {
 
         <div> {this.props.sessions.map((session) => <SessionCard session={session} key={session.id}> </SessionCard>)} </div>
 
-        </Droppable>
+        {/* </Droppable> */}
       </Container>
 
     );
