@@ -53,9 +53,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <DragDropContext
-        onDragEnd
-      >
+      <DragDropContext onDragEnd={this.onDragEnd}>
+
 
         <div> {this.state.columnOrder.map(columnId => {
           const column = this.state.columns[columnId];
