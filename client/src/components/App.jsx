@@ -13,7 +13,17 @@ class App extends React.Component {
 
     this.state = {
       addSession: false,
-      mySessions: []
+      mySessions: [],
+
+      columns: {
+        'column-1': {
+          id: 'column-1',
+          title: 'Ideas',
+          sessionIds: [1, 2, 3, 4],
+        },
+      },
+
+      columnOrder: ['column-1']
     };
 
     this.makeSession = this.makeSession.bind(this);
@@ -37,7 +47,7 @@ class App extends React.Component {
   }
 
   onDragEnd(result) {
-  //come back later. onDragStart and onDragUpdate are the other two callbacks
+    //come back later. onDragStart and onDragUpdate are the other two callbacks
   }
 
 
@@ -46,14 +56,25 @@ class App extends React.Component {
       <DragDropContext
         onDragEnd
       >
-      <div onKeyDown={this.keyStroke} tabIndex='0'>
-        <div> <Column sessions={this.state.mySessions}> </Column> </div>
+
+        <div> {this.state.columnOrder.map(columnId => {
+          const column = this.state.columns[columnId];
+
+          const sessions = column.sessionIds.map(sessionId => this.state.mySessions[sessionId]);
+
+          return <Column key={column.id} column={column} sessions={this.state.mySessions} />;
+        })}
+        </div>
+
+        <div onKeyDown={this.keyStroke} tabIndex='0'>
 
 
-        <div> {this.state.addSession ? <Session> </Session> : ''}</div>
+          {/* <div> <Column sessions={this.state.mySessions}> </Column> </div> */}
 
-        <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
-      </div>
+          <div> {this.state.addSession ? <Session> </Session> : ''}</div>
+
+          <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
+        </div>
       </DragDropContext>
     );
   }

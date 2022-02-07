@@ -17,20 +17,23 @@ const SessionList = styled.div`
   paddings: 8px;
 `;
 
+
+
 export default class Column extends React.Component {
 
 
   render() {
     return (
+     <div> hi
       <Container>
         <Title> title from props here </Title>
-        {/* <Droppable  droppableId={this.props.session}> */}
+
 
         <div> {this.props.sessions.map((session) => <SessionCard session={session} key={session.id}> </SessionCard>)} </div>
 
-        {/* </Droppable> */}
-      </Container>
 
+      </Container>
+      </div>
     );
   }
 }

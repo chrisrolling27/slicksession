@@ -146,7 +146,15 @@ var App = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
     _this.state = {
       addSession: false,
-      mySessions: []
+      mySessions: [],
+      columns: {
+        'column-1': {
+          id: 'column-1',
+          title: 'Ideas',
+          sessionIds: [1, 2, 3, 4]
+        }
+      },
+      columnOrder: ['column-1']
     };
     _this.makeSession = _this.makeSession.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this));
     _this.keyStroke = _this.keyStroke.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this));
@@ -184,14 +192,24 @@ var App = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_9__["DragDropContext"], {
         onDragEnd: true
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.columnOrder.map(function (columnId) {
+        var column = _this3.state.columns[columnId];
+        var sessions = column.sessionIds.map(function (sessionId) {
+          return _this3.state.mySessions[sessionId];
+        });
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Column_jsx__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          key: column.id,
+          column: column,
+          sessions: _this3.state.mySessions
+        });
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         onKeyDown: this.keyStroke,
         tabIndex: "0"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Column_jsx__WEBPACK_IMPORTED_MODULE_11__["default"], {
-        sessions: this.state.mySessions
-      }, " "), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.addSession ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Session_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null, " ") : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.addSession ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Session_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null, " ") : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         className: "addSessionButton",
         onClick: this.makeSession
       }, " + "), " ")));
@@ -267,12 +285,12 @@ var Column = /*#__PURE__*/function (_React$Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Column, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Title, null, " title from props here "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.props.sessions.map(function (session) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " hi", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Title, null, " title from props here "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.props.sessions.map(function (session) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_SessionCard_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
           session: session,
           key: session.id
         }, " ");
-      }), " "));
+      }), " ")));
     }
   }]);
 
