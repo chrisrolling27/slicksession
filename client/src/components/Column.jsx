@@ -24,7 +24,7 @@ export default class Column extends React.Component {
 
   render() {
     return (
-     <div> hi
+     <div>
       <Container>
         <Title> title from props here </Title>
 
