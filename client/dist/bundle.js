@@ -285,7 +285,7 @@ var Column = /*#__PURE__*/function (_React$Component) {
         droppableId: this.props.column.id
       }, function (provided) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SessionList, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
-          innerRef: provided.innerRef
+          ref: provided.innerRef
         }, provided.droppableProps), _this.props.sessions.map(function (session, index) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_SessionCard_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
             key: session.id,
@@ -470,11 +470,11 @@ var SessionCard = /*#__PURE__*/function (_React$Component) {
       var _this = this;
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_7__["Draggable"], {
-        droppableId: this.props.session.id,
+        draggableId: this.props.session.id,
         index: this.props.index
       }, function (provided) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Container, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, provided.draggableProps, provided.dragHandleProps, {
-          innerRef: provided.innerRef
+          ref: provided.innerRef
         }), _this.props.session.content);
       });
     }

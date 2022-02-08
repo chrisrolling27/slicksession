@@ -26,7 +26,8 @@ export default class Column extends React.Component {
         <Title>  {this.props.column.title} </Title>
         <Droppable droppableId={this.props.column.id}>
           {provided => (
-            <SessionList innerRef={provided.innerRef} {...provided.droppableProps} >
+            <SessionList ref={provided.innerRef} {...provided.droppableProps} >
+
               {this.props.sessions.map((session, index) => (
               <SessionCard key={session.id} session={session} index={index} />
           ))}

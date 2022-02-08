@@ -13,12 +13,12 @@ export default class SessionCard extends React.Component {
 
   render() {
     return (
-      <Draggable droppableId={this.props.session.id} index={this.props.index}>
-        {(provided) => (
+      <Draggable draggableId={this.props.session.id} index={this.props.index}>
+        {provided => (
           <Container
-            {...provided.draggableProps}
+            { ...provided.draggableProps}
             {...provided.dragHandleProps}
-            innerRef={provided.innerRef}
+            ref={provided.innerRef}
           >
             {this.props.session.content}
           </Container>
