@@ -47,7 +47,8 @@ export default class App extends React.Component {
   render() {
     return (
 
-      <DragDropContext>
+      <DragDropContext  onDragEnd={this.onDragEnd}>
+
       {this.state.columnOrder.map(columnId => {
       const column = this.state.columns[columnId];
       const sessions = column.sessionIds.map(sessionId => this.state.sessions[sessionId]);

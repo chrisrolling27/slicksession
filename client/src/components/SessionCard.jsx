@@ -11,11 +11,19 @@ const Container = styled.div`
 
 export default class SessionCard extends React.Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    return <Container> {this.props.session.content} </Container>
+    return (
+      <Draggable droppableId={this.props.session.id} index={this.props.index}>
+        {(provided) => (
+          <Container
+            {...provided.draggableProps}
+            {...provided.dragHandleProps}
+            innerRef={provided.innerRef}
+          >
+            {this.props.session.content}
+          </Container>
+        )}
+      </Draggable>
+    );
   }
-};
+}
