@@ -22,11 +22,11 @@ export default class Column extends React.Component {
 
   render() {
     return (
+      <Container>
+        <Title>  {this.props.column.title} </Title>
+        <SessionList>  Sessions go here </SessionList>
+      </Container>
 
-      <div>
-        {this.props.sessions.map((session) => <SessionCard session={session} key={session.id} > </SessionCard>)}
-      </div>
-
-    );
+    )
   }
 }

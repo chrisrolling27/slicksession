@@ -1,10 +1,10 @@
 import React from 'react'
-import Session from './Session.jsx';
+import SessionAdder from './SessionAdder.jsx';
 import SessionCard from './SessionCard.jsx';
 import { DragDropContext } from 'react-beautiful-dnd';
 import axios from 'axios';
 import Column from './Column.jsx';
-//import initialData from '../src/initialData.js';
+import initialData from './initialData';
 
 
 class App extends React.Component {
@@ -12,14 +12,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      addSession: false,
-      mySessions: [],
+    this.state = initialData;
 
-    };
-
-    this.makeSession = this.makeSession.bind(this);
-    this.keyStroke = this.keyStroke.bind(this);
+    // this.makeSession = this.makeSession.bind(this);
+    // this.keyStroke = this.keyStroke.bind(this);
   }
 
   componentDidMount() {
@@ -45,23 +41,20 @@ class App extends React.Component {
 
 
   render() {
-    return (
-      <div>
+    return this.state.columnOrder.map(columnId => {
+      const column = this.state.columns[columnId];
+      const sessions = column.sessionIds.map(sessionId => this.state.sessions[sessionId]);
 
-        {/* {this.state.columnOrder.map(columnId => {
-          const column = this.state.columns[columnId];
-          const sessions = column.sessionIds.map(sessionId => this.state.mySessions[sessionId]);
-          return <Column key={column.id} column={column} sessions={this.state.mySessions} />;
-        })} */}
+      return <Column key={column.id} column={column} sessions={sessions} />;
+    });
 
-        {this.state.addSession ? <Session> </Session> : ''}
 
-        <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
+        // {this.state.addSession ? <SessionAdder> </SessionAdder> : ''}
+        // <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
 
-      </div>
-    );
   }
-}
+};
+
 
 
 

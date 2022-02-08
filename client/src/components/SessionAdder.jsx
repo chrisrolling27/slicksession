@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-class Session extends React.Component {
+class SessionAdder extends React.Component {
 
   constructor(props) {
     super(props);
@@ -52,4 +52,4 @@ class Session extends React.Component {
 
 
 
-export default Session;
+export default SessionAdder;
