@@ -181,7 +181,8 @@ var App = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "keyStroke",
-    value: function keyStroke(e) {// if (e.key === 'l') {
+    value: function keyStroke(e) {// <div onKeyDown={this.keyStroke} tabIndex='0'> </div>
+      // if (e.key === 'l') {
       //   this.setState({ addSession: !this.state.addSession });
       // }
     }
@@ -194,7 +195,7 @@ var App = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_9__["DragDropContext"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_9__["DragDropContext"], {
         onDragEnd: this.onDragEnd
       }, this.state.columnOrder.map(function (columnId) {
         var column = _this3.state.columns[columnId];
@@ -206,13 +207,10 @@ var App = /*#__PURE__*/function (_React$Component) {
           column: column,
           sessions: _this3.state.mySessions
         });
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        onKeyDown: this.keyStroke,
-        tabIndex: "0"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.addSession ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Session_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null, " ") : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         className: "addSessionButton",
         onClick: this.makeSession
-      }, " + "), " ")));
+      }, " + "), " "));
     }
   }]);
 

@@ -41,6 +41,9 @@ class App extends React.Component {
   }
 
   keyStroke(e) {
+
+    // <div onKeyDown={this.keyStroke} tabIndex='0'> </div>
+
     // if (e.key === 'l') {
     //   this.setState({ addSession: !this.state.addSession });
     // }
@@ -53,21 +56,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <DragDropContext onDragEnd={this.onDragEnd}>
-        {this.state.columnOrder.map(columnId => {
-          const column = this.state.columns[columnId];
-          const sessions = column.sessionIds.map(sessionId => this.state.mySessions[sessionId]);
-          return <Column key={column.id} column={column} sessions={this.state.mySessions} />;
-        })}
+      <div>
+        <DragDropContext onDragEnd={this.onDragEnd}>
+          {this.state.columnOrder.map(columnId => {
+            const column = this.state.columns[columnId];
+            const sessions = column.sessionIds.map(sessionId => this.state.mySessions[sessionId]);
+            return <Column key={column.id} column={column} sessions={this.state.mySessions} />;
+          })}
+        </DragDropContext>
 
 
-        <div onKeyDown={this.keyStroke} tabIndex='0'>
-          {/* <div> <Column sessions={this.state.mySessions}> </Column> </div> */}
 
-          <div> {this.state.addSession ? <Session> </Session> : ''}</div>
-          <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
-        </div>
-      </DragDropContext>
+
+        <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
+      </div>
     );
   }
 }
