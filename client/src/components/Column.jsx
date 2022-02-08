@@ -28,11 +28,15 @@ export default class Column extends React.Component {
       <Container>
         <Title> {this.props.column.title} </Title>
         <Droppable droppableId={this.props.column.id}>
-        {provided => (
-          <
-        )}
+          {provided => (
+            <SessionList
+              innerRef={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              <div>  {this.props.sessions.map((session) => <SessionCard session={session} key={session.id}> </SessionCard>)}</div>
 
-      <div>  {this.props.sessions.map((session) => <SessionCard session={session} key={session.id}> </SessionCard>)}</div>
+            </SessionList>
+          )}
 
         </Droppable>
       </Container>
