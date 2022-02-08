@@ -7,7 +7,7 @@ import Column from './Column.jsx';
 import initialData from './initialData';
 
 
-class App extends React.Component {
+export default class App extends React.Component {
 
   constructor(props) {
     super(props);
@@ -25,6 +25,10 @@ class App extends React.Component {
   }
 
   makeSession() {
+
+    // {this.state.addSession ? <SessionAdder> </SessionAdder> : ''}
+    // <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
+
     this.setState({ addSession: !this.state.addSession });
   }
 
@@ -41,21 +45,17 @@ class App extends React.Component {
 
 
   render() {
-    return this.state.columnOrder.map(columnId => {
+    return (
+
+      <DragDropContext>
+      {this.state.columnOrder.map(columnId => {
       const column = this.state.columns[columnId];
       const sessions = column.sessionIds.map(sessionId => this.state.sessions[sessionId]);
 
       return <Column key={column.id} column={column} sessions={sessions} />;
-    });
+    })}
+      </DragDropContext>
 
-
-        // {this.state.addSession ? <SessionAdder> </SessionAdder> : ''}
-        // <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
-
-  }
+    )
+  };
 };
-
-
-
-
-export default App;

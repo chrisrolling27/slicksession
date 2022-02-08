@@ -95,6 +95,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return App; });
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
@@ -163,6 +164,8 @@ var App = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "makeSession",
     value: function makeSession() {
+      // {this.state.addSession ? <SessionAdder> </SessionAdder> : ''}
+      // <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
       this.setState({
         addSession: !this.state.addSession
       });
@@ -183,7 +186,7 @@ var App = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
-      return this.state.columnOrder.map(function (columnId) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_8__["DragDropContext"], null, this.state.columnOrder.map(function (columnId) {
         var column = _this3.state.columns[columnId];
         var sessions = column.sessionIds.map(function (sessionId) {
           return _this3.state.sessions[sessionId];
@@ -193,16 +196,15 @@ var App = /*#__PURE__*/function (_React$Component) {
           column: column,
           sessions: sessions
         });
-      }); // {this.state.addSession ? <SessionAdder> </SessionAdder> : ''}
-      // <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
+      }));
     }
   }]);
 
   return App;
 }(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
 
+
 ;
-/* harmony default export */ __webpack_exports__["default"] = (App);
 
 /***/ }),
 
