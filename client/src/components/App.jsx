@@ -4,6 +4,7 @@ import SessionCard from './SessionCard.jsx';
 import { DragDropContext } from 'react-beautiful-dnd';
 import axios from 'axios';
 import Column from './Column.jsx';
+//import initialData from '../src/initialData.js';
 
 
 class App extends React.Component {
@@ -15,15 +16,6 @@ class App extends React.Component {
       addSession: false,
       mySessions: [],
 
-      columns: {
-        'column-1': {
-          id: 'column-1',
-          title: 'Ideas',
-          sessionIds: [1, 2, 3, 4],
-        },
-      },
-
-      columnOrder: ['column-1']
     };
 
     this.makeSession = this.makeSession.bind(this);
@@ -41,9 +33,7 @@ class App extends React.Component {
   }
 
   keyStroke(e) {
-
     // <div onKeyDown={this.keyStroke} tabIndex='0'> </div>
-
     // if (e.key === 'l') {
     //   this.setState({ addSession: !this.state.addSession });
     // }
@@ -57,18 +47,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <DragDropContext onDragEnd={this.onDragEnd}>
-          {this.state.columnOrder.map(columnId => {
-            const column = this.state.columns[columnId];
-            const sessions = column.sessionIds.map(sessionId => this.state.mySessions[sessionId]);
-            return <Column key={column.id} column={column} sessions={this.state.mySessions} />;
-          })}
-        </DragDropContext>
 
+        {/* {this.state.columnOrder.map(columnId => {
+          const column = this.state.columns[columnId];
+          const sessions = column.sessionIds.map(sessionId => this.state.mySessions[sessionId]);
+          return <Column key={column.id} column={column} sessions={this.state.mySessions} />;
+        })} */}
 
-
+        {this.state.addSession ? <Session> </Session> : ''}
 
         <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
+
       </div>
     );
   }
