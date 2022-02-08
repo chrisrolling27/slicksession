@@ -15,8 +15,6 @@ export default class SessionCard extends React.Component {
     super(props);
   }
 
-  ;
-
 
   render() {
     return (
@@ -24,16 +22,15 @@ export default class SessionCard extends React.Component {
         {(provided) => (
 
           <Container
+            innerRef={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
-            innerRef={provided.innerRef}
+
           >
             {this.props.session.text} {this.props.session.date}
           </Container>
         )};
-
       </Draggable>
-
     );
   }
 }

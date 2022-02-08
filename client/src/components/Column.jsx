@@ -26,16 +26,14 @@ export default class Column extends React.Component {
       <Container>
         <Title> {this.props.column.title} </Title>
 
-        <div>  {this.props.sessions.map((session, index) => <SessionCard session={session} key={session.id}> index={index} </SessionCard>)}</div>
-
         <Droppable droppableId={this.props.column.id}>
           {provided => (
             <SessionList
               innerRef={provided.innerRef}
               {...provided.droppableProps}
             >
-              <div>  {this.props.sessions.map((session) => <SessionCard session={session} key={session.id}> </SessionCard>)}</div>
-
+             {this.props.sessions.map((session, index) => <SessionCard session={session} key={session.id} index={index}> </SessionCard>)}
+            {provided.placeholder}
             </SessionList>
           )}
 

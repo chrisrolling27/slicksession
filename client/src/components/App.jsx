@@ -54,12 +54,12 @@ class App extends React.Component {
   render() {
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
-        <div> {this.state.columnOrder.map(columnId => {
+        {this.state.columnOrder.map(columnId => {
           const column = this.state.columns[columnId];
           const sessions = column.sessionIds.map(sessionId => this.state.mySessions[sessionId]);
           return <Column key={column.id} column={column} sessions={this.state.mySessions} />;
         })}
-        </div>
+
 
         <div onKeyDown={this.keyStroke} tabIndex='0'>
           {/* <div> <Column sessions={this.state.mySessions}> </Column> </div> */}

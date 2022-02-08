@@ -196,7 +196,7 @@ var App = /*#__PURE__*/function (_React$Component) {
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_9__["DragDropContext"], {
         onDragEnd: this.onDragEnd
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.columnOrder.map(function (columnId) {
+      }, this.state.columnOrder.map(function (columnId) {
         var column = _this3.state.columns[columnId];
         var sessions = column.sessionIds.map(function (sessionId) {
           return _this3.state.mySessions[sessionId];
@@ -206,7 +206,7 @@ var App = /*#__PURE__*/function (_React$Component) {
           column: column,
           sessions: _this3.state.mySessions
         });
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         onKeyDown: this.keyStroke,
         tabIndex: "0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", this.state.addSession ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Session_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null, " ") : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
@@ -290,22 +290,18 @@ var Column = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Title, null, " ", this.props.column.title, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, "  ", this.props.sessions.map(function (session, index) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_SessionCard_jsx__WEBPACK_IMPORTED_MODULE_9__["default"], {
-          session: session,
-          key: session.id
-        }, " index=", index, " ");
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_10__["Droppable"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Title, null, " ", this.props.column.title, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_10__["Droppable"], {
         droppableId: this.props.column.id
       }, function (provided) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SessionList, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
           innerRef: provided.innerRef
-        }, provided.droppableProps), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, "  ", _this.props.sessions.map(function (session) {
+        }, provided.droppableProps), _this.props.sessions.map(function (session, index) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_SessionCard_jsx__WEBPACK_IMPORTED_MODULE_9__["default"], {
             session: session,
-            key: session.id
+            key: session.id,
+            index: index
           }, " ");
-        })));
+        }), provided.placeholder);
       }));
     }
   }]);
@@ -488,9 +484,9 @@ var SessionCard = /*#__PURE__*/function (_React$Component) {
         draggableId: this.props.session.id,
         index: this.props.index
       }, function (provided) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, provided.draggableProps, provided.dragHandleProps, {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
           innerRef: provided.innerRef
-        }), _this.props.session.text, " ", _this.props.session.date);
+        }, provided.draggableProps, provided.dragHandleProps), _this.props.session.text, " ", _this.props.session.date);
       }, ";");
     }
   }]);
