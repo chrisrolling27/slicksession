@@ -24,7 +24,9 @@ export default class Column extends React.Component {
     return (
       <Container>
         <Title>  {this.props.column.title} </Title>
-        <SessionList>  Sessions go here </SessionList>
+        <SessionList>
+           {this.props.sessions.map(session => <SessionCard key={session.id} session={session} /> )}
+            </SessionList>
       </Container>
 
     )

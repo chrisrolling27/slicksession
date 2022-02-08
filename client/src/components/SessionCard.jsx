@@ -15,12 +15,7 @@ export default class SessionCard extends React.Component {
     super(props);
   }
 
-
   render() {
-    return (
-      <div>
-        {this.props.session.text} {this.props.session.date}
-      </div>
-    );
+    return <Container> {this.props.session.content} </Container>
   }
 };
