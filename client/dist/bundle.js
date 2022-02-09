@@ -180,7 +180,8 @@ var App = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "onDragEnd",
-    value: function onDragEnd(result) {//come back later. onDragStart and onDragUpdate are the other two callbacks
+    value: function onDragEnd(result) {//
+      //come back later. onDragStart and onDragUpdate are the other two callbacks
     }
   }, {
     key: "render",
