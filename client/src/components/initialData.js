@@ -18,6 +18,8 @@ const initialData = {
   },
     columnOrder: ['column-1'],
 
+    addSession: false,
+
 };
 
 export default initialData;

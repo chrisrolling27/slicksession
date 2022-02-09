@@ -14,8 +14,7 @@ export default class App extends React.Component {
 
     this.state = initialData;
 
-    // this.makeSession = this.makeSession.bind(this);
-    // this.keyStroke = this.keyStroke.bind(this);
+    this.makeSession = this.makeSession.bind(this);
   }
 
   componentDidMount() {
@@ -25,14 +24,11 @@ export default class App extends React.Component {
   }
 
   makeSession() {
-
-    // {this.state.addSession ? <SessionAdder> </SessionAdder> : ''}
-    // <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
-
     this.setState({ addSession: !this.state.addSession });
   }
 
   keyStroke(e) {
+    // this.keyStroke = this.keyStroke.bind(this);
     // <div onKeyDown={this.keyStroke} tabIndex='0'> </div>
     // if (e.key === 'l') {
     //   this.setState({ addSession: !this.state.addSession });
@@ -46,17 +42,20 @@ export default class App extends React.Component {
 
   render() {
     return (
+      <div>
+        <DragDropContext onDragEnd={this.onDragEnd}>
 
-      <DragDropContext  onDragEnd={this.onDragEnd}>
+          {this.state.columnOrder.map(columnId => {
+            const column = this.state.columns[columnId];
+            const sessions = column.sessionIds.map(sessionId => this.state.sessions[sessionId]);
 
-      {this.state.columnOrder.map(columnId => {
-      const column = this.state.columns[columnId];
-      const sessions = column.sessionIds.map(sessionId => this.state.sessions[sessionId]);
+            return <Column key={column.id} column={column} sessions={sessions} />;
+          })}
+        </DragDropContext>
 
-      return <Column key={column.id} column={column} sessions={sessions} />;
-    })}
-      </DragDropContext>
-
+        {this.state.addSession ? <SessionAdder> </SessionAdder> : ''}
+        <button className="addSessionButton" onClick={this.makeSession}> + </button>
+      </div>
     )
   };
 };

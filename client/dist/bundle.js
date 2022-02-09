@@ -100,28 +100,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _SessionAdder_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./SessionAdder.jsx */ "./client/src/components/SessionAdder.jsx");
-/* harmony import */ var _SessionCard_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./SessionCard.jsx */ "./client/src/components/SessionCard.jsx");
-/* harmony import */ var react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-beautiful-dnd */ "./node_modules/react-beautiful-dnd/dist/react-beautiful-dnd.esm.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _Column_jsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Column.jsx */ "./client/src/components/Column.jsx");
-/* harmony import */ var _initialData__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./initialData */ "./client/src/components/initialData.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _SessionAdder_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./SessionAdder.jsx */ "./client/src/components/SessionAdder.jsx");
+/* harmony import */ var _SessionCard_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./SessionCard.jsx */ "./client/src/components/SessionCard.jsx");
+/* harmony import */ var react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-beautiful-dnd */ "./node_modules/react-beautiful-dnd/dist/react-beautiful-dnd.esm.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _Column_jsx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Column.jsx */ "./client/src/components/Column.jsx");
+/* harmony import */ var _initialData__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./initialData */ "./client/src/components/initialData.js");
 
 
 
 
 
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -134,7 +137,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 
 var App = /*#__PURE__*/function (_React$Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default()(App, _React$Component);
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(App, _React$Component);
 
   var _super = _createSuper(App);
 
@@ -144,9 +147,8 @@ var App = /*#__PURE__*/function (_React$Component) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, App);
 
     _this = _super.call(this, props);
-    _this.state = _initialData__WEBPACK_IMPORTED_MODULE_11__["default"]; // this.makeSession = this.makeSession.bind(this);
-    // this.keyStroke = this.keyStroke.bind(this);
-
+    _this.state = _initialData__WEBPACK_IMPORTED_MODULE_12__["default"];
+    _this.makeSession = _this.makeSession.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this));
     return _this;
   }
 
@@ -155,7 +157,7 @@ var App = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_9___default.a.get('/sessions').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_10___default.a.get('/sessions').then(function (response) {
         _this2.setState({
           mySessions: response.data
         });
@@ -164,15 +166,14 @@ var App = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "makeSession",
     value: function makeSession() {
-      // {this.state.addSession ? <SessionAdder> </SessionAdder> : ''}
-      // <div> <button className="addSessionButton" onClick={this.makeSession}> + </button> </div>
       this.setState({
         addSession: !this.state.addSession
       });
     }
   }, {
     key: "keyStroke",
-    value: function keyStroke(e) {// <div onKeyDown={this.keyStroke} tabIndex='0'> </div>
+    value: function keyStroke(e) {// this.keyStroke = this.keyStroke.bind(this);
+      // <div onKeyDown={this.keyStroke} tabIndex='0'> </div>
       // if (e.key === 'l') {
       //   this.setState({ addSession: !this.state.addSession });
       // }
@@ -186,24 +187,27 @@ var App = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_8__["DragDropContext"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_9__["DragDropContext"], {
         onDragEnd: this.onDragEnd
       }, this.state.columnOrder.map(function (columnId) {
         var column = _this3.state.columns[columnId];
         var sessions = column.sessionIds.map(function (sessionId) {
           return _this3.state.sessions[sessionId];
         });
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Column_jsx__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Column_jsx__WEBPACK_IMPORTED_MODULE_11__["default"], {
           key: column.id,
           column: column,
           sessions: sessions
         });
-      }));
+      })), this.state.addSession ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_SessionAdder_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null, " ") : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "addSessionButton",
+        onClick: this.makeSession
+      }, " + "));
     }
   }]);
 
   return App;
-}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
 
 
 ;
@@ -522,7 +526,8 @@ var initialData = {
       sessionIds: ['session-1', 'session-2', 'session-3', 'session-4']
     }
   },
-  columnOrder: ['column-1']
+  columnOrder: ['column-1'],
+  addSession: false
 };
 /* harmony default export */ __webpack_exports__["default"] = (initialData);
 
