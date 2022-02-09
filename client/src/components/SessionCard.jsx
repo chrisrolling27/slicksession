@@ -16,7 +16,7 @@ export default class SessionCard extends React.Component {
       <Draggable draggableId={this.props.session.id} index={this.props.index}>
         {provided => (
           <Container
-            { ...provided.draggableProps}
+            {...provided.draggableProps}
             {...provided.dragHandleProps}
             ref={provided.innerRef}
           >
