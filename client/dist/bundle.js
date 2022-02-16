@@ -216,7 +216,7 @@ var App = /*#__PURE__*/function (_React$Component) {
         columns: _objectSpread(_objectSpread({}, this.state.columns), {}, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, newColumn.id, newColumn))
       });
 
-      this.setState[newState];
+      this.setState(newState);
     }
   }, {
     key: "render",

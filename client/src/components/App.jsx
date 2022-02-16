@@ -71,7 +71,7 @@ export default class App extends React.Component {
     };
 
 
-    this.setState[newState];
+    this.setState(newState);
   };
 
 
