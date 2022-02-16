@@ -40,6 +40,8 @@ export default class App extends React.Component {
 
     const { destination, source, draggableId } = result;
 
+    console.log(source.draggableId);
+
     if (!destination) {
       return;
     }
@@ -51,23 +53,26 @@ export default class App extends React.Component {
     }
     //todo: change for multi columns
     const column = this.state.columns[source.droppableId];
-    const newTaskIds = Array.from(column.taskIds);
-    newTaskIds.splice(source.index, 1);
-    newTaskIds.splice(destination.index, 0, draggableId);
+    const newSessionIds = Array.from(column.sessionIds);
+    newSessionIds.splice(source.index, 1);
+    newSessionIds.splice(destination.index, 0, draggableId);
 
     const newColumn = {
       ...column,
-      taskIds: newTaskIds,
+      sessionIds: newSessionIds,
     };
 
     const newState = {
       ...this.state,
       columns: {
         ...this.state.columns,
-      }
-    }
+        [newColumn.id]: newColumn,
+      },
+    };
 
-  }
+
+    this.setState[newState];
+  };
 
 
   render() {

@@ -192,6 +192,7 @@ var App = /*#__PURE__*/function (_React$Component) {
       var destination = result.destination,
           source = result.source,
           draggableId = result.draggableId;
+      console.log(source.draggableId);
 
       if (!destination) {
         return;
@@ -203,17 +204,19 @@ var App = /*#__PURE__*/function (_React$Component) {
 
 
       var column = this.state.columns[source.droppableId];
-      var newTaskIds = Array.from(column.taskIds);
-      newTaskIds.splice(source.index, 1);
-      newTaskIds.splice(destination.index, 0, draggableId);
+      var newSessionIds = Array.from(column.sessionIds);
+      newSessionIds.splice(source.index, 1);
+      newSessionIds.splice(destination.index, 0, draggableId);
 
       var newColumn = _objectSpread(_objectSpread({}, column), {}, {
-        taskIds: newTaskIds
+        sessionIds: newSessionIds
       });
 
       var newState = _objectSpread(_objectSpread({}, this.state), {}, {
-        columns: _objectSpread({}, this.state.columns)
+        columns: _objectSpread(_objectSpread({}, this.state.columns), {}, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, newColumn.id, newColumn))
       });
+
+      this.setState[newState];
     }
   }, {
     key: "render",
