@@ -7,7 +7,7 @@ const Container = styled.div`
   border: 1px solid lightgrey;
   border-radius: 2px;
   margin-bottom: 8px;
-  background-color: ${}
+
 `;
 
 export default class SessionCard extends React.Component {
