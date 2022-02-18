@@ -5,7 +5,8 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import axios from 'axios';
 import Column from './Column.jsx';
 import initialData from './initialData';
-import { firebaseApp, getDatabase, ref, set } from '../firebase/firebase_config.js';
+import { firebaseApp } from '../firebase/firebase_config.js';
+import { getDatabase, ref, set } from "firebase/database";
 
 
 
@@ -32,6 +33,13 @@ export default class App extends React.Component {
 
     console.log('boink');
     let thingy = 'can i read this?';
+    //console.log(firebaseApp);
+    //const db = getDatabase(firebaseApp);
+    console.log(db);
+    // set(ref(db, 'users/' ), {
+    //   username: thingy
+    // });
+
 
   }
 

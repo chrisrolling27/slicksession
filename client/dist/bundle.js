@@ -120,6 +120,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Column_jsx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Column.jsx */ "./client/src/components/Column.jsx");
 /* harmony import */ var _initialData__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./initialData */ "./client/src/components/initialData.js");
 /* harmony import */ var _firebase_firebase_config_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../firebase/firebase_config.js */ "./client/src/firebase/firebase_config.js");
+/* harmony import */ var firebase_database__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! firebase/database */ "./node_modules/firebase/database/dist/index.esm.js");
 
 
 
@@ -135,6 +136,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -177,7 +179,12 @@ var App = /*#__PURE__*/function (_React$Component) {
     key: "makeSession",
     value: function makeSession() {
       console.log('boink');
-      var thingy = 'can i read this?';
+      var thingy = 'can i read this?'; //console.log(firebaseApp);
+      //const db = getDatabase(firebaseApp);
+
+      console.log(db); // set(ref(db, 'users/' ), {
+      //   username: thingy
+      // });
     }
   }, {
     key: "keyStroke",
@@ -580,9 +587,7 @@ var initialData = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.esm.js");
-/* harmony import */ var firebase_database__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/database */ "./node_modules/firebase/database/dist/index.esm.js");
 // Import the functions you need from the SDKs you need
-
  // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // Your web app's Firebase configuration
@@ -600,10 +605,7 @@ var firebaseConfig = {
 
 var firebaseApp = Object(firebase_app__WEBPACK_IMPORTED_MODULE_0__["initializeApp"])(firebaseConfig);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  firebaseApp: firebaseApp,
-  getDatabase: firebase_database__WEBPACK_IMPORTED_MODULE_1__["getDatabase"],
-  ref: firebase_database__WEBPACK_IMPORTED_MODULE_1__["ref"],
-  set: firebase_database__WEBPACK_IMPORTED_MODULE_1__["set"]
+  firebaseApp: firebaseApp
 });
 
 /***/ }),
