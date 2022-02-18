@@ -5,10 +5,15 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import axios from 'axios';
 import Column from './Column.jsx';
 import initialData from './initialData';
-import { firebaseApp } from '../firebase/firebase_config.js';
-import { getDatabase, ref, set } from "firebase/database";
+import { firebaseConfig } from '../firebase/firebase_config.js';
 
 
+
+
+
+// import { getDatabase, ref, set } from "firebase/database";
+// import firebase from 'firebase/app';
+// import 'firebase/firestore';
 
 export default class App extends React.Component {
 
@@ -33,9 +38,16 @@ export default class App extends React.Component {
 
     console.log('boink');
     let thingy = 'can i read this?';
-    //console.log(firebaseApp);
+    console.log(firebaseConfig);
+    // const db = firebase.firestore(firebaseApp);
+
+
+
     //const db = getDatabase(firebaseApp);
-    console.log(db);
+
+    //const heya = db.collection('ideas');
+    //console.log(heya);
+
     // set(ref(db, 'users/' ), {
     //   username: thingy
     // });
