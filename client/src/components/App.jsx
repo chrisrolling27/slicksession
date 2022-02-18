@@ -7,13 +7,22 @@ import Column from './Column.jsx';
 import initialData from './initialData';
 import { firebaseConfig } from '../firebase/firebase_config.js';
 
+//import { initializeApp } from 'firebase/app';
 
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
 
+const app = initializeApp(firebaseConfig);
 
+const db = getFirestore(app);
 
-// import { getDatabase, ref, set } from "firebase/database";
-// import firebase from 'firebase/app';
-// import 'firebase/firestore';
+//console.log(db);
+
+// async function getideas(db) {
+//   const ideasCol = collection(db, 'ideas');
+//   //const cityList = citySnapshot.docs.map(doc => doc.data());
+//   return ideasCol;
+// }
 
 export default class App extends React.Component {
 
@@ -37,14 +46,16 @@ export default class App extends React.Component {
   makeSession() {
 
     console.log('boink');
-    let thingy = 'can i read this?';
-    console.log(firebaseConfig);
+
+
+    const ideasRef = db.collection("ideas");
+
+
+
+
+
     // const db = firebase.firestore(firebaseApp);
-
-
-
     //const db = getDatabase(firebaseApp);
-
     //const heya = db.collection('ideas');
     //console.log(heya);
 
