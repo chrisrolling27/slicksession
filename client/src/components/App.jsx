@@ -5,7 +5,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import axios from 'axios';
 import Column from './Column.jsx';
 import initialData from './initialData';
-import {database} from '/home/chris/myprojects/slicksession/firebase_config.env';
+
 
 
 export default class App extends React.Component {
