@@ -5,6 +5,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import axios from 'axios';
 import Column from './Column.jsx';
 import initialData from './initialData';
+import { firebaseApp, getDatabase, ref, set } from '../firebase/firebase_config.js';
 
 
 
@@ -25,9 +26,17 @@ export default class App extends React.Component {
     })
   }
 
+
+
   makeSession() {
-    this.setState({ addSession: !this.state.addSession });
+
+    console.log('boink');
+    let thingy = 'can i read this?';
+
   }
+
+
+
 
   keyStroke(e) {
     // this.keyStroke = this.keyStroke.bind(this);
@@ -73,6 +82,7 @@ export default class App extends React.Component {
 
 
     this.setState(newState);
+
   };
 
 
