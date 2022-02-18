@@ -4,6 +4,7 @@ const PORT = 3000;
 const path = require('path');
 const db = require('../database/connection.js');
 
+
 app.use(express.json());
 
 app.use(express.static('client/dist'));
