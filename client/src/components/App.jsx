@@ -7,21 +7,25 @@ import Column from './Column.jsx';
 import initialData from './initialData';
 import { firebaseConfig } from '../firebase/firebase_config.js';
 import { initializeApp } from 'firebase/app';
-import { getFirestore, CollectionReference } from 'firebase/firestore';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
+
+//basic db stuff
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const colRef = collection(db, 'ideas');
 
-
-
-
-
-
-// async function getideas(db) {
-//   const ideasCol = collection(db, 'ideas');
-//   //const cityList = citySnapshot.docs.map(doc => doc.data());
-//   return ideasCol;
-// }
+getDocs(colRef)
+  .then((snapshot) => {
+    let ideas = [];
+    snapshot.docs.forEach((doc) => {
+      ideas.push({...doc.data(), id: doc.id})
+    })
+    console.log(ideas);
+  })
+  .catch(err => {
+    console.log(err.message);
+  })
 
 export default class App extends React.Component {
 
