@@ -9,29 +9,7 @@ import { firebaseConfig } from '../firebase/firebase_config.js';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore';
 
-
-//basic db stuff
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const colRef = collection(db, 'posts');
-
-getDocs(colRef)
-  .then((snapshot) => {
-    let posts = [];
-    snapshot.docs.forEach((doc) => {
-      posts.push({...doc.data(), id: doc.id})
-    })
-    //console.log(posts);
-    for (let i = 0; i < posts.length; i++) {
-      console.log(posts[i].content);
-    }
-  })
-  .catch(err => {
-    console.log(err.message);
-  })
-
-  //
-  //addDoc(colRef, this.state)
+//addDoc(colRef, this.state)
 
 export default class App extends React.Component {
 
@@ -45,9 +23,25 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/sessions').then((response) => {
-      this.setState({ mySessions: response.data })
-    })
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const colRef = collection(db, 'posts');
+
+    getDocs(colRef)
+      .then((snapshot) => {
+        let posts = [];
+        snapshot.docs.forEach((doc) => {
+          posts.push({ ...doc.data(), id: doc.id })
+        })
+        console.log(posts);
+        for (let i = 0; i < posts.length; i++) {
+          console.log(posts[i].content);
+        }
+      })
+      .catch(err => {
+        console.log(err.message);
+      })
   }
 
 
@@ -61,11 +55,6 @@ export default class App extends React.Component {
 
     //   console.log(data);
     // })
-
-
-
-
-
     // const db = firebase.firestore(firebaseApp);
     //const db = getDatabase(firebaseApp);
     //const heya = db.collection('ideas');
@@ -75,30 +64,14 @@ export default class App extends React.Component {
     //   username: thingy
     // });
 
-
-  }
-
-
-
-
-  keyStroke(e) {
-    // this.keyStroke = this.keyStroke.bind(this);
-    // <div onKeyDown={this.keyStroke} tabIndex='0'> </div>
-    // if (e.key === 'l') {
-    //   this.setState({ addSession: !this.state.addSession });
-    // }
   }
 
   onDragEnd(result) {
-
     const { destination, source, draggableId } = result;
-
     console.log(source.draggableId);
-
     if (!destination) {
       return;
     }
-
     if (
       destination.droppableId === source.droppableId && destination.index === source.index
     ) {
@@ -122,12 +95,8 @@ export default class App extends React.Component {
         [newColumn.id]: newColumn,
       },
     };
-
-
     this.setState(newState);
-
   };
-
 
   render() {
     return (
