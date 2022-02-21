@@ -6,17 +6,16 @@ import axios from 'axios';
 import Column from './Column.jsx';
 import initialData from './initialData';
 import { firebaseConfig } from '../firebase/firebase_config.js';
-
-//import { initializeApp } from 'firebase/app';
-
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore, CollectionReference } from 'firebase/firestore';
 
 const app = initializeApp(firebaseConfig);
-
 const db = getFirestore(app);
 
-//console.log(db);
+
+
+
+
 
 // async function getideas(db) {
 //   const ideasCol = collection(db, 'ideas');
@@ -48,7 +47,10 @@ export default class App extends React.Component {
     console.log('boink');
 
 
-    const ideasRef = db.collection("ideas");
+    // const results = db.get('ideas').on('value', data => {
+
+    //   console.log(data);
+    // })
 
 
 

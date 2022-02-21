@@ -145,13 +145,11 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 
 
- //import { initializeApp } from 'firebase/app';
 
 
 
 var app = Object(firebase_app__WEBPACK_IMPORTED_MODULE_15__["initializeApp"])(_firebase_firebase_config_js__WEBPACK_IMPORTED_MODULE_14__["firebaseConfig"]);
-var db = Object(firebase_firestore__WEBPACK_IMPORTED_MODULE_16__["getFirestore"])(app); //console.log(db);
-// async function getideas(db) {
+var db = Object(firebase_firestore__WEBPACK_IMPORTED_MODULE_16__["getFirestore"])(app); // async function getideas(db) {
 //   const ideasCol = collection(db, 'ideas');
 //   //const cityList = citySnapshot.docs.map(doc => doc.data());
 //   return ideasCol;
@@ -188,8 +186,10 @@ var App = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "makeSession",
     value: function makeSession() {
-      console.log('boink');
-      var ideasRef = db.collection("ideas"); // const db = firebase.firestore(firebaseApp);
+      console.log('boink'); // const results = db.get('ideas').on('value', data => {
+      //   console.log(data);
+      // })
+      // const db = firebase.firestore(firebaseApp);
       //const db = getDatabase(firebaseApp);
       //const heya = db.collection('ideas');
       //console.log(heya);
