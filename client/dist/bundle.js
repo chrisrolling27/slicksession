@@ -119,7 +119,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _Column_jsx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Column.jsx */ "./client/src/components/Column.jsx");
 /* harmony import */ var _initialData__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./initialData */ "./client/src/components/initialData.js");
-/* harmony import */ var _firebase_firebase_config_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../firebase/firebase_config.js */ "./client/src/firebase/firebase_config.js");
+/* harmony import */ var _firebase_firebase_config_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../firebase/firebase_config.js */ "./client/src/firebase/firebase_config.js");
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.esm.js");
 /* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! firebase/firestore */ "./node_modules/firebase/firestore/dist/index.esm.js");
 
@@ -169,7 +169,7 @@ var App = /*#__PURE__*/function (_React$Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(App, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var app = Object(firebase_app__WEBPACK_IMPORTED_MODULE_15__["initializeApp"])(_firebase_firebase_config_js__WEBPACK_IMPORTED_MODULE_14__["firebaseConfig"]);
+      var app = Object(firebase_app__WEBPACK_IMPORTED_MODULE_15__["initializeApp"])(_firebase_firebase_config_js__WEBPACK_IMPORTED_MODULE_17__["firebaseConfig"]);
       var db = Object(firebase_firestore__WEBPACK_IMPORTED_MODULE_16__["getFirestore"])(app);
       var colRef = Object(firebase_firestore__WEBPACK_IMPORTED_MODULE_16__["collection"])(db, 'posts');
       Object(firebase_firestore__WEBPACK_IMPORTED_MODULE_16__["getDocs"])(colRef).then(function (snapshot) {
