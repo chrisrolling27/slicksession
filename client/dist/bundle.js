@@ -151,18 +151,22 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 var app = Object(firebase_app__WEBPACK_IMPORTED_MODULE_15__["initializeApp"])(_firebase_firebase_config_js__WEBPACK_IMPORTED_MODULE_14__["firebaseConfig"]);
 var db = Object(firebase_firestore__WEBPACK_IMPORTED_MODULE_16__["getFirestore"])(app);
-var colRef = Object(firebase_firestore__WEBPACK_IMPORTED_MODULE_16__["collection"])(db, 'ideas');
+var colRef = Object(firebase_firestore__WEBPACK_IMPORTED_MODULE_16__["collection"])(db, 'posts');
 Object(firebase_firestore__WEBPACK_IMPORTED_MODULE_16__["getDocs"])(colRef).then(function (snapshot) {
-  var ideas = [];
+  var posts = [];
   snapshot.docs.forEach(function (doc) {
-    ideas.push(_objectSpread(_objectSpread({}, doc.data()), {}, {
+    posts.push(_objectSpread(_objectSpread({}, doc.data()), {}, {
       id: doc.id
     }));
-  });
-  console.log(ideas);
+  }); //console.log(posts);
+
+  for (var i = 0; i < posts.length; i++) {
+    console.log(posts[i].content);
+  }
 })["catch"](function (err) {
   console.log(err.message);
-});
+}); //
+//addDoc(colRef, this.state)
 
 var App = /*#__PURE__*/function (_React$Component) {
   _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(App, _React$Component);

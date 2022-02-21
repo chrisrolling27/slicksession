@@ -7,25 +7,31 @@ import Column from './Column.jsx';
 import initialData from './initialData';
 import { firebaseConfig } from '../firebase/firebase_config.js';
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore';
 
 
 //basic db stuff
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const colRef = collection(db, 'ideas');
+const colRef = collection(db, 'posts');
 
 getDocs(colRef)
   .then((snapshot) => {
-    let ideas = [];
+    let posts = [];
     snapshot.docs.forEach((doc) => {
-      ideas.push({...doc.data(), id: doc.id})
+      posts.push({...doc.data(), id: doc.id})
     })
-    console.log(ideas);
+    //console.log(posts);
+    for (let i = 0; i < posts.length; i++) {
+      console.log(posts[i].content);
+    }
   })
   .catch(err => {
     console.log(err.message);
   })
+
+  //
+  //addDoc(colRef, this.state)
 
 export default class App extends React.Component {
 
